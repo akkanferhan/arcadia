@@ -1,0 +1,23 @@
+Arcadia/Resources/Assets.xcassets/AccentColor.colorset/Contents.json
+  s_947a5ec9b0d04e::t_4c8b6643af931c 1-12
+Arcadia/Resources/Assets.xcassets/AppIcon.appiconset/Contents.json
+  s_947a5ec9b0d04e::t_990f4098967503 1-68
+Arcadia/Resources/Assets.xcassets/Contents.json
+  s_947a5ec9b0d04e::t_4c8b6643af931c 1
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "5ce2834d32622e6d604e1a747619f33dc2c98082",
+  "prompts": {},
+  "sessions": {
+    "s_947a5ec9b0d04e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "ae2b73cb-5faa-44a9-b7a6-4d22739dbe7c",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Ferhan Akkan <ferhanakkan@gmail.com>"
+    }
+  }
+}
