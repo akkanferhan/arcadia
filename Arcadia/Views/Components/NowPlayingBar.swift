@@ -12,7 +12,7 @@ struct NowPlayingBar: View {
                     .frame(width: 40, height: 52)
                     .clipShape(RoundedRectangle(cornerRadius: 6, style: .continuous))
                 VStack(alignment: .leading, spacing: 2) {
-                    Text(launcher.running == nil ? "Starting…" : "Now playing")
+                    (launcher.running == nil ? Text("Starting…") : Text("Now playing"))
                         .font(.caption.weight(.semibold))
                         .foregroundStyle(.secondary)
                     Text(game.title).font(.headline).lineLimit(1)

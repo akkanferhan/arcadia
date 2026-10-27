@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		020B48317A583B2F52EF47E5 /* EmulatorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88351EB6285E118CF42F4E5D /* EmulatorButton.swift */; };
+		0CBD9A970A5DB5AD7FBA7467 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = ACDEE1826E9DF4341D469D64 /* Localizable.xcstrings */; };
 		17B356BBA0004D4C262FB7FD /* SystemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4B1630B611CEA329743489 /* SystemView.swift */; };
 		1DF74432A4A5CF43249EFA0D /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC49813A90473D10A937E98 /* HomeView.swift */; };
 		25F973E07122F4DC2026EE5A /* GameCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBF009962D0FF1BAE76EAF3 /* GameCard.swift */; };
@@ -53,6 +54,7 @@
 		97EA6343BB2B32418BEF0361 /* Library.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Library.swift; sourceTree = "<group>"; };
 		A200B868177CA6D564CCCC7B /* Emulator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emulator.swift; sourceTree = "<group>"; };
 		A8F9E4FA3CCE582C0529B124 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		ACDEE1826E9DF4341D469D64 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		AD10502CAF52885F1D59E067 /* Artwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artwork.swift; sourceTree = "<group>"; };
 		BD47DCC560FF89CEB5397D1B /* Arcadia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Arcadia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4A95C8F7D0A11A55B060040 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				6057601F1F41C846AB29D7B8 /* Assets.xcassets */,
+				ACDEE1826E9DF4341D469D64 /* Localizable.xcstrings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -203,7 +206,14 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				Base,
+				ar,
 				en,
+				es,
+				fr,
+				hi,
+				"pt-BR",
+				tr,
+				"zh-Hans",
 			);
 			mainGroup = 8D39AA40B4B75BA4AF59B5AF;
 			minimizedProjectReferenceProxies = 1;
@@ -223,6 +233,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				48EB4F7A494975278BFC1823 /* Assets.xcassets in Resources */,
+				0CBD9A970A5DB5AD7FBA7467 /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,9 +358,11 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = dev.ferhanakkan.Arcadia;
 				PRODUCT_NAME = Arcadia;
 				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 			};
 			name = Release;
 		};
@@ -430,9 +443,11 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = dev.ferhanakkan.Arcadia;
 				PRODUCT_NAME = Arcadia;
 				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 			};
 			name = Debug;
 		};

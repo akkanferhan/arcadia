@@ -24,6 +24,8 @@ targets:
         PRODUCT_BUNDLE_IDENTIFIER: dev.ferhanakkan.Arcadia
         PRODUCT_NAME: Arcadia
         GENERATE_INFOPLIST_FILE: YES
+        SWIFT_EMIT_LOC_STRINGS: YES
+        LOCALIZATION_PREFERS_STRING_CATALOGS: YES
         INFOPLIST_KEY_CFBundleDisplayName: Arcadia
         INFOPLIST_KEY_LSApplicationCategoryType: public.app-category.games
         INFOPLIST_KEY_NSHumanReadableCopyright: "GPL-3.0"

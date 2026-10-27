@@ -9,6 +9,16 @@ enum Maker: String, CaseIterable, Identifiable {
     case classic = "Classics & Arcade"
 
     var id: String { rawValue }
+
+    var title: LocalizedStringResource {
+        switch self {
+        case .sony: "PlayStation"
+        case .nintendo: "Nintendo"
+        case .sega: "Sega"
+        case .microsoft: "Xbox"
+        case .classic: "Classics & Arcade"
+        }
+    }
 }
 
 /// A game console or handheld that Arcadia can play.
@@ -31,7 +41,7 @@ struct GameSystem: Identifiable, Hashable {
     let symbol: String
     let colors: [Color]
     /// BIOS files the emulator needs, shown as a hint.
-    var biosHint: String?
+    var biosHint: LocalizedStringResource?
 
     var gradient: LinearGradient {
         LinearGradient(colors: colors, startPoint: .topLeading, endPoint: .bottomTrailing)

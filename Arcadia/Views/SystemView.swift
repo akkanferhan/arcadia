@@ -48,9 +48,9 @@ struct SystemView: View {
                 .foregroundStyle(.secondary)
             Text("No \(system.name) games yet")
                 .font(.title3.weight(.semibold))
-            Text(system.gameIsFolder
-                 ? "Drag installed game folders here, or copy them into the \(system.id) folder."
-                 : "Drag game files here, or copy them into the \(system.id) folder.\nSupported: \(system.extensions.map { "." + $0 }.joined(separator: " "))")
+            (system.gameIsFolder
+                 ? Text("Drag installed game folders here, or copy them into the \(system.id) folder.")
+                 : Text("Drag game files here, or copy them into the \(system.id) folder.\nSupported: \(system.extensions.map { "." + $0 }.joined(separator: " "))"))
                 .multilineTextAlignment(.center)
                 .foregroundStyle(.secondary)
             Button {
@@ -87,14 +87,14 @@ private struct Banner: View {
 
             HStack(alignment: .bottom) {
                 VStack(alignment: .leading, spacing: 6) {
-                    Text("\(system.maker.rawValue.uppercased()) · \(String(system.year))")
+                    Text(verbatim: "\(String(localized: system.maker.title).uppercased()) · \(String(system.year))")
                         .font(.caption.weight(.heavy))
                         .tracking(1.5)
                         .foregroundStyle(.white.opacity(0.7))
                     Text(system.name)
                         .font(.system(size: 38, weight: .bold, design: .rounded))
                     HStack(spacing: 8) {
-                        Text("\(count) game\(count == 1 ? "" : "s")")
+                        Text("\(count) games")
                         Text("·")
                         Text("Plays with \(emulator.name)")
                         if emulator.experimental { Tag(text: "Experimental", color: .orange) }
