@@ -1,0 +1,23 @@
+Arcadia/Services/Presets/Presets.swift
+  s_947a5ec9b0d04e::t_404688bfc9176d 17-18
+Arcadia/Services/Gamepads.swift
+  s_947a5ec9b0d04e::t_55bd38e967d777 1-79
+Arcadia/Services/Launcher.swift
+  s_947a5ec9b0d04e::t_404688bfc9176d 54,57
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "b353ce32ed86e73ac65b2eee38513ed0ec3e16bc",
+  "prompts": {},
+  "sessions": {
+    "s_947a5ec9b0d04e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "ae2b73cb-5faa-44a9-b7a6-4d22739dbe7c",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Ferhan Akkan <ferhanakkan@gmail.com>"
+    }
+  }
+}
