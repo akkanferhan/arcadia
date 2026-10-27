@@ -1,0 +1,28 @@
+Arcadia/Views/Theme.swift
+  s_947a5ec9b0d04e::t_2fc7272e3cc51b 1-88
+Arcadia/App/AppModel.swift
+  s_947a5ec9b0d04e::t_1681be80f59966 32-38
+  s_947a5ec9b0d04e::t_9dc776368fd84b 1-31,39-78
+Arcadia/Views/SidebarView.swift
+  s_947a5ec9b0d04e::t_308ad8fbfa6572 1-57
+Arcadia/App/ArcadiaApp.swift
+  s_947a5ec9b0d04e::t_9606f843e82411 1-30
+Arcadia/Views/RootView.swift
+  s_947a5ec9b0d04e::t_8251f00310b2a4 1-59
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "1cf7110c509ff2606715b721486bc8b65fb408b0",
+  "prompts": {},
+  "sessions": {
+    "s_947a5ec9b0d04e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "ae2b73cb-5faa-44a9-b7a6-4d22739dbe7c",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Ferhan Akkan <ferhanakkan@gmail.com>"
+    }
+  }
+}
