@@ -1,0 +1,47 @@
+Arcadia/Views/SystemView.swift
+  s_947a5ec9b0d04e::t_6847c57e881101 51-53,90,97
+Arcadia/Views/EmulatorsView.swift
+  s_947a5ec9b0d04e::t_6847c57e881101 54
+Arcadia/App/AppModel.swift
+  s_947a5ec9b0d04e::t_6847c57e881101 47
+Arcadia/Views/SidebarView.swift
+  s_947a5ec9b0d04e::t_6847c57e881101 20
+Arcadia/Models/GameSystem.swift
+  s_947a5ec9b0d04e::t_6847c57e881101 12-21,44
+Arcadia/Views/HomeView.swift
+  s_947a5ec9b0d04e::t_6847c57e881101 28,124,126-128,160,203
+Arcadia/Views/Theme.swift
+  s_947a5ec9b0d04e::t_6847c57e881101 16,26-27,60
+Arcadia/Views/Components/EmulatorButton.swift
+  s_947a5ec9b0d04e::t_6847c57e881101 23
+Arcadia.xcodeproj/project.pbxproj
+  s_947a5ec9b0d04e::t_5df9bfa8f1e47d 11,57,92,209,211-216,236,361,365,446,450
+Arcadia/Views/OnboardingView.swift
+  s_947a5ec9b0d04e::t_6847c57e881101 75
+Arcadia/Views/Components/NowPlayingBar.swift
+  s_947a5ec9b0d04e::t_6847c57e881101 15
+project.yml
+  s_947a5ec9b0d04e::t_5df9bfa8f1e47d 27-28
+Arcadia/Services/EmulatorManager.swift
+  s_947a5ec9b0d04e::t_6847c57e881101 12-23,26,66,96,99,104-105,110,245-246
+Arcadia/Views/Components/GameCard.swift
+  s_947a5ec9b0d04e::t_6847c57e881101 63-66,119-120
+Arcadia/Services/Launcher.swift
+  s_947a5ec9b0d04e::t_6847c57e881101 24-25
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "d21386b3ffb8733bb59572ae6de201cc4a0d69c0",
+  "prompts": {},
+  "sessions": {
+    "s_947a5ec9b0d04e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "ae2b73cb-5faa-44a9-b7a6-4d22739dbe7c",
+        "model": "unknown"
+      },
+      "human_author": "Ferhan Akkan <ferhanakkan@gmail.com>"
+    }
+  }
+}
