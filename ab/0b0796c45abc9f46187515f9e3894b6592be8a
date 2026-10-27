@@ -1,0 +1,29 @@
+Arcadia/Services/Archive.swift
+  s_947a5ec9b0d04e::t_6d3cbf5732ea34 37
+  s_947a5ec9b0d04e::t_8406ca5911d20a 1-29,39-85
+  s_947a5ec9b0d04e::t_f4095e67ae8e39 30-36,38
+Arcadia/Services/EmulatorManager.swift
+  s_947a5ec9b0d04e::t_f03c94bdff16c6 174
+  s_947a5ec9b0d04e::t_aee52c0df2bd3b 1-90,93-116,118-173,175-242
+  s_947a5ec9b0d04e::t_6d3cbf5732ea34 91-92,117
+Arcadia/Services/Downloader.swift
+  s_947a5ec9b0d04e::t_669eb4cc94b8b2 1-59
+Arcadia/Services/Paths.swift
+  s_947a5ec9b0d04e::t_8dd22fe38dd970 1-57
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "ab0b0796c45abc9f46187515f9e3894b6592be8a",
+  "prompts": {},
+  "sessions": {
+    "s_947a5ec9b0d04e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "ae2b73cb-5faa-44a9-b7a6-4d22739dbe7c",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Ferhan Akkan <ferhanakkan@gmail.com>"
+    }
+  }
+}
