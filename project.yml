@@ -19,6 +19,11 @@ targets:
     platform: macOS
     sources:
       - path: Arcadia
+    dependencies:
+      # SDL3 (zlib license) reads connected gamepads the same way the emulators do.
+      - framework: Vendor/SDL3.framework
+        embed: true
+        codeSign: true
     info:
       path: Arcadia/Info.plist
       properties:
@@ -36,6 +41,8 @@ targets:
         PRODUCT_NAME: Arcadia
         GENERATE_INFOPLIST_FILE: YES
         SWIFT_EMIT_LOC_STRINGS: YES
+        SWIFT_OBJC_BRIDGING_HEADER: Arcadia/App/Arcadia-Bridging-Header.h
+        FRAMEWORK_SEARCH_PATHS: $(PROJECT_DIR)/Vendor
         LOCALIZATION_PREFERS_STRING_CATALOGS: YES
         INFOPLIST_KEY_CFBundleDisplayName: Arcadia
         INFOPLIST_KEY_LSApplicationCategoryType: public.app-category.games
