@@ -1,0 +1,27 @@
+Arcadia/Models/Emulator.swift
+  s_947a5ec9b0d04e::t_8422af22e80428 32,61,89
+project.yml
+  s_947a5ec9b0d04e::t_8422af22e80428 6,12-14
+Arcadia.xcodeproj/project.pbxproj
+  s_947a5ec9b0d04e::t_fb205099276e6a 271,324,360,407
+README.md
+  s_947a5ec9b0d04e::t_fb205099276e6a 11-13,65
+Arcadia/Services/EmulatorManager.swift
+  s_947a5ec9b0d04e::t_8422af22e80428 217
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "974218318c5011eac5b53945ba43b2800ab1cfb7",
+  "prompts": {},
+  "sessions": {
+    "s_947a5ec9b0d04e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "ae2b73cb-5faa-44a9-b7a6-4d22739dbe7c",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Ferhan Akkan <ferhanakkan@gmail.com>"
+    }
+  }
+}
