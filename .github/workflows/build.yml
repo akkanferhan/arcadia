@@ -1,0 +1,16 @@
+name: Build
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+
+jobs:
+  build:
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build
+        run: |
+          xcodebuild -project Arcadia.xcodeproj -scheme Arcadia -configuration Release \
+            -derivedDataPath build CODE_SIGNING_ALLOWED=NO build
