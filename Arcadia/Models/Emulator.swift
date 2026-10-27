@@ -54,7 +54,7 @@ extension Emulator {
         },
         Emulator(id: "duckstation", name: "DuckStation", website: URL(string: "https://www.duckstation.org")!,
                  license: "CC BY-NC-ND 4.0",
-                 sources: [.github(repo: "stenzek/duckstation", asset: #"^duckstation-mac-release\.zip$"#, includePrereleases: true)]) { r in
+                 sources: [.github(repo: "stenzek/duckstation", asset: #"^duckstation-mac-release\.zip$"#)]) { r in
             ["-batch"] + (r.fullscreen ? ["-fullscreen"] : []) + ["--", r.game.path]
         },
         Emulator(id: "pcsx2", name: "PCSX2", website: URL(string: "https://pcsx2.net")!, license: "GPL-3.0",
