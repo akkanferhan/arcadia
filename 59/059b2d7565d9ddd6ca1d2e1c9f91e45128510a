@@ -1,0 +1,39 @@
+Arcadia/Models/GameSystem.swift
+  s_947a5ec9b0d04e::t_9b2d5e6b1ee9c5 72,76,84,159,169
+Arcadia/Views/Components/BiosViews.swift
+  s_947a5ec9b0d04e::t_9b2d5e6b1ee9c5 1-111
+Arcadia/Views/Components/NowPlayingBar.swift
+  s_947a5ec9b0d04e::t_51fa839db962c7 19-23
+Arcadia/Views/EmulatorsView.swift
+  s_947a5ec9b0d04e::t_51fa839db962c7 9
+  s_947a5ec9b0d04e::t_9b2d5e6b1ee9c5 29
+  s_1b02c1f829b02f::t_65e6792dc245ff 30
+Arcadia/Views/SystemView.swift
+  s_947a5ec9b0d04e::t_9b2d5e6b1ee9c5 77,105-108
+Arcadia/Resources/Localizable.xcstrings
+  s_1b02c1f829b02f::t_44487666f7f0e3 375-420,651-696,789-926,1525-1570,1663-1708,2491,2496,2502,2508,2514,2520,2526,2532,2537,2542,2548,2554,2560,2566,2572,2578,2767-2812,2859-2904,3135,3140,3146,3152,3158,3164,3170,3176,3181,3186,3192,3198,3204,3210,3216,3222,3227,3232,3238,3244,3250,3256,3262,3268,3273,3278,3284,3290,3296,3302,3308,3314,3319,3324,3330,3336,3342,3348,3354,3360,3365,3370,3376,3382,3388,3394,3400,3406,3411,3416,3422,3428,3434,3440,3446,3452,3457,3462,3468,3474,3480,3486,3492,3498,3503,3508,3514,3520,3526,3532,3538,3544,4377-4422,4515-4652,4837-4882,4975,4980,4986,4992,4998,5004,5010,5016
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "59059b2d7565d9ddd6ca1d2e1c9f91e45128510a",
+  "prompts": {},
+  "sessions": {
+    "s_1b02c1f829b02f": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "8d7d5e3b-2a8f-4305-80ad-39ed1060b777",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Ferhan Akkan <ferhanakkan@gmail.com>"
+    },
+    "s_947a5ec9b0d04e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "ae2b73cb-5faa-44a9-b7a6-4d22739dbe7c",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Ferhan Akkan <ferhanakkan@gmail.com>"
+    }
+  }
+}
