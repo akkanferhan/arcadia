@@ -20,6 +20,9 @@ scans your game folders, shows box art and starts games with a double-click.
 - **Zero emulator setup**: Arcadia writes tuned settings for every emulator before each launch
   (Metal or Vulkan renderer, resolution matched to your Mac's GPU, no first-run wizards or update
   prompts, BIOS folders, gamepad mappings). One "Graphics quality" setting covers them all
+- **Any controller just works**: right before a game starts Arcadia reads the connected
+  controller through SDL, exactly as the emulators see it, and maps it for player 1, including
+  emulators that need the device's exact name or GUID (Dolphin, Cemu, RPCS3, melonDS)
 - **Select + Start** on a gamepad quits back to Arcadia in most emulators
 - **Box art** from your PS3/PS4/PS5 game folders or [libretro-thumbnails](https://github.com/libretro-thumbnails)
 - **Drag and drop** games onto a console page to add them
@@ -124,4 +127,6 @@ Commits follow [Conventional Commits](https://www.conventionalcommits.org) (`fea
 ## License
 
 Arcadia is licensed under the [GNU General Public License v3.0](LICENSE).
+It bundles [SDL 3](https://libsdl.org) (`Vendor/SDL3.framework`, arm64 only) under the
+[zlib license](Vendor/SDL3-LICENSE.txt) to read connected controllers.
 Emulators are separate projects under their own licenses and are downloaded from their official sources.

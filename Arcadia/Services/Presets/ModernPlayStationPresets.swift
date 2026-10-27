@@ -37,6 +37,7 @@ extension Presets {
             ini.set(["hideMouseOnIdle": "true", "hideMouseOnIdleTime": "2000"], section: "GSFrame")
             ini.set("game_window_stop", "Ctrl+Q", section: "Shortcuts")
         }
+        try rpcs3Controllers(context, root: root)
 
         // Install the PS3 system software once, without any window. It comes from bios/ps3 or,
         // when the player has none, straight from Sony's update servers.

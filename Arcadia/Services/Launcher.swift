@@ -51,9 +51,10 @@ final class Launcher {
             request.core = try await emulators.core(core)
         }
         // Arcadia's tuned settings are written before every launch, so emulator menus never matter.
+        let gamepads = await Gamepads.connected()
         let context = PresetContext(emulator: emulator, system: game.system, game: target, core: request.core,
                                     install: emulators.payloadURL(emulator.id)!, bios: library.biosFolder,
-                                    scale: quality.scale, fullscreen: fullscreen) { [weak self] status in
+                                    scale: quality.scale, fullscreen: fullscreen, gamepads: gamepads) { [weak self] status in
             Task { @MainActor in self?.preparingStatus = status }
         }
         let preset = try await Presets.apply(context)
