@@ -8,6 +8,9 @@ scans your game folders, shows box art and starts games with a double-click.
 ![Arcadia home screen](docs/home.png)
 
 > Status: early development. PS4 and especially PS5 emulation are experimental upstream.
+>
+> Arcadia runs on **Macs with Apple silicon (M1 or later)** only. Cemu and SharpEmu only ship
+> Intel builds; macOS runs them through Rosetta 2 and offers to install it the first time.
 
 ## Features
 
@@ -59,7 +62,7 @@ Multi-disc games: add an `.m3u` playlist and Arcadia hides the individual discs.
 
 ## Building
 
-Requirements: macOS 14 or later, Xcode 16 or later.
+Requirements: a Mac with Apple silicon, macOS 14 or later, Xcode 16 or later.
 
 ```sh
 open Arcadia.xcodeproj

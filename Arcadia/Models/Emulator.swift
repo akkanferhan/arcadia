@@ -29,21 +29,13 @@ struct Emulator: Identifiable {
     let sources: [DownloadSource]
     /// Command-line arguments for a launch.
     let arguments: (LaunchRequest) -> [String]
-    /// Intel-only build that runs through Rosetta 2 on Apple silicon.
+    /// Only an Intel build exists; macOS runs it through Rosetta 2.
     var needsRosetta = false
     var experimental = false
 
     var systems: [GameSystem] { GameSystem.all.filter { $0.emulatorID == id } }
 
     static func with(id: String) -> Emulator? { all.first { $0.id == id } }
-}
-
-private var isAppleSilicon: Bool {
-    #if arch(arm64)
-    true
-    #else
-    false
-    #endif
 }
 
 extension Emulator {
@@ -66,9 +58,7 @@ extension Emulator {
             (r.fullscreen ? ["--fullscreen"] : []) + [r.game.path]
         },
         Emulator(id: "rpcs3", name: "RPCS3", website: URL(string: "https://rpcs3.net")!, license: "GPL-2.0",
-                 sources: [isAppleSilicon
-                           ? .github(repo: "RPCS3/rpcs3-binaries-mac-arm64", asset: #"macos_aarch64\.7z$"#, includePrereleases: true)
-                           : .github(repo: "RPCS3/rpcs3-binaries-mac", asset: #"macos\.7z$"#, includePrereleases: true)]) { r in
+                 sources: [.github(repo: "RPCS3/rpcs3-binaries-mac-arm64", asset: #"macos_aarch64\.7z$"#, includePrereleases: true)]) { r in
             ["--no-gui"] + (r.fullscreen ? ["--fullscreen"] : []) + [r.game.path]
         },
         Emulator(id: "shadps4", name: "shadPS4", website: URL(string: "https://shadps4.net")!, license: "GPL-2.0",
@@ -96,7 +86,7 @@ extension Emulator {
             (r.fullscreen ? ["-f"] : []) + [r.game.path]
         },
         Emulator(id: "azahar", name: "Azahar", website: URL(string: "https://azahar-emu.org")!, license: "GPL-2.0",
-                 sources: [.github(repo: "azahar-emu/azahar", asset: #"^azahar-macos-universal-.*\.zip$"#)]) { r in
+                 sources: [.github(repo: "azahar-emu/azahar", asset: #"^azahar-macos-arm64-.*\.zip$"#)]) { r in
             (r.fullscreen ? ["-f"] : []) + [r.game.path]
         },
         Emulator(id: "flycast", name: "Flycast", website: URL(string: "https://github.com/flyinghead/flycast")!,

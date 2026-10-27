@@ -214,12 +214,7 @@ final class EmulatorManager {
         if FileManager.default.fileExists(atPath: core.path) { return core }
 
         try FileManager.default.createDirectory(at: folder, withIntermediateDirectories: true)
-        #if arch(arm64)
-        let arch = "arm64"
-        #else
-        let arch = "x86_64"
-        #endif
-        let url = URL(string: "https://buildbot.libretro.com/nightly/apple/osx/\(arch)/latest/\(name)_libretro.dylib.zip")!
+        let url = URL(string: "https://buildbot.libretro.com/nightly/apple/osx/arm64/latest/\(name)_libretro.dylib.zip")!
         let zip = Paths.downloads.appendingPathComponent(url.lastPathComponent)
         defer { try? FileManager.default.removeItem(at: zip) }
         _ = try await Downloader.download(url, to: zip) { _ in }
