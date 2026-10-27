@@ -3,11 +3,15 @@ options:
   bundleIdPrefix: dev.ferhanakkan
   deploymentTarget:
     macOS: "14.0"
+  developmentLanguage: en
   createIntermediateGroups: true
 settings:
   base:
     SWIFT_VERSION: "5.0"
     MARKETING_VERSION: "0.1.0"
+    # Apple silicon only.
+    ARCHS: arm64
+    ONLY_ACTIVE_ARCH: NO
     CURRENT_PROJECT_VERSION: "1"
 targets:
   Arcadia:
