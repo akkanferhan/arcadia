@@ -1,0 +1,19 @@
+Arcadia/Views/Components/CoverArt.swift
+  s_947a5ec9b0d04e::t_e69a3392720b4a 12-25
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "597610e8ffaaf755d5989a62dde226989febc8ab",
+  "prompts": {},
+  "sessions": {
+    "s_947a5ec9b0d04e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "ae2b73cb-5faa-44a9-b7a6-4d22739dbe7c",
+        "model": "unknown"
+      },
+      "human_author": "Ferhan Akkan <ferhanakkan@gmail.com>"
+    }
+  }
+}
