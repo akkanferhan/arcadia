@@ -1,0 +1,23 @@
+Arcadia/Services/Presets/GamepadPresets.swift
+  s_947a5ec9b0d04e::t_e90144645b2dc9 1-160
+Arcadia/Services/Presets/NintendoPresets.swift
+  s_947a5ec9b0d04e::t_fa91726a1ce700 32,54,117,157
+Arcadia/Services/Presets/ModernPlayStationPresets.swift
+  s_947a5ec9b0d04e::t_fa91726a1ce700 40
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "7ac22af1a1b8335f20a860d5159dda1888665f81",
+  "prompts": {},
+  "sessions": {
+    "s_947a5ec9b0d04e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "ae2b73cb-5faa-44a9-b7a6-4d22739dbe7c",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Ferhan Akkan <ferhanakkan@gmail.com>"
+    }
+  }
+}
