@@ -9,13 +9,18 @@ scans your game folders, shows box art and starts games with a double-click.
 
 > Status: early development. PS4 and especially PS5 emulation are experimental upstream.
 >
-> Arcadia runs on **Macs with Apple silicon (M1 or later)** only. Cemu and SharpEmu only ship
-> Intel builds; macOS runs them through Rosetta 2 and offers to install it the first time.
+> Arcadia runs on **Macs with Apple silicon (M1 or later)** only. PCSX2, shadPS4, Cemu and SharpEmu
+> only ship Intel builds for macOS; they run through Rosetta 2, which macOS offers to install the
+> first time. RPCS3 needs macOS 15 or later.
 
 ## Features
 
 - **One library for every system**: a folder per console, games grouped by maker in the sidebar
 - **Emulators installed for you** from each project's official releases, with one-click updates
+- **Zero emulator setup**: Arcadia writes tuned settings for every emulator before each launch
+  (Metal or Vulkan renderer, resolution matched to your Mac's GPU, no first-run wizards or update
+  prompts, BIOS folders, gamepad mappings). One "Graphics quality" setting covers them all
+- **Select + Start** on a gamepad quits back to Arcadia in most emulators
 - **Box art** from your PS3/PS4/PS5 game folders or [libretro-thumbnails](https://github.com/libretro-thumbnails)
 - **Drag and drop** games onto a console page to add them
 - Favorites, recently played, play time and search
@@ -73,6 +78,13 @@ The Xcode project is generated from `project.yml` with [XcodeGen](https://github
 After changing `project.yml` or adding files, run `xcodegen generate`.
 
 Arcadia keeps emulators, box art and play history in `~/Library/Application Support/Arcadia`.
+
+### Emulator presets
+
+Each emulator's tuned settings live in `Arcadia/Services/Presets/`. They are written right before
+every launch and only touch the keys Arcadia manages. Where an emulator supports it, Arcadia keeps
+its settings and saves in `~/Library/Application Support/Arcadia/Data/<emulator>` so a separately
+installed copy of the emulator is not affected.
 
 ### Translations
 
