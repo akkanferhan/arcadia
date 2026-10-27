@@ -9,9 +9,21 @@ struct Installation: Codable, Equatable {
     let installedAt: Date
 }
 
+enum InstallStage: Equatable {
+    case resolving, downloading, installing
+
+    var title: LocalizedStringResource {
+        switch self {
+        case .resolving: "Finding latest version"
+        case .downloading: "Downloading"
+        case .installing: "Installing"
+        }
+    }
+}
+
 enum InstallState: Equatable {
     case notInstalled
-    case working(stage: String, progress: Double?)
+    case working(stage: InstallStage, progress: Double?)
     case installed(Installation)
     case failed(String)
 
@@ -51,7 +63,7 @@ final class EmulatorManager {
 
     func install(_ emulator: Emulator) {
         guard !state(emulator.id).isWorking else { return }
-        states[emulator.id] = .working(stage: "Finding latest version", progress: nil)
+        states[emulator.id] = .working(stage: .resolving, progress: nil)
         tasks[emulator.id] = Task {
             do {
                 let installation = try await performInstall(emulator)
@@ -81,21 +93,21 @@ final class EmulatorManager {
 
     private func performInstall(_ emulator: Emulator) async throws -> Installation {
         let id = emulator.id
-        states[id] = .working(stage: "Finding latest version", progress: nil)
+        states[id] = .working(stage: .resolving, progress: nil)
         let release = try await resolve(emulator)
 
-        states[id] = .working(stage: "Downloading", progress: 0)
+        states[id] = .working(stage: .downloading, progress: 0)
         let archive = Paths.downloads.appendingPathComponent(release.url.lastPathComponent)
         defer { try? FileManager.default.removeItem(at: archive) }
         _ = try await Downloader.download(release.url, to: archive) { value in
             Task { @MainActor in
-                guard case .working(let stage, _) = self.states[id], stage == "Downloading" else { return }
-                self.states[id] = .working(stage: "Downloading", progress: value)
+                guard case .working(let stage, _) = self.states[id], stage == .downloading else { return }
+                self.states[id] = .working(stage: .downloading, progress: value)
             }
         }
         try Task.checkCancellation()
 
-        states[id] = .working(stage: "Installing", progress: nil)
+        states[id] = .working(stage: .installing, progress: nil)
         let staging = Paths.downloads.appendingPathComponent("\(id)-\(UUID().uuidString)", isDirectory: true)
         defer { try? FileManager.default.removeItem(at: staging) }
         try FileManager.default.createDirectory(at: staging, withIntermediateDirectories: true)
@@ -230,8 +242,8 @@ enum InstallError: LocalizedError {
 
     var errorDescription: String? {
         switch self {
-        case .noDownload: "No macOS download was found. Check your connection and try again."
-        case .noAppInArchive: "The download did not contain a Mac app."
+        case .noDownload: String(localized: "No macOS download was found. Check your connection and try again.")
+        case .noAppInArchive: String(localized: "The download did not contain a Mac app.")
         }
     }
 }

@@ -25,7 +25,7 @@ struct HomeView: View {
                     SectionHeader(title: "Consoles",
                                   subtitle: library.games.isEmpty
                                     ? "Every system Arcadia can play"
-                                    : "\(library.games.count) games across \(library.stockedSystems.count) systems")
+                                    : "\(library.games.count) games across \(library.stockedSystems.count) systems" as LocalizedStringKey)
                     LazyVGrid(columns: [GridItem(.adaptive(minimum: 190), spacing: 16)], spacing: 16) {
                         ForEach(library.games.isEmpty ? GameSystem.all : library.stockedSystems) { system in
                             SystemTile(system: system)
@@ -121,11 +121,11 @@ private struct WelcomeHero: View {
                 .offset(x: 40)
 
             VStack(alignment: .leading, spacing: 12) {
-                Text(hasGames ? "Ready when you are" : "Welcome to Arcadia")
+                (hasGames ? Text("Ready when you are") : Text("Welcome to Arcadia"))
                     .font(.system(size: 34, weight: .bold, design: .rounded))
-                Text(hasGames
-                     ? "Pick a console, double-click a game and play. Arcadia installs the emulator for you."
-                     : "Put your games in a system's folder, or drag them onto a console page. Arcadia does the rest.")
+                (hasGames
+                     ? Text("Pick a console, double-click a game and play. Arcadia installs the emulator for you.")
+                     : Text("Put your games in a system's folder, or drag them onto a console page. Arcadia does the rest."))
                     .font(.title3)
                     .foregroundStyle(.white.opacity(0.8))
                     .frame(maxWidth: 520, alignment: .leading)
@@ -157,7 +157,7 @@ private struct WelcomeHero: View {
 
 /// Horizontal row of games.
 private struct Shelf: View {
-    let title: String
+    let title: LocalizedStringKey
     let games: [Game]
 
     var body: some View {
@@ -200,7 +200,7 @@ struct SystemTile: View {
                     Text(system.name)
                         .font(.headline)
                         .lineLimit(1)
-                    Text(count == 0 ? "\(String(system.year))" : "\(count) game\(count == 1 ? "" : "s")")
+                    (count == 0 ? Text(verbatim: String(system.year)) : Text("\(count) games"))
                         .font(.caption)
                         .foregroundStyle(.white.opacity(0.75))
                 }

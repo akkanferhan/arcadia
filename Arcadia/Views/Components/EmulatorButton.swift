@@ -20,7 +20,7 @@ struct EmulatorButton: View {
         case let .working(stage, progress):
             HStack(spacing: 10) {
                 VStack(alignment: .leading, spacing: 4) {
-                    Text(stage).font(.caption).foregroundStyle(.secondary)
+                    Text(stage.title).font(.caption).foregroundStyle(.secondary)
                     if let progress {
                         ProgressView(value: progress).frame(width: 120)
                     } else {

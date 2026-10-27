@@ -44,7 +44,7 @@ final class AppModel {
             do {
                 try await launcher.launch(game, emulators: emulators, library: library)
             } catch Launcher.Failure.emulatorMissing(let emulator) {
-                problem = Problem(message: "\(emulator.name) plays \(game.system.name) games. Install it now? It's free and takes about a minute.",
+                problem = Problem(message: String(localized: "\(emulator.name) plays \(game.system.name) games. Install it now? It's free and takes about a minute."),
                                   missing: emulator)
             } catch {
                 problem = Problem(message: error.localizedDescription)

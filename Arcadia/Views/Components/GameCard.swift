@@ -60,9 +60,10 @@ struct GameCard: View {
         .onTapGesture(count: 2) { model.play(game) }
         .contextMenu {
             Button("Play", systemImage: "play.fill") { model.play(game) }
-            Button(record.favorite ? "Remove from Favorites" : "Add to Favorites",
-                   systemImage: record.favorite ? "star.slash" : "star") {
-                model.library.toggleFavorite(game)
+            if record.favorite {
+                Button("Remove from Favorites", systemImage: "star.slash") { model.library.toggleFavorite(game) }
+            } else {
+                Button("Add to Favorites", systemImage: "star") { model.library.toggleFavorite(game) }
             }
             Divider()
             Button("Show in Finder", systemImage: "folder") {
@@ -115,8 +116,8 @@ struct GameGrid: View {
 
 /// A full page with a title and a grid, used for favorites and search.
 struct GameGridPage: View {
-    let title: String
-    let subtitle: String
+    let title: LocalizedStringKey
+    let subtitle: LocalizedStringKey
     let games: [Game]
 
     var body: some View {

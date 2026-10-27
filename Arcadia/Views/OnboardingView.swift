@@ -72,7 +72,7 @@ struct OnboardingView: View {
 
 private struct Step: View {
     let number: Int
-    let text: String
+    let text: LocalizedStringKey
 
     var body: some View {
         HStack(alignment: .top, spacing: 12) {

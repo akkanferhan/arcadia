@@ -17,7 +17,7 @@ struct SidebarView: View {
             ForEach(Maker.allCases) { maker in
                 let systems = visibleSystems(for: maker)
                 if !systems.isEmpty {
-                    Section(maker.rawValue) {
+                    Section(String(localized: maker.title)) {
                         ForEach(systems) { system in
                             HStack(spacing: 10) {
                                 SystemBadge(system: system)

@@ -20,6 +20,7 @@ scans your game folders, shows box art and starts games with a double-click.
 - **Drag and drop** games onto a console page to add them
 - Favorites, recently played, play time and search
 - Full screen by default; quit a game from Arcadia's now-playing bar
+- Available in English, Türkçe, 简体中文, Español, हिन्दी, العربية, Français and Português (Brasil)
 
 ![Emulator manager](docs/emulators.png)
 
@@ -72,6 +73,12 @@ The Xcode project is generated from `project.yml` with [XcodeGen](https://github
 After changing `project.yml` or adding files, run `xcodegen generate`.
 
 Arcadia keeps emulators, box art and play history in `~/Library/Application Support/Arcadia`.
+
+### Translations
+
+All user-facing text lives in `Arcadia/Resources/Localizable.xcstrings`. Xcode adds new strings to the
+catalog when you build; translate them in Xcode's String Catalog editor. To preview a language, run with
+`-AppleLanguages "(tr)"` in the scheme's arguments.
 
 ## Project layout
 

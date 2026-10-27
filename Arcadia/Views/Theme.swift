@@ -13,7 +13,7 @@ enum Theme {
 extension TimeInterval {
     /// "2 h 15 min", "12 min" or "Under a minute".
     var playTimeText: String {
-        guard self >= 60 else { return "Under a minute" }
+        guard self >= 60 else { return String(localized: "Under a minute") }
         let formatter = DateComponentsFormatter()
         formatter.allowedUnits = self >= 3600 ? [.hour, .minute] : [.minute]
         formatter.unitsStyle = .short
@@ -23,8 +23,8 @@ extension TimeInterval {
 
 /// Section title used on the home and grid pages.
 struct SectionHeader: View {
-    let title: String
-    var subtitle: String?
+    let title: LocalizedStringKey
+    var subtitle: LocalizedStringKey?
 
     var body: some View {
         VStack(alignment: .leading, spacing: 2) {
@@ -57,7 +57,7 @@ struct SystemBadge: View {
 
 /// Small capsule label such as "Experimental".
 struct Tag: View {
-    let text: String
+    let text: LocalizedStringKey
     var color: Color = .secondary
 
     var body: some View {

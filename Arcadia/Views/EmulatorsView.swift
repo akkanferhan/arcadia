@@ -51,7 +51,7 @@ private struct EmulatorCard: View {
                         if emulator.needsRosetta { Tag(text: "Rosetta") }
                     }
                     Link(destination: emulator.website) {
-                        Text("\(emulator.website.host() ?? "") · \(emulator.license)")
+                        Text(verbatim: "\(emulator.website.host() ?? "") · \(emulator.license)")
                     }
                     .font(.caption)
                     .foregroundStyle(.secondary)

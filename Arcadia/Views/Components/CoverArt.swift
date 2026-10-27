@@ -9,15 +9,20 @@ struct CoverArt: View {
         ZStack {
             if let image {
                 // The whole cover over a blurred copy of itself, so any box shape fits the card.
-                Image(nsImage: image)
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .blur(radius: 24)
-                    .opacity(0.7)
-                Image(nsImage: image)
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .shadow(color: .black.opacity(0.4), radius: 10)
+                Color.clear
+                    .overlay {
+                        Image(nsImage: image)
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .blur(radius: 24)
+                            .opacity(0.7)
+                    }
+                    .overlay {
+                        Image(nsImage: image)
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .shadow(color: .black.opacity(0.4), radius: 10)
+                    }
             } else {
                 placeholder
             }

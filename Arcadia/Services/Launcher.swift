@@ -21,8 +21,8 @@ final class Launcher {
 
         var errorDescription: String? {
             switch self {
-            case .emulatorMissing(let emulator): "\(emulator.name) is not installed yet."
-            case .alreadyRunning: "Another game is already running."
+            case .emulatorMissing(let emulator): String(localized: "\(emulator.name) is not installed yet.")
+            case .alreadyRunning: String(localized: "Another game is already running.")
             }
         }
     }
