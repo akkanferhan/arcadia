@@ -1,0 +1,27 @@
+Arcadia/Views/Components/NowPlayingBar.swift
+  s_947a5ec9b0d04e::t_84e8c49e3222cc 1-42
+Arcadia/Views/Components/CoverArt.swift
+  s_947a5ec9b0d04e::t_a2c40c861734c0 11,15-20,26
+  s_947a5ec9b0d04e::t_85e81f03aec27f 1-10,12-14,21-25,27-58
+Arcadia/Views/Components/GameCard.swift
+  s_947a5ec9b0d04e::t_e90379080d39c8 1-13,15,17-138
+  s_947a5ec9b0d04e::t_f9aed292ff8554 14,16
+Arcadia/Views/Components/EmulatorButton.swift
+  s_947a5ec9b0d04e::t_79a1241bd9c554 1-73
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "de9c2085ffd50f3d372cd42d86854d6fd6d8f937",
+  "prompts": {},
+  "sessions": {
+    "s_947a5ec9b0d04e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "ae2b73cb-5faa-44a9-b7a6-4d22739dbe7c",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Ferhan Akkan <ferhanakkan@gmail.com>"
+    }
+  }
+}
