@@ -103,7 +103,7 @@ private struct Banner: View {
                     .font(.callout)
                     .foregroundStyle(.white.opacity(0.85))
                     if let hint = system.biosHint {
-                        Label(hint, systemImage: "info.circle")
+                        Label { Text(hint) } icon: { Image(systemName: "info.circle") }
                             .font(.caption)
                             .foregroundStyle(.white.opacity(0.7))
                             .padding(.top, 4)
