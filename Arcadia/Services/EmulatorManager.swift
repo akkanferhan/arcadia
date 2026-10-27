@@ -117,12 +117,13 @@ final class EmulatorManager {
         }
         let relative = String(payload.path.dropFirst(staging.path.count + 1))
 
-        // Keep RetroArch cores across updates.
+        // Keep RetroArch cores and portable save data (SharpEmu's `user`) across updates.
         let target = Paths.emulator(id)
-        let cores = target.appendingPathComponent("cores")
-        let keptCores = staging.appendingPathComponent("cores")
-        if FileManager.default.fileExists(atPath: cores.path) {
-            try? FileManager.default.moveItem(at: cores, to: keptCores)
+        for folder in ["cores", "user"] {
+            let old = target.appendingPathComponent(folder)
+            if FileManager.default.fileExists(atPath: old.path) {
+                try? FileManager.default.moveItem(at: old, to: staging.appendingPathComponent(folder))
+            }
         }
         try? FileManager.default.removeItem(at: target)
         try FileManager.default.moveItem(at: staging, to: target)

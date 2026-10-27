@@ -15,6 +15,10 @@ final class Launcher {
         didSet { UserDefaults.standard.set(fullscreen, forKey: "fullscreen") }
     }
 
+    var quality = GraphicsQuality(rawValue: UserDefaults.standard.string(forKey: "graphicsQuality") ?? "") ?? .automatic {
+        didSet { UserDefaults.standard.set(quality.rawValue, forKey: "graphicsQuality") }
+    }
+
     enum Failure: LocalizedError {
         case emulatorMissing(Emulator)
         case alreadyRunning
@@ -39,24 +43,27 @@ final class Launcher {
             ? PlayStationFolder.bootFile(in: game.url, systemID: game.systemID)
             : game.url
         var request = LaunchRequest(game: target, fullscreen: fullscreen)
-        var arguments: [String]
         if let core = game.system.core {
             request.core = try await emulators.core(core)
-            arguments = emulator.arguments(request)
-            arguments.insert("--appendconfig=\(try retroArchConfig(bios: library.biosFolder).path)", at: 0)
-        } else {
-            arguments = emulator.arguments(request)
         }
+        // Arcadia's tuned settings are written before every launch, so emulator menus never matter.
+        let context = PresetContext(emulator: emulator, system: game.system, game: target, core: request.core,
+                                    install: emulators.payloadURL(emulator.id)!, bios: library.biosFolder,
+                                    scale: quality.scale, fullscreen: fullscreen)
+        let preset = try await Presets.apply(context)
+        let arguments = preset.arguments + emulator.arguments(request)
 
         let process = Process()
         if payload.pathExtension == "app" {
             // LaunchServices brings the app to the front and handles Rosetta; -W waits until it quits.
             process.executableURL = URL(fileURLWithPath: "/usr/bin/open")
-            process.arguments = ["-W", "-n", "-a", payload.path, "--args"] + arguments
+            let environment = preset.environment.sorted { $0.key < $1.key }.flatMap { ["--env", "\($0.key)=\($0.value)"] }
+            process.arguments = ["-W", "-n"] + environment + ["-a", payload.path, "--args"] + arguments
         } else {
             process.executableURL = payload
             process.arguments = arguments
-            process.currentDirectoryURL = payload.deletingLastPathComponent()
+            process.environment = ProcessInfo.processInfo.environment.merging(preset.environment) { $1 }
+            process.currentDirectoryURL = preset.workingDirectory ?? payload.deletingLastPathComponent()
         }
         process.terminationHandler = { [weak self] _ in
             Task { @MainActor in self?.finished(library: library) }
@@ -79,16 +86,5 @@ final class Launcher {
         if let game = running { library.recordSession(game, started: startedAt) }
         running = nil
         process = nil
-    }
-
-    /// Points RetroArch at the library's BIOS folder.
-    private func retroArchConfig(bios: URL) throws -> URL {
-        let url = Paths.support.appendingPathComponent("retroarch-arcadia.cfg")
-        let config = """
-        system_directory = "\(bios.path)"
-        pause_nonactive = "false"
-        """
-        try config.write(to: url, atomically: true, encoding: .utf8)
-        return url
     }
 }

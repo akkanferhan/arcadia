@@ -16,6 +16,13 @@ enum Paths {
 
     static func emulator(_ id: String) -> URL { emulators.appendingPathComponent(id, isDirectory: true) }
 
+    /// Settings, saves and memory cards of one emulator, kept apart from the emulator's own app.
+    static func data(_ id: String) -> URL {
+        let url = folder("Data").appendingPathComponent(id, isDirectory: true)
+        try? FileManager.default.createDirectory(at: url, withIntermediateDirectories: true)
+        return url
+    }
+
     static var defaultLibrary: URL {
         FileManager.default.homeDirectoryForCurrentUser.appendingPathComponent("Games", isDirectory: true)
     }

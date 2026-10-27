@@ -50,9 +50,10 @@ extension Emulator {
             ["-batch"] + (r.fullscreen ? ["-fullscreen"] : []) + ["--", r.game.path]
         },
         Emulator(id: "pcsx2", name: "PCSX2", website: URL(string: "https://pcsx2.net")!, license: "GPL-3.0",
-                 sources: [.github(repo: "PCSX2/pcsx2", asset: #"macos-Qt\.tar\.xz$"#)]) { r in
+                 sources: [.github(repo: "PCSX2/pcsx2", asset: #"macos-Qt\.tar\.xz$"#)],
+                 arguments: { r in
             ["-batch"] + (r.fullscreen ? ["-fullscreen"] : []) + ["--", r.game.path]
-        },
+        }, needsRosetta: true),
         Emulator(id: "ppsspp", name: "PPSSPP", website: URL(string: "https://www.ppsspp.org")!, license: "GPL-2.0",
                  sources: [.github(repo: "hrydgard/ppsspp", asset: #"^PPSSPPSDL-macOS-.*\.zip$"#)]) { r in
             (r.fullscreen ? ["--fullscreen"] : []) + [r.game.path]
@@ -65,7 +66,7 @@ extension Emulator {
                  sources: [.github(repo: "shadps4-emu/shadPS4", asset: #"macos-sdl.*\.zip$"#)],
                  arguments: { r in
             ["-g", r.game.path] + (r.fullscreen ? ["-f", "true"] : [])
-        }, experimental: true),
+        }, needsRosetta: true, experimental: true),
         Emulator(id: "sharpemu", name: "SharpEmu", website: URL(string: "https://sharpemu.app")!, license: "GPL-2.0",
                  sources: [
                     .github(repo: "sharpemu/sharpemu-mac", asset: #"osx-x64-app\.zip$"#, includePrereleases: true),
