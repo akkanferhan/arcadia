@@ -14,6 +14,8 @@ struct PresetContext {
     /// Internal resolution multiplier from Arcadia's graphics quality setting.
     let scale: Int
     let fullscreen: Bool
+    /// Reports slow preparation steps (downloads) to the now-playing bar.
+    var report: @Sendable (LocalizedStringResource) -> Void = { _ in }
 
     /// Settings, saves and memory cards for this emulator, owned by Arcadia.
     var data: URL { Paths.data(emulator.id) }

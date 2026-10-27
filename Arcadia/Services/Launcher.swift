@@ -7,6 +7,8 @@ import Observation
 final class Launcher {
     private(set) var running: Game?
     private(set) var preparing: Game?
+    /// What Arcadia is doing before the game starts, such as downloading firmware.
+    private(set) var preparingStatus: LocalizedStringResource?
     private var process: Process?
     private var payload: URL?
     private var startedAt = Date.now
@@ -33,23 +35,27 @@ final class Launcher {
 
     func launch(_ game: Game, emulators: EmulatorManager, library: Library) async throws {
         guard running == nil else { throw Failure.alreadyRunning }
-        let emulator = Emulator.with(id: game.system.emulatorID)!
+        // Without a real BIOS some systems play through a core with a built-in one.
+        let player = Bios.player(for: game.system, bios: library.biosFolder)
+        let emulator = player.emulator
         guard let payload = emulators.payloadURL(emulator.id) else { throw Failure.emulatorMissing(emulator) }
 
         preparing = game
-        defer { preparing = nil }
+        defer { preparing = nil; preparingStatus = nil }
 
         let target = game.system.gameIsFolder
             ? PlayStationFolder.bootFile(in: game.url, systemID: game.systemID)
             : game.url
         var request = LaunchRequest(game: target, fullscreen: fullscreen)
-        if let core = game.system.core {
+        if let core = player.core {
             request.core = try await emulators.core(core)
         }
         // Arcadia's tuned settings are written before every launch, so emulator menus never matter.
         let context = PresetContext(emulator: emulator, system: game.system, game: target, core: request.core,
                                     install: emulators.payloadURL(emulator.id)!, bios: library.biosFolder,
-                                    scale: quality.scale, fullscreen: fullscreen)
+                                    scale: quality.scale, fullscreen: fullscreen) { [weak self] status in
+            Task { @MainActor in self?.preparingStatus = status }
+        }
         let preset = try await Presets.apply(context)
         let arguments = preset.arguments + emulator.arguments(request)
 

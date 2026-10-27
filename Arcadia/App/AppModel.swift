@@ -68,9 +68,24 @@ final class AppModel {
         }
     }
 
+    /// Copies dropped BIOS files into place. Returns the names it did not recognise.
+    func importBios(_ urls: [URL]) -> [String] {
+        var unknown: [String] = []
+        for url in urls {
+            guard let target = Bios.destination(for: url, bios: library.biosFolder) else {
+                unknown.append(url.lastPathComponent)
+                continue
+            }
+            try? FileManager.default.createDirectory(at: target.deletingLastPathComponent(), withIntermediateDirectories: true)
+            try? FileManager.default.removeItem(at: target)
+            try? FileManager.default.copyItem(at: url, to: target)
+        }
+        return unknown
+    }
+
     /// Installs the emulator for every system that has games.
     func installNeededEmulators() {
-        let ids = Set(library.stockedSystems.map(\.emulatorID))
+        let ids = Set(library.stockedSystems.map { Bios.player(for: $0, bios: library.biosFolder).emulator.id })
         for emulator in Emulator.all where ids.contains(emulator.id) && !emulators.isInstalled(emulator.id) {
             emulators.install(emulator)
         }
