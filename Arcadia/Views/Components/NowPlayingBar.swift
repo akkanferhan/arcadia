@@ -16,7 +16,11 @@ struct NowPlayingBar: View {
                         .font(.caption.weight(.semibold))
                         .foregroundStyle(.secondary)
                     Text(game.title).font(.headline).lineLimit(1)
-                    Text(game.system.name).font(.caption).foregroundStyle(.secondary)
+                    if launcher.running == nil, let status = launcher.preparingStatus {
+                        Text(status).font(.caption).foregroundStyle(.secondary)
+                    } else {
+                        Text(game.system.name).font(.caption).foregroundStyle(.secondary)
+                    }
                 }
                 Spacer(minLength: 20)
                 if launcher.running != nil {

@@ -6,7 +6,7 @@ struct EmulatorsView: View {
 
     var body: some View {
         let missing = model.library.stockedSystems
-            .map(\.emulatorID)
+            .map { Bios.player(for: $0, bios: model.library.biosFolder).emulator.id }
             .filter { !model.emulators.isInstalled($0) && !model.emulators.state($0).isWorking }
 
         ScrollView {
@@ -25,6 +25,8 @@ struct EmulatorsView: View {
                         .controlSize(.large)
                     }
                 }
+
+                BiosCard()
 
                 LazyVGrid(columns: [GridItem(.adaptive(minimum: 340), spacing: 16)], spacing: 16) {
                     ForEach(Emulator.all) { emulator in

@@ -19,6 +19,17 @@ targets:
     platform: macOS
     sources:
       - path: Arcadia
+    info:
+      path: Arcadia/Info.plist
+      properties:
+        CFBundleShortVersionString: $(MARKETING_VERSION)
+        CFBundleVersion: $(CURRENT_PROJECT_VERSION)
+        # Sony serves PS3 system software over HTTP only; RPCS3 verifies the file's hashes.
+        NSAppTransportSecurity:
+          NSExceptionDomains:
+            playstation.net:
+              NSIncludesSubdomains: true
+              NSExceptionAllowsInsecureHTTPLoads: true
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: dev.ferhanakkan.Arcadia

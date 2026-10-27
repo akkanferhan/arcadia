@@ -38,10 +38,16 @@ extension Presets {
             ini.set("game_window_stop", "Ctrl+Q", section: "Shortcuts")
         }
 
-        // Install the PS3 firmware the player put in bios/ps3, once, without any window.
+        // Install the PS3 system software once, without any window. It comes from bios/ps3 or,
+        // when the player has none, straight from Sony's update servers.
         let firmware = context.bios.appendingPathComponent("ps3/PS3UPDAT.PUP")
         let installed = root.appendingPathComponent("dev_flash/vsh/etc/version.txt")
-        if FileManager.default.fileExists(atPath: firmware.path), !FileManager.default.fileExists(atPath: installed.path) {
+        if !FileManager.default.fileExists(atPath: installed.path) {
+            if !FileManager.default.fileExists(atPath: firmware.path) {
+                context.report("Downloading PS3 system software from Sony…")
+                try await PS3Firmware.download(to: firmware)
+            }
+            context.report("Installing PS3 system software…")
             let executable = context.executableFolder.appendingPathComponent("rpcs3")
             try await Task.detached {
                 let process = Process()
@@ -51,6 +57,11 @@ extension Presets {
                 try process.run()
                 process.waitUntilExit()
             }.value
+            // RPCS3 checks every part of the file against the hashes inside it before installing.
+            guard FileManager.default.fileExists(atPath: installed.path) else {
+                try? FileManager.default.removeItem(at: firmware)
+                throw PS3Firmware.Failure.corrupted
+            }
         }
         return PresetLaunch(environment: ["HOME": home.path])
     }
@@ -90,6 +101,36 @@ extension Presets {
             "--vsync=on",
             "--overlay=off",
         ])
+    }
+}
+
+/// The PS3 system software Sony publishes for console owners.
+enum PS3Firmware {
+    enum Failure: LocalizedError {
+        case unavailable, corrupted
+        var errorDescription: String? {
+            switch self {
+            case .unavailable: String(localized: "Sony's PS3 update server could not be reached.")
+            case .corrupted: String(localized: "The PS3 system software download was damaged. Try again.")
+            }
+        }
+    }
+
+    /// Sony serves the update list and file over plain HTTP; RPCS3 verifies the file's
+    /// internal hashes when it installs it.
+    static func download(to destination: URL) async throws {
+        let list = URL(string: "http://fus01.ps3.update.playstation.net/update/ps3/list/us/ps3-updatelist.txt")!
+        let (data, _) = try await URLSession.shared.data(from: list)
+        let text = String(decoding: data, as: UTF8.self)
+        guard let match = text.firstMatch(of: #/CDN=(http://[^;]+/PS3UPDAT\.PUP)/#),
+              let url = URL(string: String(match.1)) else { throw Failure.unavailable }
+
+        let temporary = Paths.downloads.appendingPathComponent("PS3UPDAT.PUP")
+        defer { try? FileManager.default.removeItem(at: temporary) }
+        _ = try await Downloader.download(url, to: temporary) { _ in }
+        try FileManager.default.createDirectory(at: destination.deletingLastPathComponent(), withIntermediateDirectories: true)
+        try? FileManager.default.removeItem(at: destination)
+        try FileManager.default.moveItem(at: temporary, to: destination)
     }
 }
 

@@ -218,6 +218,7 @@ extension Presets {
         let hdd = data.appendingPathComponent("xbox_hdd.qcow2")
         if !FileManager.default.fileExists(atPath: hdd.path) {
             // xemu cannot create a hard disk itself; the project publishes a blank, legal image.
+            context.report("Preparing the Xbox hard disk…")
             let zip = Paths.downloads.appendingPathComponent("xbox_hdd.qcow2.zip")
             defer { try? FileManager.default.removeItem(at: zip) }
             let url = URL(string: "https://github.com/xemu-project/xemu-hdd-image/releases/download/1.0/xbox_hdd.qcow2.zip")!
