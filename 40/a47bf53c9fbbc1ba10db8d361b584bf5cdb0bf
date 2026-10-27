@@ -1,0 +1,191 @@
+project.yml
+  s_947a5ec9b0d04e::t_cf5044dbe8b3bf 22-26,44-45
+Arcadia.xcodeproj/project.pbxproj
+  s_947a5ec9b0d04e::t_fa91726a1ce700 12,32,46,50,53-66,70,83,88,101,113-123,129,159,184,201-208,243,263-264,351-352,452-455,470,543-546,561
+Arcadia/App/Arcadia-Bridging-Header.h
+  s_947a5ec9b0d04e::t_cf5044dbe8b3bf 1
+Vendor/SDL3-LICENSE.txt
+  s_947a5ec9b0d04e::t_5a9d356dc3e057 1-18
+Vendor/SDL3.framework/Headers
+  s_947a5ec9b0d04e::t_dec2ba1da65138 1
+Vendor/SDL3.framework/Resources
+  s_947a5ec9b0d04e::t_88186845f21d63 1
+Vendor/SDL3.framework/SDL3
+  s_947a5ec9b0d04e::t_525bbe5cc7d365 1
+Vendor/SDL3.framework/Versions/A/Headers/SDL.h
+  s_947a5ec9b0d04e::t_d53bd67b61a725 1-91
+Vendor/SDL3.framework/Versions/A/Headers/SDL_assert.h
+  s_947a5ec9b0d04e::t_3cb6f3c5af35db 1-710
+Vendor/SDL3.framework/Versions/A/Headers/SDL_asyncio.h
+  s_947a5ec9b0d04e::t_b6676a2d051061 1-550
+Vendor/SDL3.framework/Versions/A/Headers/SDL_atomic.h
+  s_947a5ec9b0d04e::t_4db482193a5aa0 1-692
+Vendor/SDL3.framework/Versions/A/Headers/SDL_audio.h
+  s_947a5ec9b0d04e::t_652bf2dd5941ad 1-2370
+Vendor/SDL3.framework/Versions/A/Headers/SDL_begin_code.h
+  s_947a5ec9b0d04e::t_88f263f6774ed3 1-553
+Vendor/SDL3.framework/Versions/A/Headers/SDL_bits.h
+  s_947a5ec9b0d04e::t_de45e13d8dafc0 1-146
+Vendor/SDL3.framework/Versions/A/Headers/SDL_blendmode.h
+  s_947a5ec9b0d04e::t_7d5b7478cb921c 1-202
+Vendor/SDL3.framework/Versions/A/Headers/SDL_camera.h
+  s_947a5ec9b0d04e::t_c2957735baec4a 1-535
+Vendor/SDL3.framework/Versions/A/Headers/SDL_clipboard.h
+  s_947a5ec9b0d04e::t_b87f572f7fe593 1-331
+Vendor/SDL3.framework/Versions/A/Headers/SDL_close_code.h
+  s_947a5ec9b0d04e::t_03913efe84b14c 1-41
+Vendor/SDL3.framework/Versions/A/Headers/SDL_copying.h
+  s_947a5ec9b0d04e::t_79ecc3fa8d397d 1-22
+Vendor/SDL3.framework/Versions/A/Headers/SDL_cpuinfo.h
+  s_947a5ec9b0d04e::t_050020ba2f2665 1-374
+Vendor/SDL3.framework/Versions/A/Headers/SDL_dialog.h
+  s_947a5ec9b0d04e::t_88df7428ff37a9 1-343
+Vendor/SDL3.framework/Versions/A/Headers/SDL_dlopennote.h
+  s_947a5ec9b0d04e::t_c678a3808fd346 1-234
+Vendor/SDL3.framework/Versions/A/Headers/SDL_egl.h
+  s_947a5ec9b0d04e::t_aea363a6820b49 1-2355
+Vendor/SDL3.framework/Versions/A/Headers/SDL_endian.h
+  s_947a5ec9b0d04e::t_abb11853ca0bc5 1-645
+Vendor/SDL3.framework/Versions/A/Headers/SDL_error.h
+  s_947a5ec9b0d04e::t_5c5e575e45b699 1-226
+Vendor/SDL3.framework/Versions/A/Headers/SDL_events.h
+  s_947a5ec9b0d04e::t_0b25a5f9a16eb5 1-1651
+Vendor/SDL3.framework/Versions/A/Headers/SDL_filesystem.h
+  s_947a5ec9b0d04e::t_bb84ad138d0b73 1-537
+Vendor/SDL3.framework/Versions/A/Headers/SDL_gamepad.h
+  s_947a5ec9b0d04e::t_8f081db52e5ac4 1-1657
+Vendor/SDL3.framework/Versions/A/Headers/SDL_gpu.h
+  s_947a5ec9b0d04e::t_48e0452729d77a 1-4637
+Vendor/SDL3.framework/Versions/A/Headers/SDL_guid.h
+  s_947a5ec9b0d04e::t_7e3d7361a457d5 1-106
+Vendor/SDL3.framework/Versions/A/Headers/SDL_haptic.h
+  s_947a5ec9b0d04e::t_00b095eba05549 1-1461
+Vendor/SDL3.framework/Versions/A/Headers/SDL_hidapi.h
+  s_947a5ec9b0d04e::t_e10d2c1d38748d 1-571
+Vendor/SDL3.framework/Versions/A/Headers/SDL_hints.h
+  s_947a5ec9b0d04e::t_b3c8b68bc7c35e 1-5028
+Vendor/SDL3.framework/Versions/A/Headers/SDL_init.h
+  s_947a5ec9b0d04e::t_44c18c074edadb 1-508
+Vendor/SDL3.framework/Versions/A/Headers/SDL_intrin.h
+  s_947a5ec9b0d04e::t_a592a8245948f0 1-410
+Vendor/SDL3.framework/Versions/A/Headers/SDL_iostream.h
+  s_947a5ec9b0d04e::t_72ddbb55f563a8 1-1379
+Vendor/SDL3.framework/Versions/A/Headers/SDL_joystick.h
+  s_947a5ec9b0d04e::t_5d6a27fa016f02 1-1385
+Vendor/SDL3.framework/Versions/A/Headers/SDL_keyboard.h
+  s_947a5ec9b0d04e::t_dbd49df15e5e14 1-608
+Vendor/SDL3.framework/Versions/A/Headers/SDL_keycode.h
+  s_947a5ec9b0d04e::t_2b9ae277c34a86 1-348
+Vendor/SDL3.framework/Versions/A/Headers/SDL_loadso.h
+  s_947a5ec9b0d04e::t_2537a38f4fa707 1-145
+Vendor/SDL3.framework/Versions/A/Headers/SDL_locale.h
+  s_947a5ec9b0d04e::t_4c097b0d61dfbf 1-119
+Vendor/SDL3.framework/Versions/A/Headers/SDL_log.h
+  s_947a5ec9b0d04e::t_3b162cf25ede57 1-541
+Vendor/SDL3.framework/Versions/A/Headers/SDL_main.h
+  s_947a5ec9b0d04e::t_f4cb0b868fce15 1-704
+Vendor/SDL3.framework/Versions/A/Headers/SDL_main_impl.h
+  s_947a5ec9b0d04e::t_7abc5e58225ddf 1-149
+Vendor/SDL3.framework/Versions/A/Headers/SDL_messagebox.h
+  s_947a5ec9b0d04e::t_629a90e44dc570 1-230
+Vendor/SDL3.framework/Versions/A/Headers/SDL_metal.h
+  s_947a5ec9b0d04e::t_5773a83e524f2a 1-113
+Vendor/SDL3.framework/Versions/A/Headers/SDL_misc.h
+  s_947a5ec9b0d04e::t_5ce6fd138f7586 1-80
+Vendor/SDL3.framework/Versions/A/Headers/SDL_mouse.h
+  s_947a5ec9b0d04e::t_7531c212281339 1-813
+Vendor/SDL3.framework/Versions/A/Headers/SDL_mutex.h
+  s_947a5ec9b0d04e::t_64a6ac0f977da9 1-1117
+Vendor/SDL3.framework/Versions/A/Headers/SDL_oldnames.h
+  s_947a5ec9b0d04e::t_6fcf464480e256 1-1339
+Vendor/SDL3.framework/Versions/A/Headers/SDL_opengl.h
+  s_947a5ec9b0d04e::t_cce689a2e1c420 1-3101
+Vendor/SDL3.framework/Versions/A/Headers/SDL_opengl_glext.h
+  s_947a5ec9b0d04e::t_6e02fa932cfac6 1-13213
+Vendor/SDL3.framework/Versions/A/Headers/SDL_opengles.h
+  s_947a5ec9b0d04e::t_f11b235bc5cea9 1-38
+Vendor/SDL3.framework/Versions/A/Headers/SDL_opengles2.h
+  s_947a5ec9b0d04e::t_b4b696d3292d84 1-51
+Vendor/SDL3.framework/Versions/A/Headers/SDL_opengles2_gl2.h
+  s_947a5ec9b0d04e::t_6547931fa96754 1-656
+Vendor/SDL3.framework/Versions/A/Headers/SDL_opengles2_gl2ext.h
+  s_947a5ec9b0d04e::t_6d4531a1063979 1-4033
+Vendor/SDL3.framework/Versions/A/Headers/SDL_opengles2_gl2platform.h
+  s_947a5ec9b0d04e::t_4f0f051584ea35 1-27
+Vendor/SDL3.framework/Versions/A/Headers/SDL_opengles2_khrplatform.h
+  s_947a5ec9b0d04e::t_d54bea5d23c73f 1-311
+Vendor/SDL3.framework/Versions/A/Headers/SDL_pen.h
+  s_947a5ec9b0d04e::t_66e3b8ff9f3fa3 1-198
+Vendor/SDL3.framework/Versions/A/Headers/SDL_pixels.h
+  s_947a5ec9b0d04e::t_da77a2b29e5b7b 1-1441
+Vendor/SDL3.framework/Versions/A/Headers/SDL_platform.h
+  s_947a5ec9b0d04e::t_5e53eb4b39417c 1-66
+Vendor/SDL3.framework/Versions/A/Headers/SDL_platform_defines.h
+  s_947a5ec9b0d04e::t_fe2ac36416d172 1-497
+Vendor/SDL3.framework/Versions/A/Headers/SDL_power.h
+  s_947a5ec9b0d04e::t_cf54a593d06397 1-108
+Vendor/SDL3.framework/Versions/A/Headers/SDL_process.h
+  s_947a5ec9b0d04e::t_214e3a47b4e40c 1-441
+Vendor/SDL3.framework/Versions/A/Headers/SDL_properties.h
+  s_947a5ec9b0d04e::t_c73d584ac693dd 1-572
+Vendor/SDL3.framework/Versions/A/Headers/SDL_rect.h
+  s_947a5ec9b0d04e::t_f6aeab2927a2da 1-528
+Vendor/SDL3.framework/Versions/A/Headers/SDL_render.h
+  s_947a5ec9b0d04e::t_0f1bcd8102f953 1-3034
+Vendor/SDL3.framework/Versions/A/Headers/SDL_revision.h
+  s_947a5ec9b0d04e::t_79dbc3b8c0a2ad 1-56
+Vendor/SDL3.framework/Versions/A/Headers/SDL_scancode.h
+  s_947a5ec9b0d04e::t_b828b943aad952 1-430
+Vendor/SDL3.framework/Versions/A/Headers/SDL_sensor.h
+  s_947a5ec9b0d04e::t_182480495ae523 1-321
+Vendor/SDL3.framework/Versions/A/Headers/SDL_stdinc.h
+  s_947a5ec9b0d04e::t_37cb2dcc5ea27f 1-6186
+Vendor/SDL3.framework/Versions/A/Headers/SDL_storage.h
+  s_947a5ec9b0d04e::t_9aab810a741512 1-686
+Vendor/SDL3.framework/Versions/A/Headers/SDL_surface.h
+  s_947a5ec9b0d04e::t_eb4ba3acd18ae8 1-1769
+Vendor/SDL3.framework/Versions/A/Headers/SDL_system.h
+  s_947a5ec9b0d04e::t_94dd30c4fa0082 1-840
+Vendor/SDL3.framework/Versions/A/Headers/SDL_thread.h
+  s_947a5ec9b0d04e::t_32da67ccd493c5 1-602
+Vendor/SDL3.framework/Versions/A/Headers/SDL_time.h
+  s_947a5ec9b0d04e::t_3f94e43c795253 1-249
+Vendor/SDL3.framework/Versions/A/Headers/SDL_timer.h
+  s_947a5ec9b0d04e::t_1aca8da125e786 1-454
+Vendor/SDL3.framework/Versions/A/Headers/SDL_touch.h
+  s_947a5ec9b0d04e::t_a41cd602195f84 1-184
+Vendor/SDL3.framework/Versions/A/Headers/SDL_tray.h
+  s_947a5ec9b0d04e::t_125803d20aade8 1-544
+Vendor/SDL3.framework/Versions/A/Headers/SDL_version.h
+  s_947a5ec9b0d04e::t_2bf2dd08089b4f 1-198
+Vendor/SDL3.framework/Versions/A/Headers/SDL_video.h
+  s_947a5ec9b0d04e::t_5e8716d3f5c437 1-3497
+Vendor/SDL3.framework/Versions/A/Headers/SDL_vulkan.h
+  s_947a5ec9b0d04e::t_7b204324329123 1-287
+Vendor/SDL3.framework/Versions/A/Resources/INSTALL.md
+  s_947a5ec9b0d04e::t_adce4ec51ca154 1-41
+Vendor/SDL3.framework/Versions/A/Resources/Info.plist
+  s_947a5ec9b0d04e::t_15de588ec69417 1-50
+Vendor/SDL3.framework/Versions/A/Resources/LICENSE.txt
+  s_947a5ec9b0d04e::t_fa0d5fa1c29be3 1-18
+Vendor/SDL3.framework/Versions/A/Resources/README.md
+  s_947a5ec9b0d04e::t_41268c58337691 1-17
+Vendor/SDL3.framework/Versions/Current
+  s_947a5ec9b0d04e::t_c89eed6f6f9707 1
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "40a47bf53c9fbbc1ba10db8d361b584bf5cdb0bf",
+  "prompts": {},
+  "sessions": {
+    "s_947a5ec9b0d04e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "ae2b73cb-5faa-44a9-b7a6-4d22739dbe7c",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Ferhan Akkan <ferhanakkan@gmail.com>"
+    }
+  }
+}
