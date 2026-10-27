@@ -1,0 +1,23 @@
+Arcadia/Models/GameSystem.swift
+  s_947a5ec9b0d04e::t_fb686924be1077 1-180
+Arcadia/Models/Emulator.swift
+  s_947a5ec9b0d04e::t_183d72fc330269 1-112
+Arcadia/Models/Game.swift
+  s_947a5ec9b0d04e::t_3af2619f4de463 1-37
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "c4f1378399a8626e041b1dac8ca7eb5cf118720c",
+  "prompts": {},
+  "sessions": {
+    "s_947a5ec9b0d04e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "ae2b73cb-5faa-44a9-b7a6-4d22739dbe7c",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Ferhan Akkan <ferhanakkan@gmail.com>"
+    }
+  }
+}
