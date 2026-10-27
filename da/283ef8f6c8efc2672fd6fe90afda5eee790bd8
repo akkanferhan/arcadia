@@ -1,0 +1,24 @@
+Arcadia/Services/Presets/Presets.swift
+  s_947a5ec9b0d04e::t_51fa839db962c7 17-18
+Arcadia/App/AppModel.swift
+  s_947a5ec9b0d04e::t_51fa839db962c7 88
+  s_947a5ec9b0d04e::t_9b2d5e6b1ee9c5 71-85
+Arcadia/Services/Launcher.swift
+  s_947a5ec9b0d04e::t_51fa839db962c7 10-11,38-40,44,50,56-58
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "da283ef8f6c8efc2672fd6fe90afda5eee790bd8",
+  "prompts": {},
+  "sessions": {
+    "s_947a5ec9b0d04e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "ae2b73cb-5faa-44a9-b7a6-4d22739dbe7c",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Ferhan Akkan <ferhanakkan@gmail.com>"
+    }
+  }
+}
