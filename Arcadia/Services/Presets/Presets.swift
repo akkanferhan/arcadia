@@ -14,6 +14,8 @@ struct PresetContext {
     /// Internal resolution multiplier from Arcadia's graphics quality setting.
     let scale: Int
     let fullscreen: Bool
+    /// Controllers connected at launch, first one is player 1.
+    var gamepads: [Gamepad] = []
     /// Reports slow preparation steps (downloads) to the now-playing bar.
     var report: @Sendable (LocalizedStringResource) -> Void = { _ in }
 
