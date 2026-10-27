@@ -1,0 +1,39 @@
+Arcadia/Services/Presets/ModernPlayStationPresets.swift
+  s_947a5ec9b0d04e::t_c197ec287fb9af 41-42,45-50,60-64,105-134
+Arcadia/Info.plist
+  s_947a5ec9b0d04e::t_009dde30564202 1-17,19,21-35
+  s_947a5ec9b0d04e::t_a6bfd8f1a6fddd 18,20
+Arcadia.xcodeproj/project.pbxproj
+  s_947a5ec9b0d04e::t_009dde30564202 20,56,75,137,184,292,404,490
+  s_947a5ec9b0d04e::t_9b2d5e6b1ee9c5 36,59,156,293
+project.yml
+  s_947a5ec9b0d04e::t_009dde30564202 22-24,28-32
+  s_947a5ec9b0d04e::t_a6bfd8f1a6fddd 25-26
+  s_1b02c1f829b02f::t_82b815f73d51da 27
+Arcadia/Services/Presets/NintendoPresets.swift
+  s_947a5ec9b0d04e::t_c197ec287fb9af 221
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "915352d8ca1134cbb8c96bc7ed1b42e33f610d69",
+  "prompts": {},
+  "sessions": {
+    "s_1b02c1f829b02f": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "8d7d5e3b-2a8f-4305-80ad-39ed1060b777",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Ferhan Akkan <ferhanakkan@gmail.com>"
+    },
+    "s_947a5ec9b0d04e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "ae2b73cb-5faa-44a9-b7a6-4d22739dbe7c",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Ferhan Akkan <ferhanakkan@gmail.com>"
+    }
+  }
+}
