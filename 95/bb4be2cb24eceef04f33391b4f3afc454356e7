@@ -1,0 +1,23 @@
+Arcadia/Models/Game.swift
+  s_947a5ec9b0d04e::t_c7b93ea08e5d03 8-14,28-36
+Arcadia/Services/Library.swift
+  s_947a5ec9b0d04e::t_bac8b2bf860f85 1-142
+Arcadia/Services/PlayStationFolder.swift
+  s_947a5ec9b0d04e::t_9535f23a0e95b3 1-61
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "95bb4be2cb24eceef04f33391b4f3afc454356e7",
+  "prompts": {},
+  "sessions": {
+    "s_947a5ec9b0d04e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "ae2b73cb-5faa-44a9-b7a6-4d22739dbe7c",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Ferhan Akkan <ferhanakkan@gmail.com>"
+    }
+  }
+}
