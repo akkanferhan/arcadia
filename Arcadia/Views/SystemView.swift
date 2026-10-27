@@ -74,7 +74,7 @@ private struct Banner: View {
     let count: Int
 
     var body: some View {
-        let emulator = Emulator.with(id: system.emulatorID)!
+        let emulator = Bios.player(for: system, bios: model.library.biosFolder).emulator
 
         ZStack(alignment: .bottomLeading) {
             system.gradient
@@ -102,7 +102,10 @@ private struct Banner: View {
                     }
                     .font(.callout)
                     .foregroundStyle(.white.opacity(0.85))
-                    if let hint = system.biosHint {
+                    if BiosRule.rule(for: system.id) != nil {
+                        BiosStatusLabel(system: system)
+                            .padding(.top, 4)
+                    } else if let hint = system.biosHint {
                         Label { Text(hint) } icon: { Image(systemName: "info.circle") }
                             .font(.caption)
                             .foregroundStyle(.white.opacity(0.7))

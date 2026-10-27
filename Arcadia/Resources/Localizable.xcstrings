@@ -372,6 +372,52 @@
         }
       }
     },
+    "A PS2 BIOS dumped from your console (4 MB). There is no free replacement.": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ملف BIOS لجهاز PS2 مستخرج من جهازك (4 ميغابايت). لا يوجد بديل مجاني."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Una BIOS de PS2 extraída de tu consola (4 MB). No hay alternativa gratuita."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Un BIOS PS2 extrait de votre console (4 Mo). Il n’existe aucune alternative libre."
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "आपके कंसोल से निकाला गया PS2 BIOS (4 MB)। इसका कोई मुफ़्त विकल्प नहीं है।"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Uma BIOS de PS2 extraída do seu console (4 MB). Não existe alternativa gratuita."
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Konsolundan alınmış bir PS2 BIOS’u (4 MB). Ücretsiz bir alternatifi yok."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "从你自己的主机转储的 PS2 BIOS（4 MB），没有免费替代品。"
+          }
+        }
+      }
+    },
     "Add to %@": {
       "localizations": {
         "ar": {
@@ -602,6 +648,52 @@
         }
       }
     },
+    "Any PS1 BIOS from your console, such as scph5501.bin. Without it Arcadia uses a built-in BIOS that runs most games.": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "أي ملف BIOS لجهاز PS1 من جهازك، مثل scph5501.bin. بدونه يستخدم Arcadia نظام BIOS مدمجًا يشغّل معظم الألعاب."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cualquier BIOS de PS1 de tu consola, como scph5501.bin. Sin ella, Arcadia usa una BIOS integrada que ejecuta la mayoría de los juegos."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "N’importe quel BIOS PS1 de votre console, comme scph5501.bin. Sans lui, Arcadia utilise un BIOS intégré qui fait tourner la plupart des jeux."
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "आपके कंसोल का कोई भी PS1 BIOS, जैसे scph5501.bin। इसके बिना Arcadia एक बिल्ट-इन BIOS इस्तेमाल करता है जो ज़्यादातर गेम चलाता है।"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Qualquer BIOS de PS1 do seu console, como scph5501.bin. Sem ela, o Arcadia usa uma BIOS embutida que roda a maioria dos jogos."
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Konsolundan alınmış herhangi bir PS1 BIOS’u (ör. scph5501.bin). Yoksa Arcadia, oyunların çoğunu çalıştıran yerleşik bir BIOS kullanır."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "来自你主机的任意 PS1 BIOS，例如 scph5501.bin。没有它时，Arcadia 会使用能运行大多数游戏的内置 BIOS。"
+          }
+        }
+      }
+    },
     "Automatic": {
       "localizations": {
         "ar": {
@@ -690,6 +782,144 @@
           "stringUnit": {
             "state": "translated",
             "value": "BIOS"
+          }
+        }
+      }
+    },
+    "BIOS & System Software": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "BIOS وبرامج النظام"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "BIOS y software del sistema"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "BIOS et logiciel système"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "BIOS और सिस्टम सॉफ़्टवेयर"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "BIOS e software do sistema"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "BIOS ve Sistem Yazılımı"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "BIOS 与系统软件"
+          }
+        }
+      }
+    },
+    "BIOS found": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "تم العثور على BIOS"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "BIOS encontrada"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "BIOS trouvé"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "BIOS मिल गया"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "BIOS encontrada"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "BIOS bulundu"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已找到 BIOS"
+          }
+        }
+      }
+    },
+    "BIOS needed. Drop it on the Emulators page or into the bios folder.": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "يلزم ملف BIOS. أفلته في صفحة المحاكيات أو ضعه في مجلد bios."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Se necesita la BIOS. Arrástrala a la página Emuladores o ponla en la carpeta bios."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "BIOS requis. Déposez-le sur la page Émulateurs ou dans le dossier bios."
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "BIOS ज़रूरी है। इसे एम्युलेटर पेज पर छोड़ें या bios फ़ोल्डर में रखें।"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "BIOS necessária. Solte-a na página Emuladores ou coloque-a na pasta bios."
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "BIOS gerekli. Emülatörler sayfasına sürükle ya da bios klasörüne koy."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "需要 BIOS。请将其拖到“模拟器”页面或放入 bios 文件夹。"
           }
         }
       }
@@ -1292,6 +1522,52 @@
         }
       }
     },
+    "Downloading PS3 system software from Sony…": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "جارٍ تنزيل برنامج نظام PS3 من Sony…"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Descargando el software del sistema de PS3 desde Sony…"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Téléchargement du logiciel système PS3 depuis Sony…"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sony से PS3 सिस्टम सॉफ़्टवेयर डाउनलोड हो रहा है…"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Baixando o software do sistema do PS3 da Sony…"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "PS3 sistem yazılımı Sony’den indiriliyor…"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "正在从 Sony 下载 PS3 系统软件…"
+          }
+        }
+      }
+    },
     "Drag game files here, or copy them into the %@ folder.\nSupported: %@": {
       "localizations": {
         "ar": {
@@ -1380,6 +1656,52 @@
           "stringUnit": {
             "state": "translated",
             "value": "将已安装的游戏文件夹拖到这里，或复制到 %@ 文件夹。"
+          }
+        }
+      }
+    },
+    "Drop BIOS files dumped from your consoles here. Arcadia puts each one where its emulator looks.": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "أفلت هنا ملفات BIOS المستخرجة من أجهزتك، وسيضع Arcadia كل ملف حيث يبحث عنه محاكيه."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Suelta aquí los archivos BIOS extraídos de tus consolas. Arcadia coloca cada uno donde lo busca su emulador."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Déposez ici les fichiers BIOS extraits de vos consoles. Arcadia place chacun là où son émulateur le cherche."
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "अपने कंसोल से निकाली गई BIOS फ़ाइलें यहाँ छोड़ें। Arcadia हर फ़ाइल को वहाँ रखता है जहाँ उसका एम्युलेटर ढूँढता है।"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Solte aqui os arquivos de BIOS extraídos dos seus consoles. O Arcadia coloca cada um onde o emulador procura."
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Konsollarından aldığın BIOS dosyalarını buraya bırak. Arcadia her birini emülatörünün aradığı yere koyar."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "把从你主机转储的 BIOS 文件拖到这里，Arcadia 会把每个文件放到对应模拟器查找的位置。"
           }
         }
       }
@@ -2166,52 +2488,6 @@
         }
       }
     },
-    "Install the PS3 firmware (PS3UPDAT.PUP) from RPCS3's File menu.": {
-      "localizations": {
-        "ar": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "ثبّت برنامج PS3 الثابت (PS3UPDAT.PUP) من قائمة File في RPCS3."
-          }
-        },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Instala el firmware de PS3 (PS3UPDAT.PUP) desde el menú Archivo de RPCS3."
-          }
-        },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Installez le firmware PS3 (PS3UPDAT.PUP) depuis le menu Fichier de RPCS3."
-          }
-        },
-        "hi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "RPCS3 के File मेनू से PS3 फ़र्मवेयर (PS3UPDAT.PUP) इंस्टॉल करें।"
-          }
-        },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Instale o firmware do PS3 (PS3UPDAT.PUP) pelo menu Arquivo do RPCS3."
-          }
-        },
-        "tr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "PS3 yazılımını (PS3UPDAT.PUP) RPCS3’ün Dosya menüsünden yükle."
-          }
-        },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "请通过 RPCS3 的“文件”菜单安装 PS3 固件（PS3UPDAT.PUP）。"
-          }
-        }
-      }
-    },
     "Installing": {
       "localizations": {
         "ar": {
@@ -2254,6 +2530,52 @@
           "stringUnit": {
             "state": "translated",
             "value": "正在安装"
+          }
+        }
+      }
+    },
+    "Installing PS3 system software…": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "جارٍ تثبيت برنامج نظام PS3…"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Instalando el software del sistema de PS3…"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Installation du logiciel système PS3…"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "PS3 सिस्टम सॉफ़्टवेयर इंस्टॉल हो रहा है…"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Instalando o software do sistema do PS3…"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "PS3 sistem yazılımı yükleniyor…"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "正在安装 PS3 系统软件…"
           }
         }
       }
@@ -2442,6 +2764,52 @@
         }
       }
     },
+    "No BIOS needed": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "لا حاجة إلى BIOS"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No necesita BIOS"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aucun BIOS requis"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "BIOS की ज़रूरत नहीं"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Não precisa de BIOS"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "BIOS gerekmez"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无需 BIOS"
+          }
+        }
+      }
+    },
     "No macOS download was found. Check your connection and try again.": {
       "localizations": {
         "ar": {
@@ -2484,6 +2852,52 @@
           "stringUnit": {
             "state": "translated",
             "value": "未找到 macOS 版本的下载。请检查网络连接后重试。"
+          }
+        }
+      }
+    },
+    "Not recognised as a BIOS: %@": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "لم يُتعرّف عليه كملف BIOS: %@"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No se reconoce como BIOS: %@"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Non reconnu comme BIOS : %@"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "BIOS के रूप में पहचाना नहीं गया: %@"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Não reconhecido como BIOS: %@"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "BIOS olarak tanınmadı: %@"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无法识别为 BIOS：%@"
           }
         }
       }
@@ -2714,6 +3128,52 @@
           "stringUnit": {
             "state": "translated",
             "value": "打开游戏文件夹"
+          }
+        }
+      }
+    },
+    "PS3 system software. Arcadia downloads it from Sony when you first play.": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "برنامج نظام PS3. يُنزّله Arcadia من Sony عند أول تشغيل."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Software del sistema de PS3. Arcadia lo descarga de Sony la primera vez que juegas."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Logiciel système PS3. Arcadia le télécharge depuis Sony la première fois que vous jouez."
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "PS3 सिस्टम सॉफ़्टवेयर। पहली बार खेलने पर Arcadia इसे Sony से डाउनलोड करता है।"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Software do sistema do PS3. O Arcadia baixa da Sony na primeira vez que você joga."
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "PS3 sistem yazılımı. Arcadia ilk oynadığında onu Sony’den indirir."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "PS3 系统软件。首次游玩时，Arcadia 会从 Sony 下载。"
           }
         }
       }
@@ -3040,140 +3500,48 @@
         }
       }
     },
-    "Put a PS1 BIOS (e.g. scph5501.bin) in bios/ps1.": {
+    "Preparing the Xbox hard disk…": {
       "localizations": {
         "ar": {
           "stringUnit": {
             "state": "translated",
-            "value": "ضع ملف BIOS لجهاز PS1 (مثل scph5501.bin) في bios/ps1."
+            "value": "جارٍ تجهيز القرص الصلب لجهاز Xbox…"
           }
         },
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Pon una BIOS de PS1 (p. ej., scph5501.bin) en bios/ps1."
+            "value": "Preparando el disco duro de Xbox…"
           }
         },
         "fr": {
           "stringUnit": {
             "state": "translated",
-            "value": "Placez un BIOS PS1 (par ex. scph5501.bin) dans bios/ps1."
+            "value": "Préparation du disque dur Xbox…"
           }
         },
         "hi": {
           "stringUnit": {
             "state": "translated",
-            "value": "PS1 BIOS (जैसे scph5501.bin) को bios/ps1 में रखें।"
+            "value": "Xbox हार्ड डिस्क तैयार हो रही है…"
           }
         },
         "pt-BR": {
           "stringUnit": {
             "state": "translated",
-            "value": "Coloque uma BIOS de PS1 (ex.: scph5501.bin) em bios/ps1."
+            "value": "Preparando o disco rígido do Xbox…"
           }
         },
         "tr": {
           "stringUnit": {
             "state": "translated",
-            "value": "Bir PS1 BIOS’unu (ör. scph5501.bin) bios/ps1 klasörüne koy."
+            "value": "Xbox sabit diski hazırlanıyor…"
           }
         },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "将 PS1 BIOS（如 scph5501.bin）放入 bios/ps1。"
-          }
-        }
-      }
-    },
-    "Put sega_101.bin and mpr-17933.bin in bios/.": {
-      "localizations": {
-        "ar": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "ضع sega_101.bin وmpr-17933.bin في bios/."
-          }
-        },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Pon sega_101.bin y mpr-17933.bin en bios/."
-          }
-        },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Placez sega_101.bin et mpr-17933.bin dans bios/."
-          }
-        },
-        "hi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "sega_101.bin और mpr-17933.bin को bios/ में रखें।"
-          }
-        },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Coloque sega_101.bin e mpr-17933.bin em bios/."
-          }
-        },
-        "tr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "sega_101.bin ve mpr-17933.bin dosyalarını bios/ klasörüne koy."
-          }
-        },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "将 sega_101.bin 和 mpr-17933.bin 放入 bios/。"
-          }
-        }
-      }
-    },
-    "Put your PS2 BIOS in bios/ps2 and select it in PCSX2's first-run setup.": {
-      "localizations": {
-        "ar": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "ضع BIOS جهاز PS2 في bios/ps2 واختره في إعداد التشغيل الأول لـ PCSX2."
-          }
-        },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Pon tu BIOS de PS2 en bios/ps2 y selecciónala en la configuración inicial de PCSX2."
-          }
-        },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Placez votre BIOS PS2 dans bios/ps2 et sélectionnez-le lors de la première configuration de PCSX2."
-          }
-        },
-        "hi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "अपना PS2 BIOS bios/ps2 में रखें और PCSX2 के पहले सेटअप में उसे चुनें।"
-          }
-        },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Coloque sua BIOS de PS2 em bios/ps2 e selecione-a na configuração inicial do PCSX2."
-          }
-        },
-        "tr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "PS2 BIOS’unu bios/ps2 klasörüne koy ve PCSX2’nin ilk kurulumunda seç."
-          }
-        },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "将 PS2 BIOS 放入 bios/ps2，并在 PCSX2 首次运行设置中选择它。"
+            "value": "正在准备 Xbox 硬盘…"
           }
         }
       }
@@ -4006,6 +4374,52 @@
         }
       }
     },
+    "Sony's PS3 update server could not be reached.": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "تعذّر الوصول إلى خادم تحديثات PS3 من Sony."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No se pudo conectar con el servidor de actualizaciones de PS3 de Sony."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Impossible de joindre le serveur de mises à jour PS3 de Sony."
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sony के PS3 अपडेट सर्वर से कनेक्ट नहीं हो सका।"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Não foi possível acessar o servidor de atualização do PS3 da Sony."
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sony’nin PS3 güncelleme sunucusuna ulaşılamadı."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无法连接 Sony 的 PS3 更新服务器。"
+          }
+        }
+      }
+    },
     "Start games in full screen": {
       "localizations": {
         "ar": {
@@ -4094,6 +4508,144 @@
           "stringUnit": {
             "state": "translated",
             "value": "正在启动…"
+          }
+        }
+      }
+    },
+    "System software downloads from Sony the first time you play.": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "يُنزَّل برنامج النظام من Sony عند أول تشغيل."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "El software del sistema se descarga de Sony la primera vez que juegas."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Le logiciel système est téléchargé depuis Sony la première fois que vous jouez."
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "पहली बार खेलने पर सिस्टम सॉफ़्टवेयर Sony से डाउनलोड होता है।"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O software do sistema é baixado da Sony na primeira vez que você joga."
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sistem yazılımı ilk oynadığında Sony’den indirilir."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "首次游玩时会从 Sony 下载系统软件。"
+          }
+        }
+      }
+    },
+    "The MCPX boot ROM (512 bytes) and a flash BIOS from your Xbox. There is no free replacement.": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ذاكرة الإقلاع MCPX (512 بايت) وملف BIOS فلاش من جهاز Xbox الخاص بك. لا يوجد بديل مجاني."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La ROM de arranque MCPX (512 bytes) y una BIOS flash de tu Xbox. No hay alternativa gratuita."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La ROM de démarrage MCPX (512 octets) et un BIOS flash de votre Xbox. Il n’existe aucune alternative libre."
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "आपके Xbox से MCPX बूट ROM (512 बाइट) और एक फ़्लैश BIOS। इसका कोई मुफ़्त विकल्प नहीं है।"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A ROM de boot MCPX (512 bytes) e uma BIOS flash do seu Xbox. Não existe alternativa gratuita."
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Xbox’ından alınmış MCPX boot ROM’u (512 bayt) ve bir flash BIOS. Ücretsiz bir alternatifi yok."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "来自你的 Xbox 的 MCPX 启动 ROM（512 字节）和 Flash BIOS，没有免费替代品。"
+          }
+        }
+      }
+    },
+    "The PS3 system software download was damaged. Try again.": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "تلف تنزيل برنامج نظام PS3. حاول مرة أخرى."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La descarga del software del sistema de PS3 está dañada. Inténtalo de nuevo."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Le téléchargement du logiciel système PS3 est endommagé. Réessayez."
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "PS3 सिस्टम सॉफ़्टवेयर डाउनलोड खराब हो गया। फिर से कोशिश करें।"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O download do software do sistema do PS3 foi corrompido. Tente novamente."
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "PS3 sistem yazılımı indirmesi bozuk geldi. Tekrar dene."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "PS3 系统软件下载已损坏，请重试。"
           }
         }
       }
@@ -4282,6 +4834,52 @@
         }
       }
     },
+    "Using a built-in BIOS. Add your console's BIOS for the best compatibility.": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "يُستخدم نظام BIOS مدمج. أضف BIOS جهازك لأفضل توافق."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Usando una BIOS integrada. Añade la BIOS de tu consola para la mejor compatibilidad."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "BIOS intégré utilisé. Ajoutez le BIOS de votre console pour une compatibilité optimale."
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "बिल्ट-इन BIOS इस्तेमाल हो रहा है। सबसे अच्छी संगतता के लिए अपने कंसोल का BIOS जोड़ें।"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Usando uma BIOS embutida. Adicione a BIOS do seu console para melhor compatibilidade."
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Yerleşik BIOS kullanılıyor. En iyi uyumluluk için konsolunun BIOS’unu ekle."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "正在使用内置 BIOS。添加你主机的 BIOS 可获得最佳兼容性。"
+          }
+        }
+      }
+    },
     "Welcome to Arcadia": {
       "localizations": {
         "ar": {
@@ -4374,48 +4972,48 @@
         }
       }
     },
-    "xemu needs the MCPX boot ROM, a flash BIOS and an HDD image (set in its settings).": {
+    "sega_101.bin or mpr-17933.bin. Without it Arcadia uses a built-in BIOS; multi-disc games need the real one.": {
       "localizations": {
         "ar": {
           "stringUnit": {
             "state": "translated",
-            "value": "يحتاج xemu إلى ذاكرة الإقلاع MCPX وملف BIOS فلاش وصورة قرص صلب (تُحدَّد في إعداداته)."
+            "value": "sega_101.bin أو mpr-17933.bin. بدونه يستخدم Arcadia نظام BIOS مدمجًا؛ وتحتاج الألعاب متعددة الأقراص إلى الأصلي."
           }
         },
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "xemu necesita la ROM de arranque MCPX, una BIOS flash y una imagen de disco duro (se configuran en sus ajustes)."
+            "value": "sega_101.bin o mpr-17933.bin. Sin ella, Arcadia usa una BIOS integrada; los juegos de varios discos necesitan la real."
           }
         },
         "fr": {
           "stringUnit": {
             "state": "translated",
-            "value": "xemu nécessite la ROM de démarrage MCPX, un BIOS flash et une image de disque dur (à définir dans ses réglages)."
+            "value": "sega_101.bin ou mpr-17933.bin. Sans lui, Arcadia utilise un BIOS intégré ; les jeux multidisques nécessitent le vrai."
           }
         },
         "hi": {
           "stringUnit": {
             "state": "translated",
-            "value": "xemu को MCPX बूट ROM, एक फ़्लैश BIOS और एक HDD इमेज चाहिए (इन्हें उसकी सेटिंग में चुनें)।"
+            "value": "sega_101.bin या mpr-17933.bin। इसके बिना Arcadia बिल्ट-इन BIOS इस्तेमाल करता है; मल्टी-डिस्क गेम के लिए असली BIOS चाहिए।"
           }
         },
         "pt-BR": {
           "stringUnit": {
             "state": "translated",
-            "value": "O xemu precisa da ROM de boot MCPX, de uma BIOS flash e de uma imagem de HD (definidas nas configurações dele)."
+            "value": "sega_101.bin ou mpr-17933.bin. Sem ela, o Arcadia usa uma BIOS embutida; jogos com vários discos precisam da original."
           }
         },
         "tr": {
           "stringUnit": {
             "state": "translated",
-            "value": "xemu; MCPX boot ROM, bir flash BIOS ve bir HDD imajı ister (kendi ayarlarından belirlenir)."
+            "value": "sega_101.bin veya mpr-17933.bin. Yoksa Arcadia yerleşik bir BIOS kullanır; çok diskli oyunlar gerçeğini ister."
           }
         },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "xemu 需要 MCPX 启动 ROM、Flash BIOS 和硬盘镜像（在其设置中指定）。"
+            "value": "sega_101.bin 或 mpr-17933.bin。没有它时，Arcadia 会使用内置 BIOS；多光盘游戏需要真实 BIOS。"
           }
         }
       }
