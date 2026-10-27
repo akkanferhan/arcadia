@@ -52,8 +52,9 @@ scans your game folders, shows box art and starts games with a double-click.
 
 ## Games and BIOS files
 
-Arcadia never downloads games, BIOS or firmware. Use dumps of games and hardware you own.
-On first launch Arcadia creates this layout in the folder you choose (default `~/Games`):
+Arcadia never ships games, BIOS or firmware: they are copyrighted by the console makers.
+Use dumps of games and hardware you own. On first launch Arcadia creates this layout in the folder
+you choose (default `~/Games`):
 
 ```
 Games/
@@ -63,6 +64,16 @@ Games/
    ├─ ps1/  ps2/  ps3/  xbox/
    └─ (RetroArch BIOS files go in bios/ directly)
 ```
+
+Drop BIOS files on the **BIOS & System Software** card on the Emulators page and Arcadia sorts
+them into place. Most systems need no BIOS at all:
+
+| System | Without your BIOS |
+| --- | --- |
+| PS1 | Plays through PCSX ReARMed's built-in BIOS; DuckStation takes over once you add one |
+| Saturn | Plays through Yabause's built-in BIOS (multi-disc games need the real one) |
+| PS3 | System software is downloaded from Sony's update servers on first play |
+| PS2, Xbox | Your console's BIOS is required; there is no free replacement |
 
 Multi-disc games: add an `.m3u` playlist and Arcadia hides the individual discs.
 
