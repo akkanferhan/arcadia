@@ -1,0 +1,21 @@
+Arcadia/Models/Emulator.swift
+  s_947a5ec9b0d04e::t_62dce3e171e090 53-54,56,69
+README.md
+  s_947a5ec9b0d04e::t_3df2044f975f60 12-14,20-23,82-88
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "1e07736d699b3cf5ea34dec31b3b0d2ae9b3bdc3",
+  "prompts": {},
+  "sessions": {
+    "s_947a5ec9b0d04e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "ae2b73cb-5faa-44a9-b7a6-4d22739dbe7c",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Ferhan Akkan <ferhanakkan@gmail.com>"
+    }
+  }
+}
