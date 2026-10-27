@@ -1,9 +1,6 @@
 import Foundation
-import GameController
 
 extension Presets {
-    static var gamepadConnected: Bool { !GCController.controllers().isEmpty }
-
     // MARK: Dolphin (GameCube, Wii)
 
     /// Dolphin runs from its own user folder (`-u`), so a separately installed Dolphin is untouched.
@@ -32,6 +29,7 @@ extension Presets {
             ], section: "Settings")
             ini.set("VSync", "True", section: "Hardware")
         }
+        try dolphinControllers(context, config: config)
         return PresetLaunch(arguments: ["-u", context.data.path])
     }
 
@@ -53,6 +51,7 @@ extension Presets {
             ("Graphic/UpscaleFilter", "1"),
             ("Graphic/FullscreenScaling", "0"),
         ])
+        try cemuControllers(context)
         return PresetLaunch(arguments: ["-m", mlc.path])
     }
 
@@ -62,7 +61,6 @@ extension Presets {
     /// It reads `portable/melonDS.toml` next to the app.
     static func melonDS(_ context: PresetContext) throws -> PresetLaunch {
         let file = context.install.deletingLastPathComponent().appendingPathComponent("portable/melonDS.toml")
-        // Raw SDL joystick codes: buttons by index, D-pad buttons combined with the left stick.
         let toml = """
         LimitFPS = true
         AudioSync = false
@@ -116,18 +114,7 @@ extension Presets {
         HK_FullscreenToggle = 16777274
 
         [Instance0.Joystick]
-        A = 1
-        B = 0
-        X = 3
-        Y = 2
-        L = 9
-        R = 10
-        Select = 4
-        Start = 6
-        Up = 17891339
-        Down = 16842764
-        Left = 1114125
-        Right = 65550
+        \(melonDSJoystick(context.gamepads.first).map { "\($0.0) = \($0.1)" }.joined(separator: "\n"))
 
         """
         try FileManager.default.createDirectory(at: file.deletingLastPathComponent(), withIntermediateDirectories: true)
@@ -167,7 +154,7 @@ extension Presets {
             set(["use_cpu_jit": "true", "cpu_clock_percentage": "100"], "Core")
 
             // A gamepad binding replaces the keyboard one, so only bind the pad when one is connected.
-            if gamepadConnected {
+            if !context.gamepads.isEmpty {
                 func button(_ index: Int) -> String { "\"engine:sdl,api:controller,maptype:all,button:\(index)\"" }
                 func trigger(_ axis: Int) -> String {
                     "\"engine:sdl,api:controller,maptype:all,axis:\(axis),direction:+,threshold:0.5\""
