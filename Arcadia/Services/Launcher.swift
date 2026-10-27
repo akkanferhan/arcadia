@@ -11,9 +11,8 @@ final class Launcher {
     private var payload: URL?
     private var startedAt = Date.now
 
-    var fullscreen: Bool {
-        get { UserDefaults.standard.object(forKey: "fullscreen") as? Bool ?? true }
-        set { UserDefaults.standard.set(newValue, forKey: "fullscreen") }
+    var fullscreen = UserDefaults.standard.object(forKey: "fullscreen") as? Bool ?? true {
+        didSet { UserDefaults.standard.set(fullscreen, forKey: "fullscreen") }
     }
 
     enum Failure: LocalizedError {
