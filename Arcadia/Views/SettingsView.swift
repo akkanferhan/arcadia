@@ -23,8 +23,19 @@ struct SettingsView: View {
                     Button("Rescan") { Task { await model.library.scan() } }
                 }
             }
-            Section("Playing") {
+            Section {
+                Picker("Graphics quality", selection: $launcher.quality) {
+                    ForEach(GraphicsQuality.allCases) { quality in
+                        Text(quality.title).tag(quality)
+                    }
+                }
                 Toggle("Start games in full screen", isOn: $launcher.fullscreen)
+            } header: {
+                Text("Playing")
+            } footer: {
+                let chip = AppleSilicon.current
+                Text("\(chip.name) with a \(chip.gpuCores)-core GPU. Arcadia tunes every emulator for this Mac; games render at \(launcher.quality.scale)× their original resolution.")
+                    .foregroundStyle(.secondary)
             }
             Section("BIOS") {
                 Text("Some systems need BIOS or firmware files dumped from your own console. Put them in the bios folder inside your games folder.")

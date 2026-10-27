@@ -47,9 +47,6 @@ struct EmulatorButton: View {
                         NSWorkspace.shared.activateFileViewerSelecting([url])
                     }
                 }
-                Button("Open \(emulator.name)", systemImage: "macwindow") {
-                    if let url = emulators.payloadURL(emulator.id) { NSWorkspace.shared.open(url) }
-                }
                 Divider()
                 Button("Uninstall", systemImage: "trash", role: .destructive) {
                     emulators.uninstall(emulator.id)
