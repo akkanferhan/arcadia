@@ -1,0 +1,37 @@
+Arcadia/Services/Presets/NintendoPresets.swift
+  s_947a5ec9b0d04e::t_88a66e9f40392e 32-34,199
+Arcadia/Services/Presets/PlayStationPresets.swift
+  s_947a5ec9b0d04e::t_88a66e9f40392e 73
+Arcadia/Services/Presets/PPSSPPPreset.swift
+  s_947a5ec9b0d04e::t_88a66e9f40392e 30,32
+Arcadia/Services/Presets/RetroArchPreset.swift
+  s_947a5ec9b0d04e::t_88a66e9f40392e 61
+Arcadia/Services/Presets/Presets.swift
+  s_947a5ec9b0d04e::t_88a66e9f40392e 23-24
+Arcadia/Services/Achievements/KeychainCredentialStore.swift
+  s_947a5ec9b0d04e::t_f38a2224af8d4e 1-48
+Tests/ArcadiaTests/AchievementsTests.swift
+  s_947a5ec9b0d04e::t_5e20ce85926554 55,80,93
+  s_947a5ec9b0d04e::t_05e431630d7636 1-54,56-79,81-92,94-176
+Arcadia/Services/Achievements/RetroAchievements.swift
+  s_947a5ec9b0d04e::t_584ca64d6dd9ce 1-162
+Arcadia/Services/Presets/AchievementsPresets.swift
+  s_947a5ec9b0d04e::t_febdd3a577ced0 1-88,90-126
+  s_947a5ec9b0d04e::t_88a66e9f40392e 89
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "d301e64ec68b9e297ec272a351a324d8c6198b7f",
+  "prompts": {},
+  "sessions": {
+    "s_947a5ec9b0d04e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "ae2b73cb-5faa-44a9-b7a6-4d22739dbe7c",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Ferhan Akkan <ferhanakkan@gmail.com>"
+    }
+  }
+}
