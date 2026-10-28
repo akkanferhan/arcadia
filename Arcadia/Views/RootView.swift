@@ -31,6 +31,14 @@ struct RootView: View {
         .sheet(isPresented: $model.showSaveSpace) {
             SaveSpaceView()
         }
+        .sheet(item: $model.details) { game in
+            GameDetailsView(game: game)
+        }
+        .sheet(item: Binding(get: { model.details == nil ? model.collections.prompt : nil },
+                             set: { model.collections.prompt = $0 })) { prompt in
+            CollectionNameSheet(prompt: prompt)
+        }
+        .detailsLaunchArgument()
         .alert(item: $model.problem) { problem in
             if let emulator = problem.missing {
                 Alert(title: Text("Almost ready"), message: Text(problem.message),
@@ -63,6 +71,8 @@ struct RootView: View {
                 GameGridPage(title: "Favorites", subtitle: "Games you've starred", games: model.library.favorites)
             case .system(let id):
                 if let system = GameSystem.with(id: id) { SystemView(system: system) }
+            case .collection(let id):
+                CollectionView(id: id)
             case .emulators:
                 EmulatorsView()
             }
