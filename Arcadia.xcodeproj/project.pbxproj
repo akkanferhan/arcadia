@@ -23,6 +23,7 @@
 		402AE0E09B120F0A0C4749A4 /* TestSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE1FAC42B6C0A1BE53F778A /* TestSupport.swift */; };
 		42C073A81A798FCE44C69245 /* Bios.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2815851E3A498347EFF6059 /* Bios.swift */; };
 		48EB4F7A494975278BFC1823 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6057601F1F41C846AB29D7B8 /* Assets.xcassets */; };
+		4F987A95F03D55AB2D2893AC /* SaveSpaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD7AEF081AEAAE2FCB25B4B /* SaveSpaceView.swift */; };
 		5589360C2C1B21CF9A576F4B /* RetroArchPreset.swift in Sources */ = {isa = PBXBuildFile; fileRef = B437352CDA4252AC7274B87D /* RetroArchPreset.swift */; };
 		566EB34E33FCC2E08E455B43 /* EmulatorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3950787B4CA3AA7BF4513663 /* EmulatorManager.swift */; };
 		6097722C6994C95D35AD11E8 /* AppleSilicon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5675169E922AEE3316611F /* AppleSilicon.swift */; };
@@ -106,6 +107,7 @@
 		671CCDB488F80DC171E258B5 /* SidebarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarView.swift; sourceTree = "<group>"; };
 		6A465C9E977BB474751CA62E /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
 		6ABFA1D2C54C622375B1E917 /* DiscCompressor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscCompressor.swift; sourceTree = "<group>"; };
+		6AD7AEF081AEAAE2FCB25B4B /* SaveSpaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveSpaceView.swift; sourceTree = "<group>"; };
 		7A09281597713AED32BE213D /* GameFinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameFinder.swift; sourceTree = "<group>"; };
 		812C784C99CEB2DFC813B35C /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		825ABEF719D1D53B7F189C32 /* SDL3.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL3.framework; path = Vendor/SDL3.framework; sourceTree = "<group>"; };
@@ -271,6 +273,7 @@
 				4CC49813A90473D10A937E98 /* HomeView.swift */,
 				A8F9E4FA3CCE582C0529B124 /* OnboardingView.swift */,
 				C4A95C8F7D0A11A55B060040 /* RootView.swift */,
+				6AD7AEF081AEAAE2FCB25B4B /* SaveSpaceView.swift */,
 				812C784C99CEB2DFC813B35C /* SettingsView.swift */,
 				671CCDB488F80DC171E258B5 /* SidebarView.swift */,
 				1A4B1630B611CEA329743489 /* SystemView.swift */,
@@ -457,6 +460,7 @@
 				61A541A69337FD43068FEB04 /* Presets.swift in Sources */,
 				5589360C2C1B21CF9A576F4B /* RetroArchPreset.swift in Sources */,
 				71D6DECCB0C6DF8ACC11A107 /* RootView.swift in Sources */,
+				4F987A95F03D55AB2D2893AC /* SaveSpaceView.swift in Sources */,
 				80DB8AE959740A0D99714CD7 /* SettingsView.swift in Sources */,
 				F975F3F013DD56850A468884 /* SidebarView.swift in Sources */,
 				17B356BBA0004D4C262FB7FD /* SystemView.swift in Sources */,

@@ -22,6 +22,7 @@ struct SettingsView: View {
                     Button("Create System Folders") { model.library.createFolders() }
                     Button("Rescan") { Task { await model.library.scan() } }
                     Button("Find Games on This Mac…") { model.showFinder = true }
+                    Button("Save Disk Space…") { model.showSaveSpace = true }
                 }
             }
             Section {

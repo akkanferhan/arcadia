@@ -16,11 +16,13 @@ final class AppModel {
     let emulators = EmulatorManager()
     let launcher = Launcher()
     let finder = GameFinder()
+    let compressor = DiscCompressor()
 
     var selection: SidebarItem? = .home
     var search = ""
     var showOnboarding: Bool
     var showFinder = false
+    var showSaveSpace = false
     var problem: Problem?
 
     struct Problem: Identifiable {
@@ -46,6 +48,8 @@ final class AppModel {
         case "emulators": selection = .emulators
         case let id?: selection = GameSystem.with(id: id).map { .system($0.id) } ?? .home
         }
+        // `-saveSpace YES` opens Save Disk Space right away (handy for development).
+        showSaveSpace = UserDefaults.standard.bool(forKey: "saveSpace")
         // `-findGamesIn <folder>` searches only that folder right away (handy for development).
         if let folder = UserDefaults.standard.string(forKey: "findGamesIn") {
             let url = URL(fileURLWithPath: folder)

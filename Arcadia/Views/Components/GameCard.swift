@@ -65,6 +65,12 @@ struct GameCard: View {
             } else {
                 Button("Add to Favorites", systemImage: "star") { model.library.toggleFavorite(game) }
             }
+            if CompressionPlan.plan(for: game) != nil {
+                Button("Compress to Save Space…", systemImage: "arrow.down.right.and.arrow.up.left") {
+                    model.compressor.focus = game
+                    model.showSaveSpace = true
+                }
+            }
             Divider()
             Button("Show in Finder", systemImage: "folder") {
                 NSWorkspace.shared.activateFileViewerSelecting([game.url])

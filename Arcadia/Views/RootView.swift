@@ -28,6 +28,9 @@ struct RootView: View {
         .sheet(isPresented: $model.showFinder) {
             FindGamesView()
         }
+        .sheet(isPresented: $model.showSaveSpace) {
+            SaveSpaceView()
+        }
         .alert(item: $model.problem) { problem in
             if let emulator = problem.missing {
                 Alert(title: Text("Almost ready"), message: Text(problem.message),
