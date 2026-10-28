@@ -1,0 +1,44 @@
+Arcadia/Views/TV/TVModeView.swift
+  s_947a5ec9b0d04e::t_0c116d4bb1b43f 1-535
+Tests/ArcadiaTests/TVNavigationTests.swift
+  s_947a5ec9b0d04e::t_0c116d4bb1b43f 1-272
+Arcadia/App/ArcadiaApp.swift
+  s_947a5ec9b0d04e::t_0c116d4bb1b43f 25,28
+  s_947a5ec9b0d04e::t_29de3b8b1349c8 29
+Arcadia/Views/RootView.swift
+  s_947a5ec9b0d04e::t_0c116d4bb1b43f 42-43
+Arcadia.xcodeproj/project.pbxproj
+  s_947a5ec9b0d04e::t_0c116d4bb1b43f 10,31,42,53-54,72,88,119,233-241,388
+  s_947a5ec9b0d04e::t_8b68ae2bb3f85f 193
+  s_947a5ec9b0d04e::t_05e4e9d9479fef 134,140,156,167,178,242-245,312,592-597,614
+Arcadia/Views/SettingsView.swift
+  s_947a5ec9b0d04e::t_0c116d4bb1b43f 5,36
+Arcadia/App/AppModel.swift
+  s_947a5ec9b0d04e::t_0c116d4bb1b43f 32-33
+Arcadia/Views/TV/TVInput.swift
+  s_947a5ec9b0d04e::t_0c116d4bb1b43f 1-141
+Arcadia/Views/TV/TVModeController.swift
+  s_947a5ec9b0d04e::t_0c116d4bb1b43f 1-145
+Arcadia/Views/TV/TVNavigation.swift
+  s_947a5ec9b0d04e::t_0c116d4bb1b43f 1-334
+Arcadia/Views/TV/TVOverlays.swift
+  s_947a5ec9b0d04e::t_0c116d4bb1b43f 1-416
+Arcadia/Views/TV/TVMode.swift
+  s_947a5ec9b0d04e::t_0c116d4bb1b43f 1-97
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "65eb1c6ed61fe35f51e3350c4b66f05d4e56f21a",
+  "prompts": {},
+  "sessions": {
+    "s_947a5ec9b0d04e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "ae2b73cb-5faa-44a9-b7a6-4d22739dbe7c",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Ferhan Akkan <ferhanakkan@gmail.com>"
+    }
+  }
+}
