@@ -27,6 +27,7 @@
 		566EB34E33FCC2E08E455B43 /* EmulatorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3950787B4CA3AA7BF4513663 /* EmulatorManager.swift */; };
 		6097722C6994C95D35AD11E8 /* AppleSilicon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5675169E922AEE3316611F /* AppleSilicon.swift */; };
 		61A541A69337FD43068FEB04 /* Presets.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC93158998E3FEF087A52306 /* Presets.swift */; };
+		68FFC0397450187C29A540A6 /* FolderWatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A899554D2789C31C2F93072 /* FolderWatcher.swift */; };
 		71D6DECCB0C6DF8ACC11A107 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A95C8F7D0A11A55B060040 /* RootView.swift */; };
 		74A7A0D42D0FE3FC88AB4E32 /* ArcadiaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F075E3969F2CC2D43B2F62 /* ArcadiaApp.swift */; };
 		775F30204137D02909AA4A05 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0E850E7AC8F33F6CA3CFC3 /* Game.swift */; };
@@ -54,6 +55,7 @@
 		D818146C2F14B81D52AD24EB /* GameFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A09281597713AED32BE213D /* GameFinder.swift */; };
 		D83BA14939E2650FFD33CD23 /* Paths.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A94B480FF851B32C4EBDA4C /* Paths.swift */; };
 		DD2706CF114208249D1E9A42 /* PlayStationPresets.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED3403B2F642B4ADD1630D5 /* PlayStationPresets.swift */; };
+		F5201833F230E56DB0E168AE /* FolderWatcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFA42C7F8A4A9CE2D8EC052 /* FolderWatcherTests.swift */; };
 		F975F3F013DD56850A468884 /* SidebarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671CCDB488F80DC171E258B5 /* SidebarView.swift */; };
 		FDA336ACDE80BA2D5FB7192D /* SDL3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 825ABEF719D1D53B7F189C32 /* SDL3.framework */; };
 /* End PBXBuildFile section */
@@ -94,6 +96,7 @@
 		3C93AF9553B3227700244CF6 /* Downloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Downloader.swift; sourceTree = "<group>"; };
 		3D2178624FDAD84591FF0DDD /* GameSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSystem.swift; sourceTree = "<group>"; };
 		3F24944E338626A252FB76BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		4A899554D2789C31C2F93072 /* FolderWatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderWatcher.swift; sourceTree = "<group>"; };
 		4CC49813A90473D10A937E98 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		552E3F0567F989B07102ADBB /* ModernPlayStationPresets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModernPlayStationPresets.swift; sourceTree = "<group>"; };
 		57C0F5D6658EB4112AABCF7A /* BiosViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiosViews.swift; sourceTree = "<group>"; };
@@ -102,6 +105,7 @@
 		671CCDB488F80DC171E258B5 /* SidebarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarView.swift; sourceTree = "<group>"; };
 		6A465C9E977BB474751CA62E /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
 		7A09281597713AED32BE213D /* GameFinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameFinder.swift; sourceTree = "<group>"; };
+		7FFA42C7F8A4A9CE2D8EC052 /* FolderWatcherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderWatcherTests.swift; sourceTree = "<group>"; };
 		812C784C99CEB2DFC813B35C /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		825ABEF719D1D53B7F189C32 /* SDL3.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL3.framework; path = Vendor/SDL3.framework; sourceTree = "<group>"; };
 		84F075E3969F2CC2D43B2F62 /* ArcadiaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcadiaApp.swift; sourceTree = "<group>"; };
@@ -184,6 +188,7 @@
 				AD10502CAF52885F1D59E067 /* Artwork.swift */,
 				3C93AF9553B3227700244CF6 /* Downloader.swift */,
 				3950787B4CA3AA7BF4513663 /* EmulatorManager.swift */,
+				4A899554D2789C31C2F93072 /* FolderWatcher.swift */,
 				7A09281597713AED32BE213D /* GameFinder.swift */,
 				605F8FF86F965E32FDC74B02 /* GameIdentifier.swift */,
 				C8A18463512A2739BED27CBB /* Gamepads.swift */,
@@ -200,6 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				9479CD5B5BB8551EBA0778CE /* ConfigFileTests.swift */,
+				7FFA42C7F8A4A9CE2D8EC052 /* FolderWatcherTests.swift */,
 				1978F3D28ED8BFB82CE15E74 /* GameIdentifierTests.swift */,
 				ABEB897CD0B84F515FFC489C /* LibraryTests.swift */,
 				E69D79541BD7443833D9BD8A /* MultiplayerTests.swift */,
@@ -420,6 +426,7 @@
 				566EB34E33FCC2E08E455B43 /* EmulatorManager.swift in Sources */,
 				98825D79B66BEE75FB33465D /* EmulatorsView.swift in Sources */,
 				CEA17191C0844D50711D88EC /* FindGamesView.swift in Sources */,
+				68FFC0397450187C29A540A6 /* FolderWatcher.swift in Sources */,
 				775F30204137D02909AA4A05 /* Game.swift in Sources */,
 				25F973E07122F4DC2026EE5A /* GameCard.swift in Sources */,
 				D818146C2F14B81D52AD24EB /* GameFinder.swift in Sources */,
@@ -453,6 +460,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				983952800500088AD359BF87 /* ConfigFileTests.swift in Sources */,
+				F5201833F230E56DB0E168AE /* FolderWatcherTests.swift in Sources */,
 				81DFEEBB425213C5B1185CC0 /* GameIdentifierTests.swift in Sources */,
 				8DBB70F06166B99F413D5A07 /* LibraryTests.swift in Sources */,
 				2C761B22D5AE7D873D3C87E1 /* MultiplayerTests.swift in Sources */,

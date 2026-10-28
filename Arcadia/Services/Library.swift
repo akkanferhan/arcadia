@@ -8,10 +8,13 @@ final class Library {
     private(set) var games: [Game] = []
     private(set) var records: [String: GameRecord] = [:]
     private(set) var isScanning = false
+    /// Rescans when games are copied into or removed from the folder.
+    @ObservationIgnored private var watcher: FolderWatcher?
 
     var folder: URL {
         didSet {
             UserDefaults.standard.set(folder.path, forKey: "libraryFolder")
+            watcher?.watch(folder)
             Task { await scan() }
         }
     }
@@ -25,6 +28,9 @@ final class Library {
            let saved = try? JSONDecoder().decode([String: GameRecord].self, from: data) {
             records = saved
         }
+        let watcher = FolderWatcher { [weak self] in Task { await self?.scan() } }
+        if hasFolder { watcher.watch(folder) }
+        self.watcher = watcher
     }
 
     var biosFolder: URL { folder.appendingPathComponent("bios", isDirectory: true) }
