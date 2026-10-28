@@ -27,7 +27,7 @@ actor Artwork {
         }
         guard let repo = game.system.thumbnails else { return nil }
 
-        let digest = SHA256.hash(data: Data(game.id.utf8)).map { String(format: "%02x", $0) }.joined()
+        let digest = key(for: game)
         let cached = Paths.artwork.appendingPathComponent(digest + ".png")
         let missing = Paths.artwork.appendingPathComponent(digest + ".none")
         if let image = NSImage(contentsOf: cached) { return image }
@@ -43,6 +43,18 @@ actor Artwork {
         }
         FileManager.default.createFile(atPath: missing.path, contents: nil)
         return nil
+    }
+
+    /// A file-name-safe key for a game, used to name cached images.
+    nonisolated static func key(for game: Game) -> String {
+        SHA256.hash(data: Data(game.id.utf8)).map { String(format: "%02x", $0) }.joined()
+    }
+
+    /// The box art already on disk, without downloading anything.
+    nonisolated static func cachedFile(for game: Game) -> URL? {
+        if game.system.gameIsFolder, let icon = PlayStationFolder.icon(in: game.url) { return icon }
+        let cached = Paths.artwork.appendingPathComponent(key(for: game) + ".png")
+        return FileManager.default.fileExists(atPath: cached.path) ? cached : nil
     }
 
     /// The file name first; then common regions, for files without tags.
