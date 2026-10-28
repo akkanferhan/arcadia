@@ -1,0 +1,35 @@
+Tests/ArcadiaTests/GameIdentifierTests.swift
+  s_947a5ec9b0d04e::t_c646fada1542cf 1-84
+Tests/ArcadiaTests/LibraryTests.swift
+  s_947a5ec9b0d04e::t_c08af791bd163f 1-129
+Arcadia/Services/Library.swift
+  s_947a5ec9b0d04e::t_5cd37f3b506902 93
+Tests/ArcadiaTests/TestSupport.swift
+  s_947a5ec9b0d04e::t_85c83f8a5ff187 1-90
+Arcadia.xcodeproj/project.pbxproj
+  s_947a5ec9b0d04e::t_61d462a885e1ee 22,34,37,39,60-69,86,88,90,112,116,164,197-207,223,295-302,326-343,356-358,383,448-458,461-468,536-577,677,712-717,720
+  s_947a5ec9b0d04e::t_4b9c789a357451 718-719
+project.yml
+  s_947a5ec9b0d04e::t_ee65d8013e8969 61-64
+  s_947a5ec9b0d04e::t_5cd37f3b506902 57,65-92
+Tests/ArcadiaTests/ConfigFileTests.swift
+  s_947a5ec9b0d04e::t_fe93e39fb86171 1-92
+Arcadia.xcodeproj/xcshareddata/xcschemes/Arcadia.xcscheme
+  s_947a5ec9b0d04e::t_61d462a885e1ee 1-118
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "7eb730502443457c3d4164238be9f8760c29223f",
+  "prompts": {},
+  "sessions": {
+    "s_947a5ec9b0d04e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "ae2b73cb-5faa-44a9-b7a6-4d22739dbe7c",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Ferhan Akkan <ferhanakkan@gmail.com>"
+    }
+  }
+}
