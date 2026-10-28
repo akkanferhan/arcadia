@@ -4840,6 +4840,98 @@
         }
       }
     },
+    "Downloading PS Vita system fonts from Sony…": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "جارٍ تنزيل خطوط نظام PS Vita من Sony…"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Descargando las fuentes del sistema de PS Vita desde Sony…"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Téléchargement des polices système PS Vita depuis Sony…"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sony से PS Vita सिस्टम फ़ॉन्ट डाउनलोड हो रहे हैं…"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Baixando as fontes do sistema do PS Vita da Sony…"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "PS Vita sistem yazı tipleri Sony’den indiriliyor…"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "正在从 Sony 下载 PS Vita 系统字体…"
+          }
+        }
+      }
+    },
+    "Downloading PS Vita system software from Sony…": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "جارٍ تنزيل برنامج نظام PS Vita من Sony…"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Descargando el software del sistema de PS Vita desde Sony…"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Téléchargement du logiciel système PS Vita depuis Sony…"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sony से PS Vita सिस्टम सॉफ़्टवेयर डाउनलोड हो रहा है…"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Baixando o software do sistema do PS Vita da Sony…"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "PS Vita sistem yazılımı Sony’den indiriliyor…"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "正在从 Sony 下载 PS Vita 系统软件…"
+          }
+        }
+      }
+    },
     "Downloading PS3 system software from Sony…": {
       "localizations": {
         "ar": {
@@ -4974,6 +5066,52 @@
           "stringUnit": {
             "state": "translated",
             "value": "将游戏文件拖到这里，或复制到 %1$@ 文件夹。\n支持的格式：%2$@"
+          }
+        }
+      }
+    },
+    "Drag game folders or %@ files here, or copy them into the %@ folder.": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "اسحب مجلدات الألعاب أو ملفات %1$@ إلى هنا، أو انسخها إلى مجلد %2$@."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Arrastra aquí carpetas de juegos o archivos %1$@, o cópialos en la carpeta %2$@."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Glissez ici des dossiers de jeux ou des fichiers %1$@, ou copiez-les dans le dossier %2$@."
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "गेम फ़ोल्डर या %1$@ फ़ाइलें यहाँ खींचें, या उन्हें %2$@ फ़ोल्डर में कॉपी करें।"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Arraste pastas de jogos ou arquivos %1$@ para cá, ou copie-os para a pasta %2$@."
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Oyun klasörlerini ya da %1$@ dosyalarını buraya sürükle veya %2$@ klasörüne kopyala."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "将游戏文件夹或 %1$@ 文件拖到这里，或复制到 %2$@ 文件夹。"
           }
         }
       }
@@ -6768,6 +6906,52 @@
           "stringUnit": {
             "state": "translated",
             "value": "正在安装 %@…"
+          }
+        }
+      }
+    },
+    "Installing PS Vita system software…": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "جارٍ تثبيت برنامج نظام PS Vita…"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Instalando el software del sistema de PS Vita…"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Installation du logiciel système PS Vita…"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "PS Vita सिस्टम सॉफ़्टवेयर इंस्टॉल हो रहा है…"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Instalando o software do sistema do PS Vita…"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "PS Vita sistem yazılımı yükleniyor…"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "正在安装 PS Vita 系统软件…"
           }
         }
       }
@@ -8930,6 +9114,52 @@
           "stringUnit": {
             "state": "translated",
             "value": "只有在压缩副本校验通过后，原始文件才会被移到废纸篓。"
+          }
+        }
+      }
+    },
+    "PS Vita system software and fonts. Arcadia downloads them from Sony when you first play.": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "برنامج نظام PS Vita وخطوطه. يُنزّلها Arcadia من Sony عند أول تشغيل."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Software del sistema y fuentes de PS Vita. Arcadia los descarga de Sony la primera vez que juegas."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Logiciel système et polices PS Vita. Arcadia les télécharge depuis Sony la première fois que vous jouez."
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "PS Vita सिस्टम सॉफ़्टवेयर और फ़ॉन्ट। पहली बार खेलने पर Arcadia इन्हें Sony से डाउनलोड करता है।"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Software do sistema e fontes do PS Vita. O Arcadia os baixa da Sony na primeira vez que você joga."
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "PS Vita sistem yazılımı ve yazı tipleri. Arcadia ilk oynadığında bunları Sony’den indirir."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "PS Vita 系统软件和字体。首次游玩时，Arcadia 会从 Sony 下载。"
           }
         }
       }
@@ -12016,6 +12246,52 @@
         }
       }
     },
+    "Sony's PS Vita update server could not be reached.": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "تعذّر الوصول إلى خادم تحديثات PS Vita من Sony."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No se pudo conectar con el servidor de actualizaciones de PS Vita de Sony."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Impossible de joindre le serveur de mises à jour PS Vita de Sony."
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sony के PS Vita अपडेट सर्वर से कनेक्ट नहीं हो सका।"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Não foi possível acessar o servidor de atualização do PS Vita da Sony."
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sony’nin PS Vita güncelleme sunucusuna ulaşılamadı."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无法连接 Sony 的 PS Vita 更新服务器。"
+          }
+        }
+      }
+    },
     "Sony's PS3 update server could not be reached.": {
       "localizations": {
         "ar": {
@@ -12522,6 +12798,52 @@
         }
       }
     },
+    "The PS Vita system software download was damaged. Try again.": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "تلف تنزيل برنامج نظام PS Vita. حاول مرة أخرى."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La descarga del software del sistema de PS Vita está dañada. Inténtalo de nuevo."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Le téléchargement du logiciel système PS Vita est endommagé. Réessayez."
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "PS Vita सिस्टम सॉफ़्टवेयर डाउनलोड खराब हो गया। फिर से कोशिश करें।"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O download do software do sistema do PS Vita foi corrompido. Tente novamente."
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "PS Vita sistem yazılımı indirmesi bozuk geldi. Tekrar dene."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "PS Vita 系统软件下载已损坏，请重试。"
+          }
+        }
+      }
+    },
     "The PS3 system software download was damaged. Try again.": {
       "localizations": {
         "ar": {
@@ -12844,6 +13166,52 @@
         }
       }
     },
+    "This PS Vita game is encrypted and can't be installed without its license (sce_sys/package/work.bin). Dump it again with NoNpDrm or FAGDec.": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "لعبة PS Vita هذه مشفّرة ولا يمكن تثبيتها دون ترخيصها (sce_sys/package/work.bin). استخرجها مجددًا باستخدام NoNpDrm أو FAGDec."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Este juego de PS Vita está cifrado y no se puede instalar sin su licencia (sce_sys/package/work.bin). Vuelve a extraerlo con NoNpDrm o FAGDec."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ce jeu PS Vita est chiffré et ne peut pas être installé sans sa licence (sce_sys/package/work.bin). Extrayez-le à nouveau avec NoNpDrm ou FAGDec."
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "यह PS Vita गेम एन्क्रिप्टेड है और इसके लाइसेंस (sce_sys/package/work.bin) के बिना इंस्टॉल नहीं हो सकता। इसे NoNpDrm या FAGDec से फिर से डंप करें।"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Este jogo de PS Vita está criptografado e não pode ser instalado sem a licença (sce_sys/package/work.bin). Extraia-o novamente com o NoNpDrm ou o FAGDec."
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bu PS Vita oyunu şifreli ve lisansı (sce_sys/package/work.bin) olmadan yüklenemez. Oyunu NoNpDrm ya da FAGDec ile yeniden al."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "此 PS Vita 游戏已加密，没有其许可证（sce_sys/package/work.bin）无法安装。请用 NoNpDrm 或 FAGDec 重新转储。"
+          }
+        }
+      }
+    },
     "This collection is empty": {
       "localizations": {
         "ar": {
@@ -12886,6 +13254,98 @@
           "stringUnit": {
             "state": "translated",
             "value": "此合集为空"
+          }
+        }
+      }
+    },
+    "This doesn't look like a PS Vita game: its param.sfo is missing or has no title ID.": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "لا يبدو هذا لعبة PS Vita: ملف param.sfo مفقود أو لا يحتوي على معرّف اللعبة."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No parece un juego de PS Vita: falta su param.sfo o no tiene ID de título."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cela ne ressemble pas à un jeu PS Vita : son param.sfo est absent ou n’a pas d’identifiant de titre."
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "यह PS Vita गेम नहीं लगता: इसकी param.sfo फ़ाइल नहीं है या उसमें टाइटल ID नहीं है।"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Isto não parece um jogo de PS Vita: o param.sfo está ausente ou não tem ID do título."
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bu bir PS Vita oyununa benzemiyor: param.sfo dosyası yok ya da içinde oyun kimliği yok."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "这看起来不像 PS Vita 游戏：缺少 param.sfo，或其中没有游戏 ID。"
+          }
+        }
+      }
+    },
+    "This is an update or add-on for a PS Vita game, not the game itself.": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "هذا تحديث أو إضافة للعبة PS Vita، وليس اللعبة نفسها."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Esto es una actualización o un complemento de un juego de PS Vita, no el juego en sí."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Il s’agit d’une mise à jour ou d’un module complémentaire d’un jeu PS Vita, pas du jeu lui-même."
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "यह PS Vita गेम का अपडेट या ऐड-ऑन है, गेम खुद नहीं।"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Isto é uma atualização ou um complemento de um jogo de PS Vita, não o jogo em si."
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bu, bir PS Vita oyununun kendisi değil, güncellemesi ya da eklentisi."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "这是 PS Vita 游戏的更新或附加内容，而不是游戏本身。"
           }
         }
       }
@@ -13760,6 +14220,52 @@
           "stringUnit": {
             "state": "translated",
             "value": "正在使用内置 BIOS。添加你主机的 BIOS 可获得最佳兼容性。"
+          }
+        }
+      }
+    },
+    "Vitamin dumps can't be played. Dump the game again with NoNpDrm or FAGDec.": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "لا يمكن تشغيل النسخ المستخرجة باستخدام Vitamin. استخرج اللعبة مجددًا باستخدام NoNpDrm أو FAGDec."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Las copias hechas con Vitamin no se pueden jugar. Vuelve a extraer el juego con NoNpDrm o FAGDec."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Les copies Vitamin ne peuvent pas être lancées. Extrayez à nouveau le jeu avec NoNpDrm ou FAGDec."
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vitamin डंप नहीं चलाए जा सकते। गेम को NoNpDrm या FAGDec से फिर से डंप करें।"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cópias feitas com o Vitamin não podem ser jogadas. Extraia o jogo novamente com o NoNpDrm ou o FAGDec."
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vitamin ile alınmış kopyalar oynatılamaz. Oyunu NoNpDrm ya da FAGDec ile yeniden al."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vitamin 转储无法游玩。请用 NoNpDrm 或 FAGDec 重新转储游戏。"
           }
         }
       }
