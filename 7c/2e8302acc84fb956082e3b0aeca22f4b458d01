@@ -1,0 +1,33 @@
+Arcadia/Views/Components/GameCard.swift
+  s_947a5ec9b0d04e::t_375d2f3c0ec42a 68-73
+Arcadia/Views/SaveSpaceView.swift
+  s_947a5ec9b0d04e::t_5d289d762b271c 200-204
+  s_947a5ec9b0d04e::t_59613bf5c8119c 1-199,205-235
+Arcadia/App/ArcadiaApp.swift
+  s_947a5ec9b0d04e::t_375d2f3c0ec42a 21
+Arcadia/App/AppModel.swift
+  s_947a5ec9b0d04e::t_c4f6e783eb0f60 51-52
+  s_947a5ec9b0d04e::t_375d2f3c0ec42a 19,25
+Arcadia.xcodeproj/project.pbxproj
+  s_947a5ec9b0d04e::t_5d289d762b271c 26,110,276,463
+Arcadia/Views/SettingsView.swift
+  s_947a5ec9b0d04e::t_375d2f3c0ec42a 25
+Arcadia/Views/RootView.swift
+  s_947a5ec9b0d04e::t_375d2f3c0ec42a 31-33
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "7c2e8302acc84fb956082e3b0aeca22f4b458d01",
+  "prompts": {},
+  "sessions": {
+    "s_947a5ec9b0d04e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "ae2b73cb-5faa-44a9-b7a6-4d22739dbe7c",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Ferhan Akkan <ferhanakkan@gmail.com>"
+    }
+  }
+}
