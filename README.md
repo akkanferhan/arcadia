@@ -46,6 +46,8 @@ scans your game folders, shows box art and starts games with a double-click.
   Continue Playing widget
 - **Launch logs**: each launch's emulator output is kept in `~/Library/Logs/Arcadia`; if a game
   closes right after starting, the alert offers its log
+- **Updates**: Arcadia updates itself with Sparkle (Arcadia › Check for Updates…), and installed
+  emulators are checked daily and updated in the background, never while you're playing
 - Favorites, recently played, play time and search
 - Available in English, Türkçe, 简体中文, Español, हिन्दी, العربية, Français and Português (Brasil)
 
@@ -144,7 +146,8 @@ catalog when you build; translate them in Xcode's String Catalog editor. To prev
 
 1. Update `MARKETING_VERSION` in `project.yml` (then `xcodegen generate`) and the `CHANGELOG.md` section.
 2. Merge `develop` into `main`, tag it (`git tag v0.1.0`) and push the tag.
-3. The **Release** workflow builds, signs, notarizes and staples `Arcadia-<version>.dmg` and publishes it.
+3. The **Release** workflow builds, signs, notarizes and staples `Arcadia-<version>.dmg`, publishes it
+   with a signed Sparkle `appcast.xml`, and installed copies of Arcadia offer the update.
 
 The workflow needs these repository secrets:
 
@@ -154,6 +157,7 @@ The workflow needs these repository secrets:
 | `DEVELOPER_ID_P12_PASSWORD` | The .p12 password |
 | `NOTARY_API_KEY` | An App Store Connect API key (.p8), base64-encoded |
 | `NOTARY_KEY_ID`, `NOTARY_ISSUER` | That key's ID and issuer ID |
+| `SPARKLE_PRIVATE_KEY` | The Sparkle EdDSA private key that signs `appcast.xml` (export it with `generate_keys -x`) |
 
 To build a release locally, save notarization credentials once with
 `xcrun notarytool store-credentials arcadia-notary --apple-id <id> --team-id 43THU6L26P`, then run

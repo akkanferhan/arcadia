@@ -40,3 +40,5 @@ with Apple silicon running macOS 26 or later.
 - Spotlight search, Shortcuts and Siri actions ("Play Game", "Continue Playing"), a Continue
   Playing widget and `arcadia://` links.
 - Launch logs in `~/Library/Logs/Arcadia`, opened from the failed-start alert or Settings.
+- Automatic updates for Arcadia through Sparkle, and daily emulator update checks with an
+  Update Available badge, Update All and background updates while no game is running.
