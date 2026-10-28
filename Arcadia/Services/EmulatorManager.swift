@@ -7,6 +7,8 @@ struct Installation: Codable, Equatable {
     /// Path of the `.app` bundle or executable, relative to the emulator's folder.
     let payload: String
     let installedAt: Date
+    /// The exact download, when the source tells it apart from the version (see `AvailableVersion`).
+    var revision: String? = nil
 }
 
 enum InstallStage: Equatable {
@@ -45,9 +47,29 @@ final class EmulatorManager {
     private(set) var states: [String: InstallState] = [:]
     private var tasks: [String: Task<Void, Never>] = [:]
 
+    /// Newest versions found by the last update check, by emulator id.
+    private(set) var latest: [String: AvailableVersion] = [:]
+    private(set) var isCheckingForUpdates = false
+    private(set) var lastUpdateCheck: Date?
+    private var updateLoop: Task<Void, Never>?
+    /// Whether a background update may start now; AppModel says no while a game is running.
+    var mayUpdateInBackground: () -> Bool = { true }
+
+    var updatesAutomatically = UserDefaults.standard.object(forKey: "updateEmulatorsAutomatically") as? Bool ?? true {
+        didSet {
+            UserDefaults.standard.set(updatesAutomatically, forKey: "updateEmulatorsAutomatically")
+            installUpdatesInBackground()
+        }
+    }
+
     init() {
         for emulator in Emulator.all {
             states[emulator.id] = Self.readInstallation(emulator.id).map(InstallState.installed) ?? .notInstalled
+        }
+        lastUpdateCheck = UserDefaults.standard.object(forKey: "emulatorUpdatesCheckedAt") as? Date
+        if let data = UserDefaults.standard.data(forKey: "emulatorUpdates"),
+           let saved = try? JSONDecoder().decode([String: AvailableVersion].self, from: data) {
+            latest = saved
         }
     }
 
@@ -61,17 +83,20 @@ final class EmulatorManager {
         return Paths.emulator(id).appendingPathComponent(installation.payload)
     }
 
-    func install(_ emulator: Emulator) {
+    /// A `quiet` install (a background update) that fails leaves the working version in place.
+    func install(_ emulator: Emulator, quiet: Bool = false) {
         guard !state(emulator.id).isWorking else { return }
         states[emulator.id] = .working(stage: .resolving, progress: nil)
         tasks[emulator.id] = Task {
             do {
                 let installation = try await performInstall(emulator)
                 states[emulator.id] = .installed(installation)
+                setLatest(AvailableVersion(version: installation.version, revision: installation.revision), for: emulator.id)
             } catch is CancellationError {
                 states[emulator.id] = Self.readInstallation(emulator.id).map(InstallState.installed) ?? .notInstalled
             } catch {
-                states[emulator.id] = .failed(error.localizedDescription)
+                let previous = quiet ? Self.readInstallation(emulator.id) : nil
+                states[emulator.id] = previous.map(InstallState.installed) ?? .failed(error.localizedDescription)
             }
             tasks[emulator.id] = nil
         }
@@ -89,6 +114,7 @@ final class EmulatorManager {
     private struct Release {
         let url: URL
         let version: String
+        var revision: String?
     }
 
     private func performInstall(_ emulator: Emulator) async throws -> Installation {
@@ -129,7 +155,8 @@ final class EmulatorManager {
         try FileManager.default.moveItem(at: staging, to: target)
         _ = try? await Shell.run("/usr/bin/xattr", ["-dr", "com.apple.quarantine", target.path])
 
-        let installation = Installation(version: release.version, payload: relative, installedAt: .now)
+        let installation = Installation(version: release.version, payload: relative, installedAt: .now,
+                                        revision: release.revision)
         let data = try JSONEncoder().encode(installation)
         try data.write(to: target.appendingPathComponent("arcadia.json"))
         return installation
@@ -157,6 +184,7 @@ final class EmulatorManager {
     private static func githubRelease(repo: String, asset pattern: String, includePrereleases: Bool) async throws -> Release {
         struct GitHubRelease: Decodable {
             struct Asset: Decodable {
+                let id: Int
                 let name: String
                 let browser_download_url: URL
             }
@@ -174,7 +202,7 @@ final class EmulatorManager {
         let regex = try Regex(pattern)
         for release in releases {
             if let asset = release.assets.first(where: { $0.name.contains(regex) }) {
-                return Release(url: asset.browser_download_url, version: release.tag_name)
+                return Release(url: asset.browser_download_url, version: release.tag_name, revision: String(asset.id))
             }
         }
         throw InstallError.noDownload
@@ -199,6 +227,7 @@ final class EmulatorManager {
                 let url: URL
             }
             let shortrev: String
+            let hash: String?
             let artifacts: [Artifact]
         }
         let (data, _) = try await URLSession.shared.data(from: URL(string: "https://dolphin-emu.org/update/latest/beta")!)
@@ -206,7 +235,7 @@ final class EmulatorManager {
         guard let mac = update.artifacts.first(where: { $0.system.hasPrefix("macOS") }) else {
             throw InstallError.noDownload
         }
-        return Release(url: mac.url, version: update.shortrev)
+        return Release(url: mac.url, version: update.shortrev, revision: update.hash)
     }
 
     private static func readInstallation(_ id: String) -> Installation? {
@@ -216,6 +245,65 @@ final class EmulatorManager {
               FileManager.default.fileExists(atPath: folder.appendingPathComponent(installation.payload).path)
         else { return nil }
         return installation
+    }
+
+    // MARK: Updates
+
+    /// Whether a newer version than the installed one is available.
+    func hasUpdate(_ id: String) -> Bool {
+        guard let installation = state(id).installation, let available = latest[id] else { return false }
+        return EmulatorUpdates.isNewer(available, than: installation)
+    }
+
+    var updateCount: Int { Emulator.all.filter { hasUpdate($0.id) }.count }
+
+    /// Checks once now, then about once a day for as long as Arcadia runs.
+    func startUpdateChecks() {
+        guard updateLoop == nil else { return }
+        updateLoop = Task { [weak self] in
+            while !Task.isCancelled {
+                await self?.checkForUpdates()
+                self?.installUpdatesInBackground()
+                // Hourly wake-ups also catch updates that waited for a game to end.
+                try? await Task.sleep(for: .seconds(60 * 60))
+            }
+        }
+    }
+
+    /// Looks up the newest version of every installed emulator. Without `force`, does nothing
+    /// when the last check was less than a day ago.
+    func checkForUpdates(force: Bool = false) async {
+        guard !isCheckingForUpdates, force || EmulatorUpdates.isCheckDue(lastCheck: lastUpdateCheck) else { return }
+        isCheckingForUpdates = true
+        defer { isCheckingForUpdates = false }
+        var reached = false
+        for emulator in Emulator.all where isInstalled(emulator.id) && !state(emulator.id).isWorking {
+            guard let release = try? await resolve(emulator) else { continue }
+            reached = true
+            setLatest(AvailableVersion(version: release.version, revision: release.revision), for: emulator.id)
+        }
+        // Offline: try again at the next wake-up instead of waiting a day.
+        guard reached else { return }
+        lastUpdateCheck = .now
+        UserDefaults.standard.set(lastUpdateCheck, forKey: "emulatorUpdatesCheckedAt")
+    }
+
+    /// Installs every available update.
+    func installUpdates(quiet: Bool = false) {
+        for emulator in Emulator.all where hasUpdate(emulator.id) { install(emulator, quiet: quiet) }
+    }
+
+    /// Installs available updates when automatic updates are on and no game is running.
+    func installUpdatesInBackground() {
+        guard updatesAutomatically, mayUpdateInBackground() else { return }
+        installUpdates(quiet: true)
+    }
+
+    private func setLatest(_ available: AvailableVersion, for id: String) {
+        latest[id] = available
+        if let data = try? JSONEncoder().encode(latest) {
+            UserDefaults.standard.set(data, forKey: "emulatorUpdates")
+        }
     }
 
     // MARK: RetroArch cores

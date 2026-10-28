@@ -5,6 +5,7 @@ struct SettingsView: View {
 
     var body: some View {
         @Bindable var launcher = model.launcher
+        @Bindable var emulators = model.emulators
 
         Form {
             Section("Library") {
@@ -36,6 +37,14 @@ struct SettingsView: View {
             } footer: {
                 let chip = AppleSilicon.current
                 Text("\(chip.name) with a \(chip.gpuCores)-core GPU. Arcadia tunes every emulator for this Mac; games render at \(launcher.quality.scale)× their original resolution.")
+                    .foregroundStyle(.secondary)
+            }
+            Section {
+                Toggle("Keep emulators up to date automatically", isOn: $emulators.updatesAutomatically)
+            } header: {
+                Text("Updates")
+            } footer: {
+                Text("Arcadia checks once a day and installs emulator updates in the background, never while a game is running.")
                     .foregroundStyle(.secondary)
             }
             Section("BIOS") {

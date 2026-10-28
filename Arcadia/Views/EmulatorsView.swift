@@ -24,6 +24,7 @@ struct EmulatorsView: View {
                         .tint(Theme.accent)
                         .controlSize(.large)
                     }
+                    EmulatorUpdatesButton()
                 }
 
                 BiosCard()
@@ -36,6 +37,37 @@ struct EmulatorsView: View {
             }
             .padding(32)
             .padding(.bottom, 80)
+        }
+    }
+}
+
+/// "Update All" when updates are waiting, otherwise a manual check.
+private struct EmulatorUpdatesButton: View {
+    @Environment(AppModel.self) private var model
+
+    var body: some View {
+        let emulators = model.emulators
+        if emulators.updateCount > 0 {
+            Button {
+                emulators.installUpdates()
+            } label: {
+                Label("Update All (\(emulators.updateCount))", systemImage: "arrow.down.circle.fill")
+            }
+            .buttonStyle(.borderedProminent)
+            .tint(Theme.accent)
+            .controlSize(.large)
+        } else if emulators.isCheckingForUpdates {
+            HStack(spacing: 8) {
+                ProgressView().controlSize(.small)
+                Text("Checking for updates…").font(.callout).foregroundStyle(.secondary)
+            }
+        } else if Emulator.all.contains(where: { emulators.isInstalled($0.id) }) {
+            Button {
+                Task { await emulators.checkForUpdates(force: true) }
+            } label: {
+                Label("Check for Updates", systemImage: "arrow.clockwise")
+            }
+            .controlSize(.large)
         }
     }
 }
