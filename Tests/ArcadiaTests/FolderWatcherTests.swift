@@ -18,23 +18,26 @@ import Testing
     @Test func reportsGamesCopiedIntoSubfolders() async {
         let folder = TemporaryFolder()
         folder.folder("snes")
+        try? await Task.sleep(for: .milliseconds(500)) // let FSEvents report the folder's creation first
         var changes = 0
-        let watcher = FolderWatcher(delay: .milliseconds(100)) { changes += 1 }
+        let watcher = FolderWatcher(delay: .milliseconds(600)) { changes += 1 }
         watcher.watch(folder.url)
         try? await Task.sleep(for: .milliseconds(300)) // the stream starts after a moment
 
-        folder.write("snes/Game One.sfc", text: "x")
-        folder.write("snes/Game Two.sfc", text: "x")
-        #expect(await eventually { changes > 0 })
         // A burst of files is one rescan.
-        try? await Task.sleep(for: .milliseconds(500))
+        for name in ["One", "Two", "Three"] {
+            folder.write("snes/Game \(name).sfc", text: "x")
+            try? await Task.sleep(for: .milliseconds(100))
+        }
+        #expect(await eventually { changes > 0 })
+        try? await Task.sleep(for: .milliseconds(800))
         #expect(changes == 1)
 
         try? FileManager.default.removeItem(at: folder.url.appendingPathComponent("snes/Game One.sfc"))
         #expect(await eventually { changes == 2 })
 
         watcher.stop()
-        folder.write("snes/Game Three.sfc", text: "x")
+        folder.write("snes/Game Four.sfc", text: "x")
         try? await Task.sleep(for: .milliseconds(800))
         #expect(changes == 2)
     }
