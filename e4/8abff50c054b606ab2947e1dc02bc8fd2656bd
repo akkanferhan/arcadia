@@ -1,0 +1,30 @@
+Arcadia/Models/Emulator.swift
+  s_947a5ec9b0d04e::t_7204231218ba31 60-67
+Arcadia/Models/GameSystem.swift
+  s_947a5ec9b0d04e::t_7204231218ba31 34,85-89
+Arcadia.xcodeproj/project.pbxproj
+  s_947a5ec9b0d04e::t_0c3cfc785ac2fa 67,170,405,805
+  s_947a5ec9b0d04e::t_40892b75b1baa3 37,73,84,169,223,247,358,360,539,769-770,773
+Arcadia/Models/Bios.swift
+  s_947a5ec9b0d04e::t_7204231218ba31 40-45
+Arcadia/Views/SystemView.swift
+  s_947a5ec9b0d04e::t_0579c12cdea6dc 52-54
+Arcadia/Services/Sync/SaveLocations.swift
+  s_947a5ec9b0d04e::t_7204231218ba31 40-41
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "e48abff50c054b606ab2947e1dc02bc8fd2656bd",
+  "prompts": {},
+  "sessions": {
+    "s_947a5ec9b0d04e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "ae2b73cb-5faa-44a9-b7a6-4d22739dbe7c",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Ferhan Akkan <ferhanakkan@gmail.com>"
+    }
+  }
+}
