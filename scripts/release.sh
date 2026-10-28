@@ -5,6 +5,8 @@
 #   NOTARY_PROFILE=<name>                 a profile saved with `xcrun notarytool store-credentials`
 #   NOTARY_KEY_PATH, NOTARY_KEY_ID, NOTARY_ISSUER   an App Store Connect API key (used by CI)
 # Set SKIP_NOTARIZATION=1 to only build and sign.
+#
+# Then writes the Sparkle appcast, build/release/appcast.xml (see scripts/appcast.sh).
 set -euo pipefail
 cd "$(dirname "$0")/.."
 
@@ -50,20 +52,22 @@ hdiutil create -volname "Arcadia" -srcfolder "$OUT/dmg" -ov -format UDZO -quiet 
 codesign --sign "$IDENTITY" --timestamp "$DMG"
 
 if [[ "${SKIP_NOTARIZATION:-0}" == 1 ]]; then
-  echo "▸ Skipping notarization: $DMG"
-  exit 0
+  echo "▸ Skipping notarization"
+else
+  echo "▸ Notarizing"
+  if [[ -n "${NOTARY_PROFILE:-}" ]]; then
+    credentials=(--keychain-profile "$NOTARY_PROFILE")
+  elif [[ -n "${NOTARY_KEY_PATH:-}" ]]; then
+    credentials=(--key "$NOTARY_KEY_PATH" --key-id "$NOTARY_KEY_ID" --issuer "$NOTARY_ISSUER")
+  else
+    echo "Set NOTARY_PROFILE or NOTARY_KEY_PATH/NOTARY_KEY_ID/NOTARY_ISSUER (or SKIP_NOTARIZATION=1)." >&2
+    exit 1
+  fi
+  xcrun notarytool submit "$DMG" "${credentials[@]}" --wait
+  xcrun stapler staple "$DMG"
+  spctl --assess --type open --context context:primary-signature --verbose "$DMG"
 fi
 
-echo "▸ Notarizing"
-if [[ -n "${NOTARY_PROFILE:-}" ]]; then
-  credentials=(--keychain-profile "$NOTARY_PROFILE")
-elif [[ -n "${NOTARY_KEY_PATH:-}" ]]; then
-  credentials=(--key "$NOTARY_KEY_PATH" --key-id "$NOTARY_KEY_ID" --issuer "$NOTARY_ISSUER")
-else
-  echo "Set NOTARY_PROFILE or NOTARY_KEY_PATH/NOTARY_KEY_ID/NOTARY_ISSUER (or SKIP_NOTARIZATION=1)." >&2
-  exit 1
-fi
-xcrun notarytool submit "$DMG" "${credentials[@]}" --wait
-xcrun stapler staple "$DMG"
-spctl --assess --type open --context context:primary-signature --verbose "$DMG"
-echo "▸ Done: $DMG"
+echo "▸ Making the appcast"
+scripts/appcast.sh "$DMG" "$APP" "$OUT/appcast.xml"
+echo "▸ Done: $DMG, $OUT/appcast.xml"
