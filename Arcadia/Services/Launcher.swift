@@ -9,9 +9,17 @@ final class Launcher {
     private(set) var preparing: Game?
     /// What Arcadia is doing before the game starts, such as downloading firmware.
     private(set) var preparingStatus: LocalizedStringResource?
+    /// Progress of a long download before the game starts, from 0 to 1.
+    private(set) var preparingProgress: Double?
+    /// Called when an emulator quits on its own within seconds of starting.
+    var onUnexpectedExit: (Game) -> Void = { _ in }
     private var process: Process?
     private var payload: URL?
     private var startedAt = Date.now
+    private var stoppedByPlayer = false
+
+    /// A session shorter than this that the player did not end means the emulator gave up.
+    private static let crashThreshold: TimeInterval = 8
 
     var fullscreen = UserDefaults.standard.object(forKey: "fullscreen") as? Bool ?? true {
         didSet { UserDefaults.standard.set(fullscreen, forKey: "fullscreen") }
@@ -45,7 +53,7 @@ final class Launcher {
         if emulator.needsRosetta, !Rosetta.isInstalled { throw Failure.rosettaMissing(emulator) }
 
         preparing = game
-        defer { preparing = nil; preparingStatus = nil }
+        defer { preparing = nil; preparingStatus = nil; preparingProgress = nil }
 
         let target = game.system.gameIsFolder
             ? PlayStationFolder.bootFile(in: game.url, systemID: game.systemID)
@@ -58,9 +66,16 @@ final class Launcher {
         let gamepads = await Gamepads.connected()
         let context = PresetContext(emulator: emulator, system: game.system, game: target, core: request.core,
                                     install: emulators.payloadURL(emulator.id)!, bios: library.biosFolder,
-                                    scale: quality.scale, fullscreen: fullscreen, gamepads: gamepads) { [weak self] status in
-            Task { @MainActor in self?.preparingStatus = status }
-        }
+                                    scale: quality.scale, fullscreen: fullscreen, gamepads: gamepads,
+                                    report: { [weak self] status in
+                                        Task { @MainActor in
+                                            self?.preparingStatus = status
+                                            self?.preparingProgress = nil
+                                        }
+                                    },
+                                    progress: { [weak self] value in
+                                        Task { @MainActor in self?.preparingProgress = value }
+                                    })
         let preset = try await Presets.apply(context)
         let arguments = preset.arguments + emulator.arguments(request)
 
@@ -83,20 +98,28 @@ final class Launcher {
         self.process = process
         self.payload = payload
         startedAt = .now
+        stoppedByPlayer = false
         running = game
     }
 
     func stop() {
         guard running != nil, let payload else { return }
+        stoppedByPlayer = true
         // `open -W` does not forward signals, so quit the emulator by its path.
         _ = try? Process.run(URL(fileURLWithPath: "/usr/bin/pkill"), arguments: ["-f", payload.path])
         process?.terminate()
     }
 
     private func finished(library: Library) {
-        if let game = running { library.recordSession(game, started: startedAt) }
+        guard let game = running else { return }
+        let duration = Date.now.timeIntervalSince(startedAt)
         running = nil
         process = nil
+        if duration < Self.crashThreshold, !stoppedByPlayer {
+            onUnexpectedExit(game)
+        } else {
+            library.recordSession(game, started: startedAt)
+        }
     }
 }
 

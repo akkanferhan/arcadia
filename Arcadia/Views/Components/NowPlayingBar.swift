@@ -18,6 +18,11 @@ struct NowPlayingBar: View {
                     Text(game.title).font(.headline).lineLimit(1)
                     if launcher.running == nil, let status = launcher.preparingStatus {
                         Text(status).font(.caption).foregroundStyle(.secondary)
+                        if let progress = launcher.preparingProgress {
+                            ProgressView(value: progress)
+                                .frame(width: 220)
+                                .help(progress.formatted(.percent.precision(.fractionLength(0))))
+                        }
                     } else {
                         Text(game.system.name).font(.caption).foregroundStyle(.secondary)
                     }

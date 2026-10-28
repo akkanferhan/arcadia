@@ -32,7 +32,14 @@ scans your game folders, shows box art and starts games with a double-click.
 - Full screen by default; quit a game from Arcadia's now-playing bar
 - Available in English, Türkçe, 简体中文, Español, हिन्दी, العربية, Français and Português (Brasil)
 
+![Find Games on This Mac](docs/find-games.png)
+
 ![Emulator manager](docs/emulators.png)
+
+## Installing
+
+Download the latest `Arcadia-<version>.dmg` from [Releases](https://github.com/akkanferhan/arcadia/releases),
+open it and drag Arcadia to Applications. Releases are signed with a Developer ID and notarized by Apple.
 
 ## Supported systems
 
@@ -95,6 +102,12 @@ After changing `project.yml` or adding files, run `xcodegen generate`.
 
 Arcadia keeps emulators, box art and play history in `~/Library/Application Support/Arcadia`.
 
+### Tests
+
+```sh
+xcodebuild -project Arcadia.xcodeproj -scheme Arcadia test
+```
+
 ### Emulator presets
 
 Each emulator's tuned settings live in `Arcadia/Services/Presets/`. They are written right before
@@ -108,14 +121,36 @@ All user-facing text lives in `Arcadia/Resources/Localizable.xcstrings`. Xcode a
 catalog when you build; translate them in Xcode's String Catalog editor. To preview a language, run with
 `-AppleLanguages "(tr)"` in the scheme's arguments.
 
+## Releasing
+
+1. Update `MARKETING_VERSION` in `project.yml` (then `xcodegen generate`) and the `CHANGELOG.md` section.
+2. Merge `develop` into `main`, tag it (`git tag v0.1.0`) and push the tag.
+3. The **Release** workflow builds, signs, notarizes and staples `Arcadia-<version>.dmg` and publishes it.
+
+The workflow needs these repository secrets:
+
+| Secret | Value |
+| --- | --- |
+| `DEVELOPER_ID_P12` | The *Developer ID Application* certificate and key, exported as .p12, base64-encoded |
+| `DEVELOPER_ID_P12_PASSWORD` | The .p12 password |
+| `NOTARY_API_KEY` | An App Store Connect API key (.p8), base64-encoded |
+| `NOTARY_KEY_ID`, `NOTARY_ISSUER` | That key's ID and issuer ID |
+
+To build a release locally, save notarization credentials once with
+`xcrun notarytool store-credentials arcadia-notary --apple-id <id> --team-id 43THU6L26P`, then run
+`NOTARY_PROFILE=arcadia-notary scripts/release.sh`.
+
 ## Project layout
 
 ```
 Arcadia/
 ├─ App/        app entry point and shared state
 ├─ Models/     systems, emulators and games catalog
-├─ Services/   installer, library scanner, launcher, box art
+├─ Services/   installer, library scanner, game finder, launcher, box art, presets
 └─ Views/      SwiftUI screens and components
+Tests/         unit tests (Swift Testing)
+Vendor/        SDL 3 (arm64)
+scripts/       release build
 ```
 
 ## Contributing
@@ -125,6 +160,15 @@ Arcadia/
 - `feature/*`: one branch per piece of work, merged into `develop`
 
 Commits follow [Conventional Commits](https://www.conventionalcommits.org) (`feat:`, `fix:`, `chore:`).
+
+## Legal
+
+Arcadia is not affiliated with, endorsed or sponsored by Sony Interactive Entertainment, Nintendo,
+Sega, Microsoft or any other console maker. PlayStation, Nintendo, Sega, Xbox and the names of their
+consoles are trademarks of their respective owners and are used here only to identify the systems
+Arcadia supports. Arcadia does not include or download games, BIOS files or firmware, other than
+system software the console maker itself publishes for download. Only use games and BIOS files you
+have dumped from hardware and media you own.
 
 ## License
 

@@ -18,6 +18,8 @@ struct PresetContext {
     var gamepads: [Gamepad] = []
     /// Reports slow preparation steps (downloads) to the now-playing bar.
     var report: @Sendable (LocalizedStringResource) -> Void = { _ in }
+    /// Download progress for the step last reported, from 0 to 1.
+    var progress: @Sendable (Double) -> Void = { _ in }
 
     /// Settings, saves and memory cards for this emulator, owned by Arcadia.
     var data: URL { Paths.data(emulator.id) }

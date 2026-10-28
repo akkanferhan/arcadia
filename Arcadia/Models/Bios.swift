@@ -81,16 +81,20 @@ enum Bios {
     }
 
     /// Where a dropped BIOS file belongs, judged by its name and size.
+    /// BIOS files RetroArch cores look for in the bios folder itself.
+    private static let rootFiles: Set<String> = ["syscard3.pce", "neogeo.zip", "gba_bios.bin", "dc_boot.bin"]
+
     static func destination(for file: URL, bios: URL) -> URL? {
-        for rule in BiosRule.all where rule.groups.contains(where: { $0.matches(file) }) {
-            // 512 KB files are PS1 BIOSes unless they carry a Saturn BIOS name.
-            if rule.systemID == "ps1", BiosRule.rule(for: "saturn")!.groups[0].names.contains(file.lastPathComponent.lowercased()) {
-                continue
-            }
+        let name = file.lastPathComponent.lowercased()
+        // Names win over sizes: syscard3.pce is as large as an Xbox flash BIOS.
+        if rootFiles.contains(name) { return bios.appendingPathComponent(file.lastPathComponent) }
+        if let rule = BiosRule.all.first(where: { $0.groups.contains { $0.names.contains(name) } }) {
             return folder(rule, in: bios).appendingPathComponent(file.lastPathComponent)
         }
-        // RetroArch looks for other BIOS files (syscard3.pce, neogeo.zip, …) in the bios folder itself.
-        let known = ["syscard3.pce", "neogeo.zip", "gba_bios.bin", "dc_boot.bin"]
-        return known.contains(file.lastPathComponent.lowercased()) ? bios.appendingPathComponent(file.lastPathComponent) : nil
+        let size = (try? file.resourceValues(forKeys: [.fileSizeKey]).fileSize) ?? -1
+        if let rule = BiosRule.all.first(where: { $0.groups.contains { $0.sizes.contains(size) } }) {
+            return folder(rule, in: bios).appendingPathComponent(file.lastPathComponent)
+        }
+        return nil
     }
 }

@@ -4,6 +4,98 @@
     "": {
       "shouldTranslate": false
     },
+    "%@ closed right after starting. Check that the game file is complete and not damaged.": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "أُغلقت %@ فور بدئها. تحقّق من أن ملف اللعبة كامل وغير تالف."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ se cerró justo después de iniciarse. Comprueba que el archivo del juego esté completo y no esté dañado."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ s’est fermé juste après son lancement. Vérifiez que le fichier du jeu est complet et intact."
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ शुरू होते ही बंद हो गया। जाँचें कि गेम फ़ाइल पूरी है और खराब नहीं है।"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ fechou logo depois de iniciar. Verifique se o arquivo do jogo está completo e não está danificado."
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ başlar başlamaz kapandı. Oyun dosyasının eksiksiz ve sağlam olduğunu kontrol et."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ 启动后立即关闭。请检查游戏文件是否完整且未损坏。"
+          }
+        }
+      }
+    },
+    "%@ closed right after starting. Check that the game file is complete and that the console's BIOS is in place.": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "أُغلقت %@ فور بدئها. تحقّق من أن ملف اللعبة كامل وأن ملف BIOS الخاص بالجهاز في مكانه."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ se cerró justo después de iniciarse. Comprueba que el archivo del juego esté completo y que la BIOS de la consola esté en su sitio."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ s’est fermé juste après son lancement. Vérifiez que le fichier du jeu est complet et que le BIOS de la console est en place."
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ शुरू होते ही बंद हो गया। जाँचें कि गेम फ़ाइल पूरी है और कंसोल का BIOS अपनी जगह पर है।"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ fechou logo depois de iniciar. Verifique se o arquivo do jogo está completo e se a BIOS do console está no lugar."
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ başlar başlamaz kapandı. Oyun dosyasının eksiksiz olduğunu ve konsolun BIOS’unun yerinde olduğunu kontrol et."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ 启动后立即关闭。请检查游戏文件是否完整，以及主机 BIOS 是否已放好。"
+          }
+        }
+      }
+    },
     "%@ is not installed yet.": {
       "localizations": {
         "ar": {
