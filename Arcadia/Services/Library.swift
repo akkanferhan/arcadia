@@ -79,7 +79,7 @@ final class Library {
         for system in GameSystem.all {
             try? FileManager.default.createDirectory(at: folder(for: system), withIntermediateDirectories: true)
         }
-        for sub in ["", "ps1", "ps2", "ps3", "xbox"] {
+        for sub in ["", "ps1", "ps2", "ps3", "psvita", "xbox"] {
             try? FileManager.default.createDirectory(at: biosFolder.appendingPathComponent(sub),
                                                      withIntermediateDirectories: true)
         }
@@ -120,8 +120,10 @@ final class Library {
                 if isDirectory(url) {
                     return Game(url: url, systemID: system.id, title: PlayStationFolder.title(in: url))
                 }
-                return system.extensions.contains(url.pathExtension.lowercased())
-                    ? Game(url: url, systemID: system.id) : nil
+                guard system.extensions.contains(url.pathExtension.lowercased()) else { return nil }
+                // A Vita package carries its real title inside.
+                return Game(url: url, systemID: system.id,
+                            title: VitaGame.isPackage(url) ? PlayStationFolder.title(in: url) : nil)
             }
         }
 

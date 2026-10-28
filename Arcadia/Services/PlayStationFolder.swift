@@ -1,9 +1,12 @@
 import Foundation
 
-/// Reads installed PS3, PS4 and PS5 game folders: the boot file, the title and the icon.
+/// Reads installed PS3, PS4, PS5 and PS Vita game folders (and Vita `.vpk` packages):
+/// the boot file, the title and the icon.
 enum PlayStationFolder {
     /// The file the emulator should boot.
     static func bootFile(in folder: URL, systemID: String) -> URL {
+        // Vita3K installs the whole folder or package, then boots it by title ID.
+        if systemID == "psvita" { return folder }
         let candidates = systemID == "ps3"
             ? ["PS3_GAME/USRDIR/EBOOT.BIN", "USRDIR/EBOOT.BIN", "EBOOT.BIN"]
             : ["eboot.bin", "EBOOT.BIN"]
@@ -12,11 +15,13 @@ enum PlayStationFolder {
     }
 
     static func title(in folder: URL) -> String? {
+        if VitaGame.isPackage(folder) { return VitaGame.Content(folder)?.title }
         let paths = ["sce_sys/param.sfo", "PS3_GAME/PARAM.SFO", "PARAM.SFO"]
         for path in paths {
             if let data = try? Data(contentsOf: folder.appendingPathComponent(path)),
                let title = sfoValue("TITLE", in: data) {
-                return title
+                // Vita titles may break onto two lines.
+                return title.replacingOccurrences(of: "\n", with: " ")
             }
         }
         if let data = try? Data(contentsOf: folder.appendingPathComponent("sce_sys/param.json")),
@@ -39,16 +44,13 @@ enum PlayStationFolder {
     /// Reads a UTF-8 string from a PARAM.SFO file.
     static func sfoValue(_ key: String, in data: Data) -> String? {
         let bytes = [UInt8](data)
-        guard bytes.count > 20, bytes[0...3] == [0x00, 0x50, 0x53, 0x46] else { return nil }
-        func u16(_ offset: Int) -> Int { Int(bytes[offset]) | Int(bytes[offset + 1]) << 8 }
-        func u32(_ offset: Int) -> Int { u16(offset) | u16(offset + 2) << 16 }
-        let keyTable = u32(8), dataTable = u32(12), count = u32(16)
-        for index in 0..<count {
-            let entry = 20 + index * 16
-            guard entry + 16 <= bytes.count else { return nil }
-            let keyStart = keyTable + u16(entry)
-            guard let keyEnd = bytes[keyStart...].firstIndex(of: 0) else { return nil }
-            guard String(decoding: bytes[keyStart..<keyEnd], as: UTF8.self) == key else { continue }
+        guard let entries = sfoEntries(bytes) else { return nil }
+        func u32(_ offset: Int) -> Int {
+            Int(bytes[offset]) | Int(bytes[offset + 1]) << 8 | Int(bytes[offset + 2]) << 16 | Int(bytes[offset + 3]) << 24
+        }
+        let dataTable = u32(12)
+        for (name, entry) in entries {
+            guard name == key else { continue }
             let start = dataTable + u32(entry + 12)
             let end = min(start + u32(entry + 4), bytes.count)
             guard start < end else { return nil }
@@ -57,5 +59,27 @@ enum PlayStationFolder {
             return value.isEmpty ? nil : value
         }
         return nil
+    }
+
+    /// Every key in a PARAM.SFO file, whatever its value type.
+    static func sfoKeys(in data: Data) -> [String] {
+        sfoEntries([UInt8](data))?.map(\.key) ?? []
+    }
+
+    /// Key names and index-entry offsets, or nil when the data is not a PARAM.SFO file.
+    private static func sfoEntries(_ bytes: [UInt8]) -> [(key: String, entry: Int)]? {
+        guard bytes.count > 20, bytes[0...3] == [0x00, 0x50, 0x53, 0x46] else { return nil }
+        func u16(_ offset: Int) -> Int { Int(bytes[offset]) | Int(bytes[offset + 1]) << 8 }
+        func u32(_ offset: Int) -> Int { u16(offset) | u16(offset + 2) << 16 }
+        let keyTable = u32(8), count = u32(16)
+        var entries: [(key: String, entry: Int)] = []
+        for index in 0..<count {
+            let entry = 20 + index * 16
+            guard entry + 16 <= bytes.count else { break }
+            let keyStart = keyTable + u16(entry)
+            guard keyStart < bytes.count, let keyEnd = bytes[keyStart...].firstIndex(of: 0) else { break }
+            entries.append((String(decoding: bytes[keyStart..<keyEnd], as: UTF8.self), entry))
+        }
+        return entries
     }
 }

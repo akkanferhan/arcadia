@@ -1,7 +1,7 @@
 import AppKit
 import CryptoKit
 
-/// Box art from the game folder (PS3/PS4/PS5 icons) or thumbnails.libretro.com, cached on disk.
+/// Box art from the game folder or package (PlayStation icons) or thumbnails.libretro.com, cached on disk.
 actor Artwork {
     static let shared = Artwork()
 
@@ -25,7 +25,7 @@ actor Artwork {
         if game.system.gameIsFolder, let icon = PlayStationFolder.icon(in: game.url) {
             return NSImage(contentsOf: icon)
         }
-        guard let repo = game.system.thumbnails else { return nil }
+        guard game.system.thumbnails != nil || VitaGame.isPackage(game.url) else { return nil }
 
         let digest = key(for: game)
         let cached = Paths.artwork.appendingPathComponent(digest + ".png")
@@ -33,8 +33,14 @@ actor Artwork {
         if let image = NSImage(contentsOf: cached) { return image }
         if FileManager.default.fileExists(atPath: missing.path) { return nil }
 
+        // A Vita package's icon is inside it; it is copied out once.
+        if VitaGame.isPackage(game.url), let data = VitaGame.packageIcon(game.url), let image = NSImage(data: data) {
+            try? data.write(to: cached)
+            return image
+        }
+
         for name in candidateNames(game) {
-            guard let url = thumbnailURL(repo: repo, name: name),
+            guard let repo = game.system.thumbnails, let url = thumbnailURL(repo: repo, name: name),
                   let (data, response) = try? await URLSession.shared.data(from: url),
                   (response as? HTTPURLResponse)?.statusCode == 200,
                   let image = NSImage(data: data) else { continue }
