@@ -1,0 +1,44 @@
+Arcadia/Views/LogView.swift
+  s_947a5ec9b0d04e::t_a5e3ebe926fce1 70-72
+  s_947a5ec9b0d04e::t_c1cbd5f9b22670 100-113
+  s_947a5ec9b0d04e::t_dd2d6de22da1ce 1-69,73-86,89-99
+  s_947a5ec9b0d04e::t_e4291ebb0158e8 87-88
+Arcadia/Services/Launcher.swift
+  s_947a5ec9b0d04e::t_2fff204cdd5d32 84-85,91-92,100-104
+  s_947a5ec9b0d04e::t_04aaf3be8897a6 16-17
+  s_947a5ec9b0d04e::t_58b1d938d24b3e 99
+Arcadia/Views/SettingsView.swift
+  s_947a5ec9b0d04e::t_3389aa264cdc16 49
+Arcadia.xcodeproj/project.pbxproj
+  s_947a5ec9b0d04e::t_d72e1573af410d 46,54,62,95,123,147,202,217,272,447,450,476
+Arcadia/App/AppModel.swift
+  s_947a5ec9b0d04e::t_408f6ebf957f3d 58
+  s_947a5ec9b0d04e::t_70fc04c43aea14 25-26,34-35,44-45
+  s_947a5ec9b0d04e::t_84a033da1d46a7 54-57
+  s_947a5ec9b0d04e::t_f8da5ff1fb682d 59
+Arcadia/Services/LaunchLogs.swift
+  s_947a5ec9b0d04e::t_bece847a1e6181 1-34,36-87
+  s_947a5ec9b0d04e::t_039fbd69b9f34f 35
+Tests/ArcadiaTests/LaunchLogsTests.swift
+  s_947a5ec9b0d04e::t_53882052448fb5 43
+  s_947a5ec9b0d04e::t_3f96ab97ad43aa 1-42,44-78
+Arcadia/Views/RootView.swift
+  s_947a5ec9b0d04e::t_b64fc961e1ab97 44-47,52-53
+  s_947a5ec9b0d04e::t_4ac36c832fc5c1 54
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "decd4a2fadd74975d241d0cac35249447aad7c92",
+  "prompts": {},
+  "sessions": {
+    "s_947a5ec9b0d04e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "ae2b73cb-5faa-44a9-b7a6-4d22739dbe7c",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Ferhan Akkan <ferhanakkan@gmail.com>"
+    }
+  }
+}
