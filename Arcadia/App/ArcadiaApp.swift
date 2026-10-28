@@ -18,6 +18,7 @@ struct ArcadiaApp: App {
                     .keyboardShortcut("f", modifiers: [.command, .shift])
                 Button("Rescan Library") { Task { await model.library.scan() } }
                     .keyboardShortcut("r")
+                Button("Save Disk Space…") { model.showSaveSpace = true }
                 Button("Show Library in Finder") { NSWorkspace.shared.open(model.library.folder) }
                     .keyboardShortcut("o", modifiers: [.command, .shift])
             }
