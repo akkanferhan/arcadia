@@ -46,7 +46,6 @@ enum Presets {
         switch context.emulator.id {
         case "retroarch": try retroArch(context)
         case "duckstation": try duckStation(context)
-        case "pcsx2": try pcsx2(context)
         case "ppsspp": try ppsspp(context)
         case "dolphin": try dolphin(context)
         case "cemu": try cemu(context)

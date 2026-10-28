@@ -1,8 +1,8 @@
 import Foundation
 
-/// DuckStation (PS1) and PCSX2 (PS2) share a settings format and input naming.
+/// DuckStation (PS1) settings and gamepad bindings.
 extension Presets {
-    /// Keyboard defaults both emulators write into a fresh file, followed by an SDL gamepad.
+    /// Keyboard defaults DuckStation writes into a fresh file, followed by an SDL gamepad.
     /// Repeated keys bind several inputs to one button.
     private static func dualShockBindings(keyboard: [String: String], pad: [String: String]) -> [(String, String)] {
         let order = ["Up", "Right", "Down", "Left", "Triangle", "Circle", "Cross", "Square", "Select", "Start",
@@ -92,59 +92,6 @@ extension Presets {
             ])
         }
         return PresetLaunch()
-    }
-
-    // MARK: PCSX2
-
-    static func pcsx2(_ context: PresetContext) throws -> PresetLaunch {
-        // With -datapath, PCSX2 keeps everything in <data>/PCSX2.
-        let settings = context.data.appendingPathComponent("PCSX2/inis/PCSX2.ini")
-
-        try INIFile.update(settings) { ini in
-            ini.set([
-                // Without SettingsVersion PCSX2 resets everything and asks for confirmation.
-                "SettingsVersion": "1",
-                "SetupWizardIncomplete": "false",
-                "ConfirmShutdown": "false",
-                "PauseOnFocusLoss": "false",
-                "RenderToSeparateWindow": "false",
-                "HideMainWindowWhenRunning": "false",
-                "StartFullscreen": "false",
-            ], section: "UI")
-            ini.set("CheckAtStartup", "false", section: "AutoUpdater")
-            ini.set([
-                "EnableFastBoot": "true",
-                "SaveStateOnShutdown": "true",
-                "EnableWideScreenPatches": "false",
-            ], section: "EmuCore")
-            ini.set("vuThread", "true", section: "EmuCore/Speedhacks")
-            ini.set([
-                "Renderer": "17", // Metal
-                // 1 = native 480p, 3 ≈ 1080p, 4 ≈ 1440p.
-                "upscale_multiplier": String(pick(context.scale, [2, 3, 3, 4])),
-                "OsdMessagesPos": "0",
-            ], section: "EmuCore/GS")
-            ini.set("Enabled", "false", section: "Achievements")
-            // PCSX2 picks the first valid BIOS in the folder when none is named.
-            ini.set("Bios", context.bios.appendingPathComponent("ps2").path, section: "Folders")
-            ini.set("SDL", "true", section: "InputSources")
-
-            var keyboard = keyboardPad
-            keyboard.merge(["Up": "Keyboard/Up", "Right": "Keyboard/Right", "Down": "Keyboard/Down",
-                            "Left": "Keyboard/Left", "Start": "Keyboard/Return"]) { $1 }
-            ini.replaceSection("Pad1", with: [("Type", "DualShock2")]
-                + dualShockBindings(keyboard: keyboard,
-                                    pad: sdlPad(face: ("FaceSouth", "FaceEast", "FaceWest", "FaceNorth"))))
-            ini.replaceSection("Hotkeys", with: [
-                ("ToggleFullscreen", "Keyboard/Alt & Keyboard/Return"), ("CycleAspectRatio", "Keyboard/F6"),
-                ("Screenshot", "Keyboard/F8"), ("LoadStateFromSlot", "Keyboard/F3"), ("SaveStateToSlot", "Keyboard/F1"),
-                ("NextSaveStateSlot", "Keyboard/F2"), ("PreviousSaveStateSlot", "Keyboard/Shift & Keyboard/F2"),
-                ("OpenPauseMenu", "Keyboard/Escape"), ("ToggleFrameLimit", "Keyboard/F4"),
-                ("TogglePause", "Keyboard/Space"), ("ToggleTurbo", "Keyboard/Tab"), ("HoldTurbo", "Keyboard/Period"),
-                ("ShutdownVM", quitCombo),
-            ])
-        }
-        return PresetLaunch(arguments: ["-datapath", context.data.path])
     }
 }
 
