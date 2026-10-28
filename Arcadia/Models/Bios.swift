@@ -37,6 +37,12 @@ struct BiosRule {
                  groups: [FileMatch(names: ["ps3updat.pup"])],
                  downloadable: true,
                  hint: "PS3 system software. Arcadia downloads it from Sony when you first play."),
+        // PSVUPDAT.PUP is the name on playstation.com; Sony's update list serves the same file as
+        // PSP2UPDAT.PUP. The font package is a PSP2UPDAT.PUP of its own, so it keeps that name.
+        BiosRule(systemID: "psvita", folder: "psvita",
+                 groups: [FileMatch(names: ["psvupdat.pup"]), FileMatch(names: ["psp2updat.pup"])],
+                 downloadable: true,
+                 hint: "PS Vita system software and fonts. Arcadia downloads them from Sony when you first play."),
         BiosRule(systemID: "saturn", folder: "",
                  groups: [FileMatch(names: ["sega_101.bin", "mpr-17933.bin"])],
                  builtInCore: "yabause",

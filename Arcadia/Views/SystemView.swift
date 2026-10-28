@@ -49,7 +49,9 @@ struct SystemView: View {
             Text("No \(system.name) games yet")
                 .font(.title3.weight(.semibold))
             (system.gameIsFolder
-                 ? Text("Drag installed game folders here, or copy them into the \(system.id) folder.")
+                 ? (system.extensions.isEmpty
+                    ? Text("Drag installed game folders here, or copy them into the \(system.id) folder.")
+                    : Text("Drag game folders or \(system.extensions.map { "." + $0 }.joined(separator: " ")) files here, or copy them into the \(system.id) folder."))
                  : Text("Drag game files here, or copy them into the \(system.id) folder.\nSupported: \(system.extensions.map { "." + $0 }.joined(separator: " "))"))
                 .multilineTextAlignment(.center)
                 .foregroundStyle(.secondary)

@@ -57,6 +57,14 @@ extension Emulator {
                  sources: [.github(repo: "RPCS3/rpcs3-binaries-mac-arm64", asset: #"macos_aarch64\.7z$"#, includePrereleases: true)]) { r in
             ["--no-gui"] + (r.fullscreen ? ["--fullscreen"] : []) + [r.game.path]
         },
+        // `continuous` is a rolling tag, so updates are told apart by the asset id (the revision).
+        Emulator(id: "vita3k", name: "Vita3K", website: URL(string: "https://vita3k.org")!, license: "GPL-2.0",
+                 sources: [.github(repo: "Vita3K/Vita3K", asset: #"^macos-arm64-latest\.dmg$"#)],
+                 arguments: { r in
+            // The SDL frontend is a plain game window that quits with the game; Vita3K's own
+            // interface never shows. The preset installs the game on first play.
+            ["--frontend", "sdl"] + Presets.vita3kBootArguments(for: r.game)
+        }, experimental: true),
         Emulator(id: "shadps4", name: "shadPS4", website: URL(string: "https://shadps4.net")!, license: "GPL-2.0",
                  sources: [.github(repo: "shadps4-emu/shadPS4", asset: #"macos-sdl.*\.zip$"#)],
                  arguments: { r in

@@ -37,6 +37,8 @@ extension SaveLocation {
             at("rpcs3", "\(rpcs3)/dev_hdd0/home/00000001/savedata", cloud: "savedata"),
             at("rpcs3", "\(rpcs3)/savestates", cloud: "savestates"),
             // Current shadPS4 keeps saves in user/home/<user>/savedata, older builds in user/savedata.
+            // Vita3K keeps each user's saves and trophies in ux0/user/<id>.
+            at("vita3k", "fs/ux0/user", cloud: "user"),
             at("shadps4", "user/home", cloud: "home"),
             at("shadps4", "user/savedata", cloud: "savedata"),
         ]

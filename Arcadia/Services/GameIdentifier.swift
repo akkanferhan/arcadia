@@ -29,14 +29,15 @@ enum GameIdentifier {
         "xiso": "xbox", "cso": "psp",
     ]
     /// Extensions worth opening to look inside.
-    private static let ambiguous: Set<String> = ["iso", "bin", "cue", "chd", "zip", "7z", "rvz", "gcz", "ciso", "pbp", "zso", "img"]
+    private static let ambiguous: Set<String> = ["iso", "bin", "cue", "chd", "zip", "7z", "rvz", "gcz", "ciso", "pbp", "zso", "img",
+                                                  "vpk"]
 
     static func isCandidate(_ url: URL) -> Bool {
         let ext = url.pathExtension.lowercased()
         return byExtension[ext] != nil || ambiguous.contains(ext)
     }
 
-    // MARK: Folders (PS3, PS4, PS5)
+    // MARK: Folders (PS3, PS4, PS5, PS Vita)
 
     /// Installed PlayStation games are folders; returns the system for one, if it is a game.
     static func identifyFolder(_ folder: URL) -> String? {
@@ -44,6 +45,10 @@ enum GameIdentifier {
             FileManager.default.fileExists(atPath: folder.appendingPathComponent(path).path)
         }
         if has("PS3_GAME/PARAM.SFO") || (has("PARAM.SFO") && has("USRDIR")) { return "ps3" }
+        // Vita and PS4 folders look alike (eboot.bin, sce_sys/param.sfo); the SFO tells them apart.
+        if let sfo = try? Data(contentsOf: folder.appendingPathComponent("sce_sys/param.sfo")), VitaGame.isVitaSFO(sfo) {
+            return VitaGame.isGameFolder(folder) ? "psvita" : nil
+        }
         if has("eboot.bin") || has("EBOOT.BIN") {
             if has("sce_sys/param.json") { return "ps5" }
             if has("sce_sys/param.sfo") { return "ps4" }
@@ -90,6 +95,9 @@ enum GameIdentifier {
             return .game(Match(systemID: "psp"))
         case "zip", "7z":
             return identifyArchive(file)
+        case "vpk":
+            guard let content = VitaGame.Content(file) else { return .ignore }
+            return content.isGame ? .game(Match(systemID: "psvita")) : .ignore
         case "chd", "zso":
             return guess(file)
         default:

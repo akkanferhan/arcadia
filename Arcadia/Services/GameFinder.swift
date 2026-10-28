@@ -155,7 +155,8 @@ final class GameFinder {
                     // Skip formats the system's emulator cannot open.
                     guard GameSystem.with(id: match.systemID)?.extensions.contains(ext) == true else { continue }
                     report(.found(Found(url: url, systemID: match.systemID, companions: match.companions,
-                                        needsReview: match.guessed)))
+                                        needsReview: match.guessed,
+                                        name: VitaGame.isPackage(url) ? PlayStationFolder.title(in: url) : nil)))
                 case .unknown:
                     report(.found(Found(url: url, systemID: nil, needsReview: true, selected: false)))
                 case .ignore:

@@ -31,7 +31,7 @@ struct GameSystem: Identifiable, Hashable {
     let year: Int
     /// Lower-case file extensions without the dot.
     let extensions: [String]
-    /// PS3/PS4/PS5 games are installed folders, not single files.
+    /// PS3/PS4/PS5/PS Vita games are installed folders, not single files.
     var gameIsFolder = false
     let emulatorID: String
     /// libretro core name, for systems played through RetroArch.
@@ -82,6 +82,11 @@ extension GameSystem {
                    extensions: ["iso"], gameIsFolder: true,
                    emulatorID: "rpcs3", thumbnails: "Sony - PlayStation 3",
                    symbol: "playstation.logo", colors: [Color(hex: 0x111111), Color(hex: 0x3B3B3B)]),
+        // Installed game folders (<TITLEID>/sce_sys/param.sfo) or .vpk packages.
+        GameSystem(id: "psvita", name: "PlayStation Vita", shortName: "Vita", maker: .sony, year: 2011,
+                   extensions: ["vpk"], gameIsFolder: true,
+                   emulatorID: "vita3k", thumbnails: "Sony - PlayStation Vita",
+                   symbol: "playstation.logo", colors: [Color(hex: 0x2B59C3), Color(hex: 0x0B1533)]),
         GameSystem(id: "ps4", name: "PlayStation 4", shortName: "PS4", maker: .sony, year: 2013,
                    extensions: [], gameIsFolder: true,
                    emulatorID: "shadps4",
