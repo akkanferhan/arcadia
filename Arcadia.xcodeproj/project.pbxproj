@@ -13,6 +13,7 @@
 		0751CA22623DAD15325EC236 /* ModernPlayStationPresets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552E3F0567F989B07102ADBB /* ModernPlayStationPresets.swift */; };
 		0780801B0BCEFEE8E84C6852 /* GameIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605F8FF86F965E32FDC74B02 /* GameIdentifier.swift */; };
 		0CBD9A970A5DB5AD7FBA7467 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = ACDEE1826E9DF4341D469D64 /* Localizable.xcstrings */; };
+		160BC9D83A8885F2CBE659FA /* DiscImageCodec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0C1DF0C93AC42E7D0421E7 /* DiscImageCodec.swift */; };
 		17B356BBA0004D4C262FB7FD /* SystemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4B1630B611CEA329743489 /* SystemView.swift */; };
 		1BD51C14EABE7207D07F7C18 /* NintendoPresets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88936842B90B72E354D788DE /* NintendoPresets.swift */; };
 		1DF74432A4A5CF43249EFA0D /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC49813A90473D10A937E98 /* HomeView.swift */; };
@@ -26,6 +27,7 @@
 		566EB34E33FCC2E08E455B43 /* EmulatorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3950787B4CA3AA7BF4513663 /* EmulatorManager.swift */; };
 		6097722C6994C95D35AD11E8 /* AppleSilicon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5675169E922AEE3316611F /* AppleSilicon.swift */; };
 		61A541A69337FD43068FEB04 /* Presets.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC93158998E3FEF087A52306 /* Presets.swift */; };
+		69966BE878BC767DA489403D /* CompressionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542C667E23812682C5954381 /* CompressionTests.swift */; };
 		71D6DECCB0C6DF8ACC11A107 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A95C8F7D0A11A55B060040 /* RootView.swift */; };
 		74A7A0D42D0FE3FC88AB4E32 /* ArcadiaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F075E3969F2CC2D43B2F62 /* ArcadiaApp.swift */; };
 		775F30204137D02909AA4A05 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0E850E7AC8F33F6CA3CFC3 /* Game.swift */; };
@@ -54,6 +56,7 @@
 		D83BA14939E2650FFD33CD23 /* Paths.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A94B480FF851B32C4EBDA4C /* Paths.swift */; };
 		DD2706CF114208249D1E9A42 /* PlayStationPresets.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED3403B2F642B4ADD1630D5 /* PlayStationPresets.swift */; };
 		F975F3F013DD56850A468884 /* SidebarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671CCDB488F80DC171E258B5 /* SidebarView.swift */; };
+		FA7C5E14DFF04AC9D413FF77 /* DiscCompressor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ABFA1D2C54C622375B1E917 /* DiscCompressor.swift */; };
 		FDA336ACDE80BA2D5FB7192D /* SDL3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 825ABEF719D1D53B7F189C32 /* SDL3.framework */; };
 /* End PBXBuildFile section */
 
@@ -86,6 +89,7 @@
 		1978F3D28ED8BFB82CE15E74 /* GameIdentifierTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameIdentifierTests.swift; sourceTree = "<group>"; };
 		1A4B1630B611CEA329743489 /* SystemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemView.swift; sourceTree = "<group>"; };
 		1D7D34EF5DDDB72CAB16CAF1 /* ArcadiaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArcadiaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E0C1DF0C93AC42E7D0421E7 /* DiscImageCodec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscImageCodec.swift; sourceTree = "<group>"; };
 		25B5018563F503C6B2C1B3CB /* Arcadia-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Arcadia-Bridging-Header.h"; sourceTree = "<group>"; };
 		2DE1FAC42B6C0A1BE53F778A /* TestSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSupport.swift; sourceTree = "<group>"; };
 		31439409C5AC60CBCC71B508 /* NowPlayingBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingBar.swift; sourceTree = "<group>"; };
@@ -94,12 +98,14 @@
 		3D2178624FDAD84591FF0DDD /* GameSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSystem.swift; sourceTree = "<group>"; };
 		3F24944E338626A252FB76BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		4CC49813A90473D10A937E98 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		542C667E23812682C5954381 /* CompressionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompressionTests.swift; sourceTree = "<group>"; };
 		552E3F0567F989B07102ADBB /* ModernPlayStationPresets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModernPlayStationPresets.swift; sourceTree = "<group>"; };
 		57C0F5D6658EB4112AABCF7A /* BiosViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiosViews.swift; sourceTree = "<group>"; };
 		6057601F1F41C846AB29D7B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		605F8FF86F965E32FDC74B02 /* GameIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameIdentifier.swift; sourceTree = "<group>"; };
 		671CCDB488F80DC171E258B5 /* SidebarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarView.swift; sourceTree = "<group>"; };
 		6A465C9E977BB474751CA62E /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
+		6ABFA1D2C54C622375B1E917 /* DiscCompressor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscCompressor.swift; sourceTree = "<group>"; };
 		7A09281597713AED32BE213D /* GameFinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameFinder.swift; sourceTree = "<group>"; };
 		812C784C99CEB2DFC813B35C /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		825ABEF719D1D53B7F189C32 /* SDL3.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL3.framework; path = Vendor/SDL3.framework; sourceTree = "<group>"; };
@@ -166,6 +172,15 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		39AA5DE3B6AF347B1BC84E56 /* Compression */ = {
+			isa = PBXGroup;
+			children = (
+				6ABFA1D2C54C622375B1E917 /* DiscCompressor.swift */,
+				1E0C1DF0C93AC42E7D0421E7 /* DiscImageCodec.swift */,
+			);
+			path = Compression;
+			sourceTree = "<group>";
+		};
 		4D8C7A2FF6A3D6BE546E9EDE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -189,6 +204,7 @@
 				97EA6343BB2B32418BEF0361 /* Library.swift */,
 				8A94B480FF851B32C4EBDA4C /* Paths.swift */,
 				EA46445A2899DC1E961AB3C8 /* PlayStationFolder.swift */,
+				39AA5DE3B6AF347B1BC84E56 /* Compression */,
 				BF13727D9B10A13F427F92D2 /* Presets */,
 			);
 			path = Services;
@@ -197,6 +213,7 @@
 		6F4C62FD7E592B2F9A8A0D0C /* ArcadiaTests */ = {
 			isa = PBXGroup;
 			children = (
+				542C667E23812682C5954381 /* CompressionTests.swift */,
 				9479CD5B5BB8551EBA0778CE /* ConfigFileTests.swift */,
 				1978F3D28ED8BFB82CE15E74 /* GameIdentifierTests.swift */,
 				ABEB897CD0B84F515FFC489C /* LibraryTests.swift */,
@@ -411,6 +428,8 @@
 				A5BAA656FE02440E70B0B931 /* BiosViews.swift in Sources */,
 				028FA05881A40FDFF1CFD517 /* ConfigFile.swift in Sources */,
 				389DC5E7CF859B9E1F6478EB /* CoverArt.swift in Sources */,
+				FA7C5E14DFF04AC9D413FF77 /* DiscCompressor.swift in Sources */,
+				160BC9D83A8885F2CBE659FA /* DiscImageCodec.swift in Sources */,
 				B995EEF85D865EF2B5D10DCF /* Downloader.swift in Sources */,
 				CDE7BBBDF308D0BA2C99D4BA /* Emulator.swift in Sources */,
 				020B48317A583B2F52EF47E5 /* EmulatorButton.swift in Sources */,
@@ -449,6 +468,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69966BE878BC767DA489403D /* CompressionTests.swift in Sources */,
 				983952800500088AD359BF87 /* ConfigFileTests.swift in Sources */,
 				81DFEEBB425213C5B1185CC0 /* GameIdentifierTests.swift in Sources */,
 				8DBB70F06166B99F413D5A07 /* LibraryTests.swift in Sources */,

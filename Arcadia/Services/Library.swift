@@ -61,6 +61,13 @@ final class Library {
         save()
     }
 
+    /// Keeps favorites and play time when a game's file is replaced, e.g. by a compressed copy.
+    func moveRecord(from oldID: String, to newID: String) {
+        guard oldID != newID, let record = records.removeValue(forKey: oldID) else { return }
+        records[newID] = record
+        save()
+    }
+
     /// Creates one folder per system plus a `bios` folder.
     func createFolders() {
         for system in GameSystem.all {
