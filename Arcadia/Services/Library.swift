@@ -90,7 +90,7 @@ final class Library {
 
     // MARK: Scanning
 
-    nonisolated private static func scan(_ root: URL) -> [Game] {
+    nonisolated static func scan(_ root: URL) -> [Game] {
         GameSystem.all.flatMap { system in
             scan(root.appendingPathComponent(system.id, isDirectory: true), system: system)
         }
