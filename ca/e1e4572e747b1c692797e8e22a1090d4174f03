@@ -1,0 +1,21 @@
+Arcadia/Services/GameIdentifier.swift
+  s_947a5ec9b0d04e::t_fea3084ef860a6 103,152
+  s_947a5ec9b0d04e::t_e9868bdcc699b1 1-102,104-116,118-151,153-285
+  s_947a5ec9b0d04e::t_01f2ef078e3955 117
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "cae1e4572e747b1c692797e8e22a1090d4174f03",
+  "prompts": {},
+  "sessions": {
+    "s_947a5ec9b0d04e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "ae2b73cb-5faa-44a9-b7a6-4d22739dbe7c",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Ferhan Akkan <ferhanakkan@gmail.com>"
+    }
+  }
+}
