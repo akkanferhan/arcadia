@@ -1,0 +1,35 @@
+Arcadia/Services/Presets/ModernPlayStationPresets.swift
+  s_947a5ec9b0d04e::t_1cfdf841e8aae6 40
+Tests/ArcadiaTests/MultiplayerTests.swift
+  s_947a5ec9b0d04e::t_5e37f83c76643e 1-148
+Arcadia.xcodeproj/project.pbxproj
+  s_947a5ec9b0d04e::t_f03783de74c26a 20,134,205,458
+Arcadia/Services/Presets/GamepadPresets.swift
+  s_947a5ec9b0d04e::t_ef6e2f5d81b6c1 4-6,8-19,50-61,64-69,80-93,99,105-113,119-159,164-180,182,190-203
+  s_947a5ec9b0d04e::t_2f0b7a12def76a 204
+Arcadia/Services/Presets/NintendoPresets.swift
+  s_947a5ec9b0d04e::t_1cfdf841e8aae6 32,54
+  s_947a5ec9b0d04e::t_e16e47f4d20d13 196
+Arcadia/Services/Presets/RetroArchPreset.swift
+  s_947a5ec9b0d04e::t_d6a6d3dc0e5109 61-64
+Arcadia/Services/Presets/PlayStationPresets.swift
+  s_947a5ec9b0d04e::t_24b911745de47e 107-109
+  s_947a5ec9b0d04e::t_360f39b8104d62 23-35,37,43-60
+  s_947a5ec9b0d04e::t_01fac735ecf4e1 61
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "8cae51d5f5028f2b2449df3649cddd45a4bcd139",
+  "prompts": {},
+  "sessions": {
+    "s_947a5ec9b0d04e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "ae2b73cb-5faa-44a9-b7a6-4d22739dbe7c",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Ferhan Akkan <ferhanakkan@gmail.com>"
+    }
+  }
+}
