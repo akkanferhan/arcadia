@@ -16,17 +16,21 @@
 		0780801B0BCEFEE8E84C6852 /* GameIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605F8FF86F965E32FDC74B02 /* GameIdentifier.swift */; };
 		0CBD9A970A5DB5AD7FBA7467 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = ACDEE1826E9DF4341D469D64 /* Localizable.xcstrings */; };
 		0F95780F688402D94A4B1039 /* CollectionsViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC8F8FF4BD60C833106FF5C /* CollectionsViews.swift */; };
+		1298DD605715D56D52808A0A /* ArcadiaWidget.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 908D90A4C4D8DFD947DE5718 /* ArcadiaWidget.appex */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		160BC9D83A8885F2CBE659FA /* DiscImageCodec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0C1DF0C93AC42E7D0421E7 /* DiscImageCodec.swift */; };
 		17B356BBA0004D4C262FB7FD /* SystemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4B1630B611CEA329743489 /* SystemView.swift */; };
 		1BD51C14EABE7207D07F7C18 /* NintendoPresets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88936842B90B72E354D788DE /* NintendoPresets.swift */; };
 		1D65E331EEC0E38DF7067A6B /* GameBrowser.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA78DCBC144E7811F331223C /* GameBrowser.swift */; };
 		1DF74432A4A5CF43249EFA0D /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC49813A90473D10A937E98 /* HomeView.swift */; };
+		24403BFD36762A31C7EE6DC9 /* AppShortcuts.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = C6447A999A9FEA27F88BCCA5 /* AppShortcuts.xcstrings */; };
 		25F973E07122F4DC2026EE5A /* GameCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBF009962D0FF1BAE76EAF3 /* GameCard.swift */; };
 		2C761B22D5AE7D873D3C87E1 /* MultiplayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E69D79541BD7443833D9BD8A /* MultiplayerTests.swift */; };
 		2D2E75D86EBD417F0D9DDCE9 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F9E4FA3CCE582C0529B124 /* OnboardingView.swift */; };
+		2D773BC19ECF798D92A379F0 /* Integration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96578CA7B0BFECE404684BD4 /* Integration.swift */; };
 		340B60FF6DD83CD69769C222 /* Wikipedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1844E443FA713D453BB9FFCA /* Wikipedia.swift */; };
 		3738A3649D4EA03A30EE9736 /* GameDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F30181C8A97E8AA2829DD9 /* GameDetailsView.swift */; };
 		389DC5E7CF859B9E1F6478EB /* CoverArt.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87C04A211AFE8FD54A89D15 /* CoverArt.swift */; };
+		3D008FADD50B8081FEF7CD9D /* ArcadiaWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F6877E3C578A7CE691E7AA /* ArcadiaWidgetBundle.swift */; };
 		402AE0E09B120F0A0C4749A4 /* TestSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE1FAC42B6C0A1BE53F778A /* TestSupport.swift */; };
 		42C073A81A798FCE44C69245 /* Bios.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2815851E3A498347EFF6059 /* Bios.swift */; };
 		4866A1B9E647BB3D39055F40 /* TVModeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21A7FCC3B1EA5E641B25CB5 /* TVModeController.swift */; };
@@ -45,6 +49,7 @@
 		687E662784B4F1AE120B23D8 /* SaveLocations.swift in Sources */ = {isa = PBXBuildFile; fileRef = A422E079DE5FF22CED914CA4 /* SaveLocations.swift */; };
 		68FFC0397450187C29A540A6 /* FolderWatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A899554D2789C31C2F93072 /* FolderWatcher.swift */; };
 		69966BE878BC767DA489403D /* CompressionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542C667E23812682C5954381 /* CompressionTests.swift */; };
+		6A25AB022A02F2EFA78176A1 /* IntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9461C5FC7ED27F1D2C40E329 /* IntegrationTests.swift */; };
 		6FE7D24311D83BE94FDB25D2 /* SaveSyncEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DA83E98AC474AF68E51DC3 /* SaveSyncEngine.swift */; };
 		71D6DECCB0C6DF8ACC11A107 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A95C8F7D0A11A55B060040 /* RootView.swift */; };
 		74A7A0D42D0FE3FC88AB4E32 /* ArcadiaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F075E3969F2CC2D43B2F62 /* ArcadiaApp.swift */; };
@@ -52,6 +57,8 @@
 		775F30204137D02909AA4A05 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0E850E7AC8F33F6CA3CFC3 /* Game.swift */; };
 		795EE8D5B990C831B31D1053 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AD88113A5F48B899BBD350 /* Theme.swift */; };
 		79C3F6151D648BF9836600C7 /* SaveSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591A42D93ACE329B2F438E73 /* SaveSync.swift */; };
+		79E5CE1BF309416A3776621E /* WidgetPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85977AD8D42BE537A4AD4C2 /* WidgetPublisher.swift */; };
+		7AACECE3971E3CF3E776E702 /* Intents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DCA6D0B09843D84D29306A /* Intents.swift */; };
 		7D0E45D4546B889BD0DD97F2 /* TVNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6D5AA2C7D3C02774810891 /* TVNavigation.swift */; };
 		7E02A2357654212EC851B48F /* TVInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1ADE13E0B70AF22499AC4E8 /* TVInput.swift */; };
 		80DB8AE959740A0D99714CD7 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812C784C99CEB2DFC813B35C /* SettingsView.swift */; };
@@ -72,6 +79,8 @@
 		B995EEF85D865EF2B5D10DCF /* Downloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C93AF9553B3227700244CF6 /* Downloader.swift */; };
 		BA2B7A0FCFCFBB05AFC5F817 /* AchievementsSettingsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB68C5F3B99E0EC2CBC17A20 /* AchievementsSettingsSection.swift */; };
 		BFA921BC582FF3C404B28BCA /* Launcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3268E4894BA62280577232B /* Launcher.swift */; };
+		C2E5E2F76C6FF5203C48D414 /* ContinuePlaying.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654C242EAE7C2FD47B2C763E /* ContinuePlaying.swift */; };
+		C3F80F970175A6C08C81D5D0 /* Spotlight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D26F02B8B028C9DC4E6123 /* Spotlight.swift */; };
 		C94668A28E28DEC613FBC5D3 /* TVNavigationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839221A7140C672C0ECF6BCB /* TVNavigationTests.swift */; };
 		CB3592EC7D1B7AC9E30CF277 /* NowPlayingBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31439409C5AC60CBCC71B508 /* NowPlayingBar.swift */; };
 		CDE7BBBDF308D0BA2C99D4BA /* Emulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A200B868177CA6D564CCCC7B /* Emulator.swift */; };
@@ -83,9 +92,12 @@
 		D818146C2F14B81D52AD24EB /* GameFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A09281597713AED32BE213D /* GameFinder.swift */; };
 		D83BA14939E2650FFD33CD23 /* Paths.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A94B480FF851B32C4EBDA4C /* Paths.swift */; };
 		DD2706CF114208249D1E9A42 /* PlayStationPresets.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED3403B2F642B4ADD1630D5 /* PlayStationPresets.swift */; };
+		E0D2B896222A82F4462135C6 /* ContinuePlayingWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837BA3FCC4687AED437A9FBC /* ContinuePlayingWidget.swift */; };
 		E5237B697970020BAE88FA2C /* Screenshots.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123A212E997DA10971756816 /* Screenshots.swift */; };
+		F0ED7C7C9A4D64306AAD7863 /* ContinuePlaying.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654C242EAE7C2FD47B2C763E /* ContinuePlaying.swift */; };
 		F2C1F8C7FE74BB876DB88CCD /* Collections.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57F165FCE5A87F720E7B440 /* Collections.swift */; };
 		F331F408CE74476FCC8B3763 /* AchievementsPresets.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A9C61B8666DF72C8848F68 /* AchievementsPresets.swift */; };
+		F4048B0F1AD11B7C1A74D0ED /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = ACDEE1826E9DF4341D469D64 /* Localizable.xcstrings */; };
 		F5201833F230E56DB0E168AE /* FolderWatcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFA42C7F8A4A9CE2D8EC052 /* FolderWatcherTests.swift */; };
 		F975F3F013DD56850A468884 /* SidebarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671CCDB488F80DC171E258B5 /* SidebarView.swift */; };
 		FA7C5E14DFF04AC9D413FF77 /* DiscCompressor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ABFA1D2C54C622375B1E917 /* DiscCompressor.swift */; };
@@ -103,9 +115,27 @@
 			remoteGlobalIDString = 4CE5371533A03B052A8B8308;
 			remoteInfo = Arcadia;
 		};
+		BDC34AC3EA1E168E27ED460D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4B7847D49C6A0D12349EA15D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8340F822221F185283649D99;
+			remoteInfo = ArcadiaWidget;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		CA367EC2057441A8FFD7D913 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				1298DD605715D56D52808A0A /* ArcadiaWidget.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D1CC697E7B3F6AF15771F593 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -123,11 +153,13 @@
 		123A212E997DA10971756816 /* Screenshots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screenshots.swift; sourceTree = "<group>"; };
 		153D84E3CF93596DBF207241 /* Archive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Archive.swift; sourceTree = "<group>"; };
 		15F11F4DC740119D2E785691 /* TVModeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVModeView.swift; sourceTree = "<group>"; };
+		1615AE9749C50D7B7E3A4148 /* Arcadia.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Arcadia.entitlements; sourceTree = "<group>"; };
 		1844E443FA713D453BB9FFCA /* Wikipedia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wikipedia.swift; sourceTree = "<group>"; };
 		1978F3D28ED8BFB82CE15E74 /* GameIdentifierTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameIdentifierTests.swift; sourceTree = "<group>"; };
 		1A4B1630B611CEA329743489 /* SystemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemView.swift; sourceTree = "<group>"; };
 		1D7D34EF5DDDB72CAB16CAF1 /* ArcadiaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArcadiaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E0C1DF0C93AC42E7D0421E7 /* DiscImageCodec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscImageCodec.swift; sourceTree = "<group>"; };
+		22D26F02B8B028C9DC4E6123 /* Spotlight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spotlight.swift; sourceTree = "<group>"; };
 		22FFC42E2129B17D7CCDD93E /* LaunchLogs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchLogs.swift; sourceTree = "<group>"; };
 		25B5018563F503C6B2C1B3CB /* Arcadia-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Arcadia-Bridging-Header.h"; sourceTree = "<group>"; };
 		2DE1FAC42B6C0A1BE53F778A /* TestSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSupport.swift; sourceTree = "<group>"; };
@@ -145,23 +177,27 @@
 		542C667E23812682C5954381 /* CompressionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompressionTests.swift; sourceTree = "<group>"; };
 		552E3F0567F989B07102ADBB /* ModernPlayStationPresets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModernPlayStationPresets.swift; sourceTree = "<group>"; };
 		57C0F5D6658EB4112AABCF7A /* BiosViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiosViews.swift; sourceTree = "<group>"; };
+		5893FF159C644B6182AA9710 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		58A2580D12D39AFDD9909324 /* TVMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVMode.swift; sourceTree = "<group>"; };
 		591A42D93ACE329B2F438E73 /* SaveSync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveSync.swift; sourceTree = "<group>"; };
 		5A72F9EAC35B4A5377692DB5 /* GameInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameInfo.swift; sourceTree = "<group>"; };
 		6057601F1F41C846AB29D7B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		605F8FF86F965E32FDC74B02 /* GameIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameIdentifier.swift; sourceTree = "<group>"; };
+		654C242EAE7C2FD47B2C763E /* ContinuePlaying.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContinuePlaying.swift; sourceTree = "<group>"; };
 		671CCDB488F80DC171E258B5 /* SidebarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarView.swift; sourceTree = "<group>"; };
 		6A465C9E977BB474751CA62E /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
 		6ABFA1D2C54C622375B1E917 /* DiscCompressor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscCompressor.swift; sourceTree = "<group>"; };
 		6AD7AEF081AEAAE2FCB25B4B /* SaveSpaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveSpaceView.swift; sourceTree = "<group>"; };
 		6BED9878131566676D107B32 /* MetadataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetadataTests.swift; sourceTree = "<group>"; };
 		71DA83E98AC474AF68E51DC3 /* SaveSyncEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveSyncEngine.swift; sourceTree = "<group>"; };
+		72DCA6D0B09843D84D29306A /* Intents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Intents.swift; sourceTree = "<group>"; };
 		73D99A6E8700E20AB6D5BE6E /* SaveMerge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveMerge.swift; sourceTree = "<group>"; };
 		784C921ADFDF63A79A152968 /* KeychainCredentialStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainCredentialStore.swift; sourceTree = "<group>"; };
 		7A09281597713AED32BE213D /* GameFinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameFinder.swift; sourceTree = "<group>"; };
 		7FFA42C7F8A4A9CE2D8EC052 /* FolderWatcherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderWatcherTests.swift; sourceTree = "<group>"; };
 		812C784C99CEB2DFC813B35C /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		825ABEF719D1D53B7F189C32 /* SDL3.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL3.framework; path = Vendor/SDL3.framework; sourceTree = "<group>"; };
+		837BA3FCC4687AED437A9FBC /* ContinuePlayingWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContinuePlayingWidget.swift; sourceTree = "<group>"; };
 		839221A7140C672C0ECF6BCB /* TVNavigationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVNavigationTests.swift; sourceTree = "<group>"; };
 		84F075E3969F2CC2D43B2F62 /* ArcadiaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcadiaApp.swift; sourceTree = "<group>"; };
 		88351EB6285E118CF42F4E5D /* EmulatorButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmulatorButton.swift; sourceTree = "<group>"; };
@@ -170,7 +206,10 @@
 		8BDB1F1F75397B0F59E397A7 /* GamepadPresets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamepadPresets.swift; sourceTree = "<group>"; };
 		8CC8F8FF4BD60C833106FF5C /* CollectionsViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionsViews.swift; sourceTree = "<group>"; };
 		8D5675169E922AEE3316611F /* AppleSilicon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleSilicon.swift; sourceTree = "<group>"; };
+		908D90A4C4D8DFD947DE5718 /* ArcadiaWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ArcadiaWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		9461C5FC7ED27F1D2C40E329 /* IntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntegrationTests.swift; sourceTree = "<group>"; };
 		9479CD5B5BB8551EBA0778CE /* ConfigFileTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigFileTests.swift; sourceTree = "<group>"; };
+		96578CA7B0BFECE404684BD4 /* Integration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Integration.swift; sourceTree = "<group>"; };
 		97EA6343BB2B32418BEF0361 /* Library.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Library.swift; sourceTree = "<group>"; };
 		9D6CADA72596641D12641CF0 /* GameSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSort.swift; sourceTree = "<group>"; };
 		9D6D5AA2C7D3C02774810891 /* TVNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVNavigation.swift; sourceTree = "<group>"; };
@@ -192,6 +231,8 @@
 		BD216CDDFBBFC931A449D302 /* ConfigFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigFile.swift; sourceTree = "<group>"; };
 		BD47DCC560FF89CEB5397D1B /* Arcadia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Arcadia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4A95C8F7D0A11A55B060040 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		C6447A999A9FEA27F88BCCA5 /* AppShortcuts.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = AppShortcuts.xcstrings; sourceTree = "<group>"; };
+		C85977AD8D42BE537A4AD4C2 /* WidgetPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetPublisher.swift; sourceTree = "<group>"; };
 		C8A18463512A2739BED27CBB /* Gamepads.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gamepads.swift; sourceTree = "<group>"; };
 		CB68C5F3B99E0EC2CBC17A20 /* AchievementsSettingsSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsSettingsSection.swift; sourceTree = "<group>"; };
 		CED3403B2F642B4ADD1630D5 /* PlayStationPresets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayStationPresets.swift; sourceTree = "<group>"; };
@@ -200,11 +241,13 @@
 		D8D39165C5D8061A46552EC0 /* Metadata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Metadata.swift; sourceTree = "<group>"; };
 		DB0E850E7AC8F33F6CA3CFC3 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		DBBF009962D0FF1BAE76EAF3 /* GameCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCard.swift; sourceTree = "<group>"; };
+		DDC1065015766336110DFC64 /* ArcadiaWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ArcadiaWidget.entitlements; sourceTree = "<group>"; };
 		E1ADE13E0B70AF22499AC4E8 /* TVInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVInput.swift; sourceTree = "<group>"; };
 		E3268E4894BA62280577232B /* Launcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Launcher.swift; sourceTree = "<group>"; };
 		E57F165FCE5A87F720E7B440 /* Collections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collections.swift; sourceTree = "<group>"; };
 		E69D79541BD7443833D9BD8A /* MultiplayerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiplayerTests.swift; sourceTree = "<group>"; };
 		E826F97C1EA57BC33DF5D06C /* SaveSyncTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveSyncTests.swift; sourceTree = "<group>"; };
+		E8F6877E3C578A7CE691E7AA /* ArcadiaWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcadiaWidgetBundle.swift; sourceTree = "<group>"; };
 		EA46445A2899DC1E961AB3C8 /* PlayStationFolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayStationFolder.swift; sourceTree = "<group>"; };
 		EF6C70EAF0C2F3EDDDE4AB13 /* PPSSPPPreset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PPSSPPPreset.swift; sourceTree = "<group>"; };
 		F0AD88113A5F48B899BBD350 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
@@ -238,6 +281,7 @@
 			children = (
 				BD47DCC560FF89CEB5397D1B /* Arcadia.app */,
 				1D7D34EF5DDDB72CAB16CAF1 /* ArcadiaTests.xctest */,
+				908D90A4C4D8DFD947DE5718 /* ArcadiaWidget.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -267,6 +311,7 @@
 		4D8C7A2FF6A3D6BE546E9EDE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C6447A999A9FEA27F88BCCA5 /* AppShortcuts.xcstrings */,
 				6057601F1F41C846AB29D7B8 /* Assets.xcassets */,
 				ACDEE1826E9DF4341D469D64 /* Localizable.xcstrings */,
 			);
@@ -301,6 +346,14 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		5F5F5D82CACC67BA11E79E40 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				654C242EAE7C2FD47B2C763E /* ContinuePlaying.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
 		6321C3A8F08812556748C890 /* Sync */ = {
 			isa = PBXGroup;
 			children = (
@@ -320,6 +373,7 @@
 				9479CD5B5BB8551EBA0778CE /* ConfigFileTests.swift */,
 				7FFA42C7F8A4A9CE2D8EC052 /* FolderWatcherTests.swift */,
 				1978F3D28ED8BFB82CE15E74 /* GameIdentifierTests.swift */,
+				9461C5FC7ED27F1D2C40E329 /* IntegrationTests.swift */,
 				F173DD4F95EB83144DA55B34 /* LaunchLogsTests.swift */,
 				ABEB897CD0B84F515FFC489C /* LibraryTests.swift */,
 				6BED9878131566676D107B32 /* MetadataTests.swift */,
@@ -329,6 +383,17 @@
 				839221A7140C672C0ECF6BCB /* TVNavigationTests.swift */,
 			);
 			path = ArcadiaTests;
+			sourceTree = "<group>";
+		};
+		8C270F9238EE8C52B774493E /* ArcadiaWidget */ = {
+			isa = PBXGroup;
+			children = (
+				DDC1065015766336110DFC64 /* ArcadiaWidget.entitlements */,
+				E8F6877E3C578A7CE691E7AA /* ArcadiaWidgetBundle.swift */,
+				837BA3FCC4687AED437A9FBC /* ContinuePlayingWidget.swift */,
+				5893FF159C644B6182AA9710 /* Info.plist */,
+			);
+			path = ArcadiaWidget;
 			sourceTree = "<group>";
 		};
 		8D02D238F595BF04D5CE6D10 /* Models */ = {
@@ -348,10 +413,23 @@
 			isa = PBXGroup;
 			children = (
 				BB990C912D94D0A0D272E570 /* Arcadia */,
+				8C270F9238EE8C52B774493E /* ArcadiaWidget */,
 				E7CC416CDB39999F369CE639 /* Tests */,
 				A4E72D8D04A572033BA65F05 /* Frameworks */,
 				180E0246ADDB6640ECC285BD /* Products */,
 			);
+			sourceTree = "<group>";
+		};
+		944104B35A96A514458900CA /* Integration */ = {
+			isa = PBXGroup;
+			children = (
+				96578CA7B0BFECE404684BD4 /* Integration.swift */,
+				72DCA6D0B09843D84D29306A /* Intents.swift */,
+				22D26F02B8B028C9DC4E6123 /* Spotlight.swift */,
+				C85977AD8D42BE537A4AD4C2 /* WidgetPublisher.swift */,
+				5F5F5D82CACC67BA11E79E40 /* Shared */,
+			);
+			path = Integration;
 			sourceTree = "<group>";
 		};
 		9948B7F7C735746AD8B045FE /* Achievements */ = {
@@ -411,8 +489,10 @@
 		BB990C912D94D0A0D272E570 /* Arcadia */ = {
 			isa = PBXGroup;
 			children = (
+				1615AE9749C50D7B7E3A4148 /* Arcadia.entitlements */,
 				3F24944E338626A252FB76BB /* Info.plist */,
 				1145D2903F50B1BE0A9F96F4 /* App */,
+				944104B35A96A514458900CA /* Integration */,
 				8D02D238F595BF04D5CE6D10 /* Models */,
 				4D8C7A2FF6A3D6BE546E9EDE /* Resources */,
 				4F659781B553BEB97316C52C /* Services */,
@@ -456,11 +536,13 @@
 				5FD8146F6B83845EF56F215A /* Sources */,
 				92C03E5335518129F9BA3F4F /* Resources */,
 				397BE7DCFEEF7D323904CA59 /* Frameworks */,
+				CA367EC2057441A8FFD7D913 /* Embed Foundation Extensions */,
 				D1CC697E7B3F6AF15771F593 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				0152983785F977497603A8FF /* PBXTargetDependency */,
 			);
 			name = Arcadia;
 			packageProductDependencies = (
@@ -487,6 +569,24 @@
 			productReference = 1D7D34EF5DDDB72CAB16CAF1 /* ArcadiaTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		8340F822221F185283649D99 /* ArcadiaWidget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3AD8599CAD1ADC97C16D0DF2 /* Build configuration list for PBXNativeTarget "ArcadiaWidget" */;
+			buildPhases = (
+				EB333AD743222AD5EF412177 /* Sources */,
+				8A79D10982F9EB16886C6122 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ArcadiaWidget;
+			packageProductDependencies = (
+			);
+			productName = ArcadiaWidget;
+			productReference = 908D90A4C4D8DFD947DE5718 /* ArcadiaWidget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -497,9 +597,15 @@
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
 					4CE5371533A03B052A8B8308 = {
+						DevelopmentTeam = 43THU6L26P;
 						ProvisioningStyle = Automatic;
 					};
 					82F5774635D6576970DBB31E = {
+						DevelopmentTeam = 43THU6L26P;
+						ProvisioningStyle = Automatic;
+					};
+					8340F822221F185283649D99 = {
+						DevelopmentTeam = 43THU6L26P;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -526,16 +632,26 @@
 			projectRoot = "";
 			targets = (
 				4CE5371533A03B052A8B8308 /* Arcadia */,
+				8340F822221F185283649D99 /* ArcadiaWidget */,
 				82F5774635D6576970DBB31E /* ArcadiaTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		8A79D10982F9EB16886C6122 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4048B0F1AD11B7C1A74D0ED /* Localizable.xcstrings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		92C03E5335518129F9BA3F4F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24403BFD36762A31C7EE6DC9 /* AppShortcuts.xcstrings in Resources */,
 				48EB4F7A494975278BFC1823 /* Assets.xcassets in Resources */,
 				0CBD9A970A5DB5AD7FBA7467 /* Localizable.xcstrings in Resources */,
 			);
@@ -560,6 +676,7 @@
 				F2C1F8C7FE74BB876DB88CCD /* Collections.swift in Sources */,
 				0F95780F688402D94A4B1039 /* CollectionsViews.swift in Sources */,
 				028FA05881A40FDFF1CFD517 /* ConfigFile.swift in Sources */,
+				F0ED7C7C9A4D64306AAD7863 /* ContinuePlaying.swift in Sources */,
 				389DC5E7CF859B9E1F6478EB /* CoverArt.swift in Sources */,
 				FA7C5E14DFF04AC9D413FF77 /* DiscCompressor.swift in Sources */,
 				160BC9D83A8885F2CBE659FA /* DiscImageCodec.swift in Sources */,
@@ -582,6 +699,8 @@
 				D78C70BE8FB1CF2CC1CF9989 /* GamepadPresets.swift in Sources */,
 				866AC1044E7488D098DD6A17 /* Gamepads.swift in Sources */,
 				1DF74432A4A5CF43249EFA0D /* HomeView.swift in Sources */,
+				2D773BC19ECF798D92A379F0 /* Integration.swift in Sources */,
+				7AACECE3971E3CF3E776E702 /* Intents.swift in Sources */,
 				960E7ECDD1313218CFDEC514 /* KeychainCredentialStore.swift in Sources */,
 				FC9A0A6CB047991549EA8488 /* LaunchLogs.swift in Sources */,
 				BFA921BC582FF3C404B28BCA /* Launcher.swift in Sources */,
@@ -609,6 +728,7 @@
 				E5237B697970020BAE88FA2C /* Screenshots.swift in Sources */,
 				80DB8AE959740A0D99714CD7 /* SettingsView.swift in Sources */,
 				F975F3F013DD56850A468884 /* SidebarView.swift in Sources */,
+				C3F80F970175A6C08C81D5D0 /* Spotlight.swift in Sources */,
 				17B356BBA0004D4C262FB7FD /* SystemView.swift in Sources */,
 				7E02A2357654212EC851B48F /* TVInput.swift in Sources */,
 				647C5ED2937B16E8E21D54FE /* TVMode.swift in Sources */,
@@ -617,7 +737,18 @@
 				7D0E45D4546B889BD0DD97F2 /* TVNavigation.swift in Sources */,
 				000E25EFE22D424A7EE9ECA8 /* TVOverlays.swift in Sources */,
 				795EE8D5B990C831B31D1053 /* Theme.swift in Sources */,
+				79E5CE1BF309416A3776621E /* WidgetPublisher.swift in Sources */,
 				340B60FF6DD83CD69769C222 /* Wikipedia.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB333AD743222AD5EF412177 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D008FADD50B8081FEF7CD9D /* ArcadiaWidgetBundle.swift in Sources */,
+				C2E5E2F76C6FF5203C48D414 /* ContinuePlaying.swift in Sources */,
+				E0D2B896222A82F4462135C6 /* ContinuePlayingWidget.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -630,6 +761,7 @@
 				983952800500088AD359BF87 /* ConfigFileTests.swift in Sources */,
 				F5201833F230E56DB0E168AE /* FolderWatcherTests.swift in Sources */,
 				81DFEEBB425213C5B1185CC0 /* GameIdentifierTests.swift in Sources */,
+				6A25AB022A02F2EFA78176A1 /* IntegrationTests.swift in Sources */,
 				D4B1B4BF3F0862819C9B7074 /* LaunchLogsTests.swift in Sources */,
 				8DBB70F06166B99F413D5A07 /* LibraryTests.swift in Sources */,
 				5D9AC75FCE4D34EE1AEF3A9D /* MetadataTests.swift in Sources */,
@@ -643,6 +775,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		0152983785F977497603A8FF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8340F822221F185283649D99 /* ArcadiaWidget */;
+			targetProxy = BDC34AC3EA1E168E27ED460D /* PBXContainerItemProxy */;
+		};
 		636514B6D860BB6675460841 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 4CE5371533A03B052A8B8308 /* Arcadia */;
@@ -688,6 +825,7 @@
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 43THU6L26P;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -721,7 +859,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Vendor";
@@ -738,11 +876,36 @@
 			};
 			name = Release;
 		};
+		43F0E8AC0D9AE486A80697F3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ArcadiaWidget/ArcadiaWidget.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ArcadiaWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.ferhanakkan.Arcadia.Widget;
+				PRODUCT_NAME = ArcadiaWidget;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+			};
+			name = Debug;
+		};
 		4B442F4E04A8723716329381 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Vendor";
@@ -763,7 +926,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_ENTITLEMENTS = Arcadia/Arcadia.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				ENABLE_APP_SANDBOX = NO;
@@ -787,6 +951,31 @@
 				SDKROOT = macosx;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "Arcadia/App/Arcadia-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		78D5BCE4469390FD371FD7CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ArcadiaWidget/ArcadiaWidget.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ArcadiaWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.ferhanakkan.Arcadia.Widget;
+				PRODUCT_NAME = ArcadiaWidget;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 			};
 			name = Release;
 		};
@@ -827,6 +1016,7 @@
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 43THU6L26P;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -854,7 +1044,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_ENTITLEMENTS = Arcadia/Arcadia.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				ENABLE_APP_SANDBOX = NO;
@@ -889,6 +1080,15 @@
 			buildConfigurations = (
 				1D608F2C3B8AA3A010C4FAD3 /* Debug */,
 				B3D2DDE967790A7A65CA244B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		3AD8599CAD1ADC97C16D0DF2 /* Build configuration list for PBXNativeTarget "ArcadiaWidget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				43F0E8AC0D9AE486A80697F3 /* Debug */,
+				78D5BCE4469390FD371FD7CC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;

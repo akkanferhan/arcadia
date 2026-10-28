@@ -13,6 +13,9 @@ settings:
     ARCHS: arm64
     ONLY_ACTIVE_ARCH: NO
     CURRENT_PROJECT_VERSION: "1"
+    # Debug builds sign with the team's Apple Development certificate so the App Group works
+    # without prompts; releases override this with Developer ID (scripts/release.sh).
+    DEVELOPMENT_TEAM: 43THU6L26P
 targets:
   Arcadia:
     type: application
@@ -24,6 +27,15 @@ targets:
       - framework: Vendor/SDL3.framework
         embed: true
         codeSign: true
+      - target: ArcadiaWidget
+        embed: true
+        codeSign: true
+    entitlements:
+      path: Arcadia/Arcadia.entitlements
+      properties:
+        # Shared with the widget. Team-prefixed, so Developer ID builds need no provisioning profile.
+        com.apple.security.application-groups:
+          - 43THU6L26P.dev.ferhanakkan.Arcadia
     info:
       path: Arcadia/Info.plist
       properties:
@@ -34,6 +46,10 @@ targets:
         NSDownloadsFolderUsageDescription: Arcadia looks for your games here when you search this Mac.
         NSRemovableVolumesUsageDescription: Arcadia looks for your games on this drive when you search.
         NSNetworkVolumesUsageDescription: Arcadia looks for your games on this drive when you search.
+        # arcadia://play?game=<id> and arcadia://open?game=<id>, used by the widget.
+        CFBundleURLTypes:
+          - CFBundleURLName: dev.ferhanakkan.Arcadia
+            CFBundleURLSchemes: [arcadia]
         # Sony serves PS3 system software over HTTP only; RPCS3 verifies the file's hashes.
         NSAppTransportSecurity:
           NSExceptionDomains:
@@ -56,12 +72,46 @@ targets:
         ENABLE_APP_SANDBOX: NO
         ENABLE_HARDENED_RUNTIME: NO
         CODE_SIGN_STYLE: Automatic
-        CODE_SIGN_IDENTITY: "-"
+        CODE_SIGN_IDENTITY: "Apple Development"
         COMBINE_HIDPI_IMAGES: YES
       configs:
         # Hardened runtime keeps the test bundle from loading in Debug, so only releases use it.
         Release:
           ENABLE_HARDENED_RUNTIME: YES
+  ArcadiaWidget:
+    type: app-extension
+    platform: macOS
+    sources:
+      - path: ArcadiaWidget
+      - path: Arcadia/Integration/Shared
+      - path: Arcadia/Resources/Localizable.xcstrings
+    info:
+      path: ArcadiaWidget/Info.plist
+      properties:
+        CFBundleDisplayName: Arcadia
+        CFBundleShortVersionString: $(MARKETING_VERSION)
+        CFBundleVersion: $(CURRENT_PROJECT_VERSION)
+        NSExtension:
+          NSExtensionPointIdentifier: com.apple.widgetkit-extension
+    entitlements:
+      path: ArcadiaWidget/ArcadiaWidget.entitlements
+      properties:
+        # macOS only loads sandboxed widgets.
+        com.apple.security.app-sandbox: true
+        com.apple.security.application-groups:
+          - 43THU6L26P.dev.ferhanakkan.Arcadia
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: dev.ferhanakkan.Arcadia.Widget
+        PRODUCT_NAME: ArcadiaWidget
+        GENERATE_INFOPLIST_FILE: YES
+        SWIFT_EMIT_LOC_STRINGS: YES
+        LOCALIZATION_PREFERS_STRING_CATALOGS: YES
+        ENABLE_APP_SANDBOX: YES
+        ENABLE_HARDENED_RUNTIME: YES
+        SKIP_INSTALL: YES
+        CODE_SIGN_STYLE: Automatic
+        CODE_SIGN_IDENTITY: "Apple Development"
   ArcadiaTests:
     type: bundle.unit-test
     platform: macOS
@@ -76,7 +126,7 @@ targets:
         SWIFT_OBJC_BRIDGING_HEADER: Arcadia/App/Arcadia-Bridging-Header.h
         FRAMEWORK_SEARCH_PATHS: $(PROJECT_DIR)/Vendor
         CODE_SIGN_STYLE: Automatic
-        CODE_SIGN_IDENTITY: "-"
+        CODE_SIGN_IDENTITY: "Apple Development"
 schemes:
   Arcadia:
     build:

@@ -1,0 +1,21 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "Continue playing in ${applicationName}" : {
+
+    },
+    "Play ${game} in ${applicationName}" : {
+
+    },
+    "Play a game in ${applicationName}" : {
+
+    },
+    "Resume my game in ${applicationName}" : {
+
+    },
+    "Start ${game} in ${applicationName}" : {
+
+    }
+  },
+  "version" : "1.0"
+}

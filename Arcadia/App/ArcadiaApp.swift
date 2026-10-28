@@ -2,7 +2,13 @@ import SwiftUI
 
 @main
 struct ArcadiaApp: App {
-    @State private var model = AppModel()
+    @State private var model: AppModel
+
+    init() {
+        let model = AppModel()
+        _model = State(initialValue: model)
+        Integration.start(model)
+    }
 
     var body: some Scene {
         WindowGroup {
@@ -10,6 +16,7 @@ struct ArcadiaApp: App {
                 .environment(model)
                 .frame(minWidth: 960, minHeight: 620)
                 .preferredColorScheme(.dark)
+                .handlesArcadiaLinks(model)
         }
         .windowToolbarStyle(.unified(showsTitle: false))
         .commands {
