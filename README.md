@@ -25,6 +25,8 @@ scans your game folders, shows box art and starts games with a double-click.
   emulators that need the device's exact name or GUID (Dolphin, Cemu, RPCS3, melonDS)
 - **Select + Start** on a gamepad quits back to Arcadia in most emulators
 - **Box art** from your PS3/PS4/PS5 game folders or [libretro-thumbnails](https://github.com/libretro-thumbnails)
+- **Find Games on This Mac**: searches your home folder and drives, recognises each game's console
+  from the disc or ROM itself (not just the file name) and adds it in place, without copying
 - **Drag and drop** games onto a console page to add them
 - Favorites, recently played, play time and search
 - Full screen by default; quit a game from Arcadia's now-playing bar
