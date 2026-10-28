@@ -21,16 +21,35 @@ scans your game folders, shows box art and starts games with a double-click.
   (Metal or Vulkan renderer, resolution matched to your Mac's GPU, no first-run wizards or update
   prompts, BIOS folders, gamepad mappings). One "Graphics quality" setting covers them all
 - **Any controller just works**: right before a game starts Arcadia reads the connected
-  controller through SDL, exactly as the emulators see it, and maps it for player 1, including
-  emulators that need the device's exact name or GUID (Dolphin, Cemu, RPCS3, melonDS)
+  controllers through SDL, exactly as the emulators see them, and maps up to four of them to
+  players 1–4, including emulators that need the device's exact name or GUID (Dolphin, Cemu,
+  RPCS3, melonDS)
 - **Select + Start** on a gamepad quits back to Arcadia in most emulators
-- **Box art** from your PS3/PS4/PS5 game folders or [libretro-thumbnails](https://github.com/libretro-thumbnails)
+- **TV Mode** (⇧⌘T): a full-screen, controller-first interface with big box art, a Continue
+  Playing shelf, favorites and a shelf for every console; it can open by itself when a
+  controller connects
+- **Game details**: box art, screenshots, genre, developer, publisher, release year, player count
+  and a Wikipedia description in your language, from open sources with no accounts or API keys
+- **Collections, sorting and filters**: your own collections in the sidebar; sort any grid by
+  name, recently played, most played, recently added or year, and filter by genre, decade or players
 - **Find Games on This Mac**: searches your home folder and drives, recognises each game's console
   from the disc or ROM itself (not just the file name) and adds it in place, without copying
-- **Drag and drop** games onto a console page to add them
+- **Live library**: games copied into the library folder show up right away; drag and drop onto a
+  console page works too
+- **Save Disk Space**: lossless compression of PSP and PS2 ISOs to CSO and GameCube ISOs to GCZ,
+  checked against the original before the original goes to the Trash
+- **iCloud Drive save sync**: saves, save states and memory cards follow you to your other Macs;
+  differing saves keep the newer copy and back up the other
+- **RetroAchievements**: sign in once and earn achievements in RetroArch, DuckStation, PPSSPP,
+  Dolphin and Flycast, with optional hardcore mode; only a token is kept in your Keychain
+- **Works with your Mac**: games in Spotlight, "Play … in Arcadia" with Siri and Shortcuts, and a
+  Continue Playing widget
+- **Launch logs**: each launch's emulator output is kept in `~/Library/Logs/Arcadia`; if a game
+  closes right after starting, the alert offers its log
 - Favorites, recently played, play time and search
-- Full screen by default; quit a game from Arcadia's now-playing bar
 - Available in English, Türkçe, 简体中文, Español, हिन्दी, العربية, Français and Português (Brasil)
+
+![TV Mode](docs/tv-mode.png)
 
 ![Find Games on This Mac](docs/find-games.png)
 

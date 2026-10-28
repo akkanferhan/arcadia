@@ -23,3 +23,20 @@ with Apple silicon running macOS 26 or later.
 - PS2 runs natively through RetroArch's PCSX2 core. PS4, PS5 and Wii U emulators only exist for
   Intel, so Arcadia offers to install Rosetta for them.
 - A warning when a game closes right after starting, and download progress before launches.
+- Up to four controllers mapped to players 1–4 in every emulator that supports it, telling
+  identical controllers apart (DuckStation uses its multitap for 3–4 players).
+- TV Mode: a full-screen, 10-foot interface for controllers with a hero for the focused game,
+  shelves for Continue Playing, Favorites and each console, on-screen search, and options and
+  problem menus. Controller input goes to the emulator while a game runs.
+- Game details with snapshots, title screens, genre, developer, publisher, year and player count
+  from libretro-database, and a Wikipedia description, downloaded on demand and cached.
+- Collections, a sort menu and genre/decade/players filters on every game grid.
+- The library updates as soon as games are added to or removed from its folder.
+- Save Disk Space: lossless compression of PSP/PS2 ISOs to CSO and GameCube ISOs to GCZ, with
+  estimated savings, verification and originals moved to the Trash.
+- iCloud Drive save sync (off by default), with conflict backups and downloads before each launch.
+- RetroAchievements sign-in for RetroArch, DuckStation, PPSSPP, Dolphin and Flycast, with
+  hardcore mode.
+- Spotlight search, Shortcuts and Siri actions ("Play Game", "Continue Playing"), a Continue
+  Playing widget and `arcadia://` links.
+- Launch logs in `~/Library/Logs/Arcadia`, opened from the failed-start alert or Settings.
