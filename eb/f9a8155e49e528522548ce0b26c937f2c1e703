@@ -1,0 +1,32 @@
+Arcadia.xcodeproj/project.pbxproj
+  s_947a5ec9b0d04e::t_20845e33efce39 53,116,231,490
+  s_947a5ec9b0d04e::t_976f525932fc4b 10,25,31,36-37,63,93,104,108,125,132,145,183-195,290,473-478
+Arcadia/Views/SettingsView.swift
+  s_947a5ec9b0d04e::t_dd559f893f9786 35
+  s_947a5ec9b0d04e::t_f8bd916e3f4d85 5
+Arcadia/Views/TV/TVMode.swift
+  s_947a5ec9b0d04e::t_651355786aabf8 1-97
+Arcadia/App/AppModel.swift
+  s_947a5ec9b0d04e::t_0d8bcfa9dcf76f 25-26
+Arcadia/App/ArcadiaApp.swift
+  s_947a5ec9b0d04e::t_bdcbf53cbc58bd 24,27
+  s_947a5ec9b0d04e::t_b53a475efca9be 28
+Arcadia/Views/RootView.swift
+  s_947a5ec9b0d04e::t_702b985b881cb8 31-32
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "ebf9a8155e49e528522548ce0b26c937f2c1e703",
+  "prompts": {},
+  "sessions": {
+    "s_947a5ec9b0d04e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "ae2b73cb-5faa-44a9-b7a6-4d22739dbe7c",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Ferhan Akkan <ferhanakkan@gmail.com>"
+    }
+  }
+}
