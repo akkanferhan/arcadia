@@ -1,0 +1,31 @@
+Arcadia/Integration/Integration.swift
+  s_947a5ec9b0d04e::t_800df602f0e49a 1-91,94-118
+  s_947a5ec9b0d04e::t_99fa301c53b269 92-93
+Arcadia/Integration/WidgetPublisher.swift
+  s_947a5ec9b0d04e::t_d61cc3b6c2e162 10,23-25,27,29
+  s_947a5ec9b0d04e::t_1bfa1263d0cbc5 2,33-34
+  s_947a5ec9b0d04e::t_b7045f720fa8d3 1,3-9,11-22,26,28,30-32,35-75
+Arcadia/Integration/Spotlight.swift
+  s_947a5ec9b0d04e::t_38752c4b3fdb0a 1-91
+Arcadia/Integration/Shared/ContinuePlaying.swift
+  s_947a5ec9b0d04e::t_c0b15e8413b032 91
+  s_947a5ec9b0d04e::t_c4a8facb5e6245 1-90,92-96
+Arcadia/App/ArcadiaApp.swift
+  s_947a5ec9b0d04e::t_087efa14ef10a0 5-11,19
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "68f43777e146c8458f9ee45722bc2e0bb46c1597",
+  "prompts": {},
+  "sessions": {
+    "s_947a5ec9b0d04e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "ae2b73cb-5faa-44a9-b7a6-4d22739dbe7c",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Ferhan Akkan <ferhanakkan@gmail.com>"
+    }
+  }
+}
