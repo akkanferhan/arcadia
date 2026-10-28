@@ -72,6 +72,7 @@ open it and drag Arcadia to Applications. Releases are signed with a Developer I
 | | PS3 | RPCS3 |
 | | PS4 | shadPS4 (experimental, Rosetta) |
 | | PS5 | SharpEmu (experimental, Rosetta) |
+| | PS Vita | Vita3K (experimental) |
 | Nintendo | NES, SNES, N64, Game Boy, Game Boy Color, Game Boy Advance | RetroArch (Mesen, Snes9x, Mupen64Plus-Next, Gambatte, mGBA) |
 | | GameCube, Wii | Dolphin |
 | | Wii U | Cemu (Rosetta) |
@@ -106,9 +107,14 @@ them into place. Most systems need no BIOS at all:
 | PS1 | Plays through PCSX ReARMed's built-in BIOS; DuckStation takes over once you add one |
 | Saturn | Plays through Yabause's built-in BIOS (multi-disc games need the real one) |
 | PS3 | System software is downloaded from Sony's update servers on first play |
+| PS Vita | System software and fonts are downloaded from Sony's update servers on first play |
 | PS2, Xbox | Your console's BIOS is required; there is no free replacement |
 
 Multi-disc games: add an `.m3u` playlist and Arcadia hides the individual discs.
+
+PS Vita games are `.vpk` files or installed game folders (`<TITLEID>` with `sce_sys/param.sfo`) in
+`psvita/`; Arcadia installs each one into Vita3K the first time you play it. Encrypted dumps need
+their license file (`sce_sys/package/work.bin`, as made by NoNpDrm).
 
 ## Building
 
