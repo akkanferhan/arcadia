@@ -1,0 +1,25 @@
+project.yml
+  s_947a5ec9b0d04e::t_b911e4031f44da 5
+.github/workflows/build.yml
+  s_947a5ec9b0d04e::t_b911e4031f44da 10
+README.md
+  s_947a5ec9b0d04e::t_b911e4031f44da 12-14,42,45,87
+Arcadia.xcodeproj/project.pbxproj
+  s_947a5ec9b0d04e::t_b911e4031f44da 442,533
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "2b14ba13586b4d130f7ab2d27b921b5b8ced2e1b",
+  "prompts": {},
+  "sessions": {
+    "s_947a5ec9b0d04e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "ae2b73cb-5faa-44a9-b7a6-4d22739dbe7c",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Ferhan Akkan <ferhanakkan@gmail.com>"
+    }
+  }
+}
