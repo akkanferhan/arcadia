@@ -60,6 +60,7 @@ enum Presets {
         case "rpcs3": try await rpcs3(context)
         case "shadps4": try shadPS4(context)
         case "sharpemu": try sharpEmu(context)
+        case "vita3k": try await vita3k(context)
         default: PresetLaunch()
         }
     }

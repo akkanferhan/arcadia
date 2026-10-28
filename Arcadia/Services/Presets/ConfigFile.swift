@@ -74,7 +74,7 @@ struct INIFile {
 }
 
 /// Edits block-style YAML files such as RPCS3's config.yml, addressed by key paths
-/// like `["Video", "Renderer"]`. Only mappings are supported, which is all RPCS3 needs.
+/// like `["Video", "Renderer"]`. Only mappings are supported, which is all RPCS3 and Vita3K need.
 struct YAMLFile {
     private var lines: [String]
 
@@ -86,6 +86,10 @@ struct YAMLFile {
 
     mutating func set(_ path: [String], _ value: String) {
         var start = 0, end = lines.count
+        // New keys go before a document end marker (`...`), which yaml-cpp writes (Vita3K).
+        if let last = lines.lastIndex(where: { !$0.trimmingCharacters(in: .whitespaces).isEmpty }), lines[last] == "..." {
+            end = last
+        }
         for (level, key) in path.enumerated() {
             let indent = String(repeating: "  ", count: level)
             let isLeaf = level == path.count - 1
