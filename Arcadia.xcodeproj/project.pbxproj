@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		000E25EFE22D424A7EE9ECA8 /* TVOverlays.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5314FF81892F2B5A339D38 /* TVOverlays.swift */; };
 		020B48317A583B2F52EF47E5 /* EmulatorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88351EB6285E118CF42F4E5D /* EmulatorButton.swift */; };
+		026BD1CEF3357E463690F136 /* AppUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042F5E410BA015DFA6880F85 /* AppUpdater.swift */; };
 		028FA05881A40FDFF1CFD517 /* ConfigFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD216CDDFBBFC931A449D302 /* ConfigFile.swift */; };
 		02E95897C09D83E97FD3EA60 /* SDL3.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 825ABEF719D1D53B7F189C32 /* SDL3.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		06B57CDAA601792231FEC702 /* GameInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A72F9EAC35B4A5377692DB5 /* GameInfo.swift */; };
@@ -47,6 +48,7 @@
 		647C5ED2937B16E8E21D54FE /* TVMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A2580D12D39AFDD9909324 /* TVMode.swift */; };
 		681849916D75E0B7E8D0B31E /* GameSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6CADA72596641D12641CF0 /* GameSort.swift */; };
 		687E662784B4F1AE120B23D8 /* SaveLocations.swift in Sources */ = {isa = PBXBuildFile; fileRef = A422E079DE5FF22CED914CA4 /* SaveLocations.swift */; };
+		68D0BD5C068A773C055C30B1 /* EmulatorUpdatesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C37BD0F5F7114570432920 /* EmulatorUpdatesTests.swift */; };
 		68FFC0397450187C29A540A6 /* FolderWatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A899554D2789C31C2F93072 /* FolderWatcher.swift */; };
 		69966BE878BC767DA489403D /* CompressionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542C667E23812682C5954381 /* CompressionTests.swift */; };
 		6A25AB022A02F2EFA78176A1 /* IntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9461C5FC7ED27F1D2C40E329 /* IntegrationTests.swift */; };
@@ -63,9 +65,11 @@
 		7E02A2357654212EC851B48F /* TVInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1ADE13E0B70AF22499AC4E8 /* TVInput.swift */; };
 		80DB8AE959740A0D99714CD7 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812C784C99CEB2DFC813B35C /* SettingsView.swift */; };
 		81DFEEBB425213C5B1185CC0 /* GameIdentifierTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1978F3D28ED8BFB82CE15E74 /* GameIdentifierTests.swift */; };
+		848542425FC7660F826176CD /* Sparkle in Frameworks */ = {isa = PBXBuildFile; productRef = 0CB87FB87CA36376E8338F02 /* Sparkle */; };
 		866AC1044E7488D098DD6A17 /* Gamepads.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A18463512A2739BED27CBB /* Gamepads.swift */; };
 		890B353411ACABD921F1C917 /* PlayStationFolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA46445A2899DC1E961AB3C8 /* PlayStationFolder.swift */; };
 		8DBB70F06166B99F413D5A07 /* LibraryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABEB897CD0B84F515FFC489C /* LibraryTests.swift */; };
+		92BBCC3146E6E2A169810259 /* EmulatorUpdates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F95FCC4BC09CBAFEA7F4505 /* EmulatorUpdates.swift */; };
 		940F8976E708D2DBF9E8CAFD /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A465C9E977BB474751CA62E /* AppModel.swift */; };
 		960E7ECDD1313218CFDEC514 /* KeychainCredentialStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784C921ADFDF63A79A152968 /* KeychainCredentialStore.swift */; };
 		983952800500088AD359BF87 /* ConfigFileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9479CD5B5BB8551EBA0778CE /* ConfigFileTests.swift */; };
@@ -150,6 +154,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		042F5E410BA015DFA6880F85 /* AppUpdater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUpdater.swift; sourceTree = "<group>"; };
 		123A212E997DA10971756816 /* Screenshots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screenshots.swift; sourceTree = "<group>"; };
 		153D84E3CF93596DBF207241 /* Archive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Archive.swift; sourceTree = "<group>"; };
 		15F11F4DC740119D2E785691 /* TVModeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVModeView.swift; sourceTree = "<group>"; };
@@ -159,6 +164,7 @@
 		1A4B1630B611CEA329743489 /* SystemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemView.swift; sourceTree = "<group>"; };
 		1D7D34EF5DDDB72CAB16CAF1 /* ArcadiaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArcadiaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E0C1DF0C93AC42E7D0421E7 /* DiscImageCodec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscImageCodec.swift; sourceTree = "<group>"; };
+		1F95FCC4BC09CBAFEA7F4505 /* EmulatorUpdates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmulatorUpdates.swift; sourceTree = "<group>"; };
 		22D26F02B8B028C9DC4E6123 /* Spotlight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spotlight.swift; sourceTree = "<group>"; };
 		22FFC42E2129B17D7CCDD93E /* LaunchLogs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchLogs.swift; sourceTree = "<group>"; };
 		25B5018563F503C6B2C1B3CB /* Arcadia-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Arcadia-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -177,6 +183,7 @@
 		542C667E23812682C5954381 /* CompressionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompressionTests.swift; sourceTree = "<group>"; };
 		552E3F0567F989B07102ADBB /* ModernPlayStationPresets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModernPlayStationPresets.swift; sourceTree = "<group>"; };
 		57C0F5D6658EB4112AABCF7A /* BiosViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiosViews.swift; sourceTree = "<group>"; };
+		57C37BD0F5F7114570432920 /* EmulatorUpdatesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmulatorUpdatesTests.swift; sourceTree = "<group>"; };
 		5893FF159C644B6182AA9710 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		58A2580D12D39AFDD9909324 /* TVMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVMode.swift; sourceTree = "<group>"; };
 		591A42D93ACE329B2F438E73 /* SaveSync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveSync.swift; sourceTree = "<group>"; };
@@ -260,6 +267,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FDA336ACDE80BA2D5FB7192D /* SDL3.framework in Frameworks */,
+				848542425FC7660F826176CD /* Sparkle in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +278,7 @@
 			isa = PBXGroup;
 			children = (
 				6A465C9E977BB474751CA62E /* AppModel.swift */,
+				042F5E410BA015DFA6880F85 /* AppUpdater.swift */,
 				25B5018563F503C6B2C1B3CB /* Arcadia-Bridging-Header.h */,
 				84F075E3969F2CC2D43B2F62 /* ArcadiaApp.swift */,
 			);
@@ -326,6 +335,7 @@
 				E57F165FCE5A87F720E7B440 /* Collections.swift */,
 				3C93AF9553B3227700244CF6 /* Downloader.swift */,
 				3950787B4CA3AA7BF4513663 /* EmulatorManager.swift */,
+				1F95FCC4BC09CBAFEA7F4505 /* EmulatorUpdates.swift */,
 				4A899554D2789C31C2F93072 /* FolderWatcher.swift */,
 				7A09281597713AED32BE213D /* GameFinder.swift */,
 				605F8FF86F965E32FDC74B02 /* GameIdentifier.swift */,
@@ -371,6 +381,7 @@
 				4D2F970EF493F4B74B476028 /* AchievementsTests.swift */,
 				542C667E23812682C5954381 /* CompressionTests.swift */,
 				9479CD5B5BB8551EBA0778CE /* ConfigFileTests.swift */,
+				57C37BD0F5F7114570432920 /* EmulatorUpdatesTests.swift */,
 				7FFA42C7F8A4A9CE2D8EC052 /* FolderWatcherTests.swift */,
 				1978F3D28ED8BFB82CE15E74 /* GameIdentifierTests.swift */,
 				9461C5FC7ED27F1D2C40E329 /* IntegrationTests.swift */,
@@ -546,6 +557,7 @@
 			);
 			name = Arcadia;
 			packageProductDependencies = (
+				0CB87FB87CA36376E8338F02 /* Sparkle */,
 			);
 			productName = Arcadia;
 			productReference = BD47DCC560FF89CEB5397D1B /* Arcadia.app */;
@@ -626,6 +638,9 @@
 			);
 			mainGroup = 8D39AA40B4B75BA4AF59B5AF;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				5A62961BC307D884EF1EA13F /* XCRemoteSwiftPackageReference "Sparkle" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 180E0246ADDB6640ECC285BD /* Products */;
 			projectDirPath = "";
@@ -667,6 +682,7 @@
 				F331F408CE74476FCC8B3763 /* AchievementsPresets.swift in Sources */,
 				BA2B7A0FCFCFBB05AFC5F817 /* AchievementsSettingsSection.swift in Sources */,
 				940F8976E708D2DBF9E8CAFD /* AppModel.swift in Sources */,
+				026BD1CEF3357E463690F136 /* AppUpdater.swift in Sources */,
 				6097722C6994C95D35AD11E8 /* AppleSilicon.swift in Sources */,
 				74A7A0D42D0FE3FC88AB4E32 /* ArcadiaApp.swift in Sources */,
 				B707D53E67DB123B526FE0F8 /* Archive.swift in Sources */,
@@ -684,6 +700,7 @@
 				CDE7BBBDF308D0BA2C99D4BA /* Emulator.swift in Sources */,
 				020B48317A583B2F52EF47E5 /* EmulatorButton.swift in Sources */,
 				566EB34E33FCC2E08E455B43 /* EmulatorManager.swift in Sources */,
+				92BBCC3146E6E2A169810259 /* EmulatorUpdates.swift in Sources */,
 				98825D79B66BEE75FB33465D /* EmulatorsView.swift in Sources */,
 				CEA17191C0844D50711D88EC /* FindGamesView.swift in Sources */,
 				68FFC0397450187C29A540A6 /* FolderWatcher.swift in Sources */,
@@ -759,6 +776,7 @@
 				FB5733A42C1A1C06DEBDAF53 /* AchievementsTests.swift in Sources */,
 				69966BE878BC767DA489403D /* CompressionTests.swift in Sources */,
 				983952800500088AD359BF87 /* ConfigFileTests.swift in Sources */,
+				68D0BD5C068A773C055C30B1 /* EmulatorUpdatesTests.swift in Sources */,
 				F5201833F230E56DB0E168AE /* FolderWatcherTests.swift in Sources */,
 				81DFEEBB425213C5B1185CC0 /* GameIdentifierTests.swift in Sources */,
 				6A25AB022A02F2EFA78176A1 /* IntegrationTests.swift in Sources */,
@@ -823,7 +841,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = "$(MARKETING_VERSION)";
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = 43THU6L26P;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -1014,7 +1032,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = "$(MARKETING_VERSION)";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 43THU6L26P;
 				ENABLE_NS_ASSERTIONS = NO;
@@ -1112,6 +1130,25 @@
 			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5A62961BC307D884EF1EA13F /* XCRemoteSwiftPackageReference "Sparkle" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sparkle-project/Sparkle";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.10.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0CB87FB87CA36376E8338F02 /* Sparkle */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5A62961BC307D884EF1EA13F /* XCRemoteSwiftPackageReference "Sparkle" */;
+			productName = Sparkle;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4B7847D49C6A0D12349EA15D /* Project object */;
 }

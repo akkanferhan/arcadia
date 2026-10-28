@@ -3,6 +3,7 @@ import SwiftUI
 @main
 struct ArcadiaApp: App {
     @State private var model: AppModel
+    private let updater = AppUpdater()
 
     init() {
         let model = AppModel()
@@ -20,6 +21,9 @@ struct ArcadiaApp: App {
         }
         .windowToolbarStyle(.unified(showsTitle: false))
         .commands {
+            CommandGroup(after: .appInfo) {
+                CheckForUpdatesButton(updater: updater.updater)
+            }
             CommandGroup(after: .newItem) {
                 Button("Find Games on This Mac…") { model.showFinder = true }
                     .keyboardShortcut("f", modifiers: [.command, .shift])

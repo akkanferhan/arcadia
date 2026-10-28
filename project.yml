@@ -5,6 +5,11 @@ options:
     macOS: "26.0"
   developmentLanguage: en
   createIntermediateGroups: true
+packages:
+  # Sparkle (MIT) installs Arcadia's own updates from the appcast published with each release.
+  Sparkle:
+    url: https://github.com/sparkle-project/Sparkle
+    from: 2.10.1
 settings:
   base:
     SWIFT_VERSION: "5.0"
@@ -12,7 +17,8 @@ settings:
     # Apple silicon only.
     ARCHS: arm64
     ONLY_ACTIVE_ARCH: NO
-    CURRENT_PROJECT_VERSION: "1"
+    # Sparkle compares build versions, so the build version follows the release version.
+    CURRENT_PROJECT_VERSION: $(MARKETING_VERSION)
     # Debug builds sign with the team's Apple Development certificate so the App Group works
     # without prompts; releases override this with Developer ID (scripts/release.sh).
     DEVELOPMENT_TEAM: 43THU6L26P
@@ -27,6 +33,7 @@ targets:
       - framework: Vendor/SDL3.framework
         embed: true
         codeSign: true
+      - package: Sparkle
       - target: ArcadiaWidget
         embed: true
         codeSign: true
@@ -41,6 +48,10 @@ targets:
       properties:
         CFBundleShortVersionString: $(MARKETING_VERSION)
         CFBundleVersion: $(CURRENT_PROJECT_VERSION)
+        # Sparkle: the appcast scripts/release.sh uploads next to each release's disk image.
+        SUFeedURL: https://github.com/akkanferhan/arcadia/releases/latest/download/appcast.xml
+        SUPublicEDKey: PU9qpsmcl451+bvIPkaChgIZLYANhkbAvvnnbPQ73Y4=
+        SUEnableAutomaticChecks: true
         NSDesktopFolderUsageDescription: Arcadia looks for your games here when you search this Mac.
         NSDocumentsFolderUsageDescription: Arcadia looks for your games here when you search this Mac.
         NSDownloadsFolderUsageDescription: Arcadia looks for your games here when you search this Mac.

@@ -52,5 +52,11 @@
 	<string>Arcadia looks for your games on this drive when you search.</string>
 	<key>NSRemovableVolumesUsageDescription</key>
 	<string>Arcadia looks for your games on this drive when you search.</string>
+	<key>SUEnableAutomaticChecks</key>
+	<true/>
+	<key>SUFeedURL</key>
+	<string>https://github.com/akkanferhan/arcadia/releases/latest/download/appcast.xml</string>
+	<key>SUPublicEDKey</key>
+	<string>PU9qpsmcl451+bvIPkaChgIZLYANhkbAvvnnbPQ73Y4=</string>
 </dict>
 </plist>

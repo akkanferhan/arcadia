@@ -34,7 +34,7 @@ struct SidebarView: View {
 
             Section("Manage") {
                 Label("Emulators", systemImage: "square.stack.3d.down.right.fill")
-                    .badge(Emulator.all.filter { model.emulators.state($0.id).isWorking }.count)
+                    .badge(Emulator.all.filter { model.emulators.state($0.id).isWorking }.count + model.emulators.updateCount)
                     .tag(SidebarItem.emulators)
             }
         }

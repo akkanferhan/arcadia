@@ -40,17 +40,21 @@ jobs:
           NOTARY_API_KEY: ${{ secrets.NOTARY_API_KEY }}
           NOTARY_KEY_ID: ${{ secrets.NOTARY_KEY_ID }}
           NOTARY_ISSUER: ${{ secrets.NOTARY_ISSUER }}
+          # Signs the Sparkle appcast; exported with `generate_keys -x`.
+          SPARKLE_PRIVATE_KEY: ${{ secrets.SPARKLE_PRIVATE_KEY }}
         run: |
           export NOTARY_KEY_PATH="$RUNNER_TEMP/AuthKey.p8"
           echo "$NOTARY_API_KEY" | base64 --decode > "$NOTARY_KEY_PATH"
           scripts/release.sh
 
       - name: Publish the release
+        # appcast.xml next to the disk image is what installed copies check for updates
+        # (releases/latest/download/appcast.xml).
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           version="${GITHUB_REF_NAME#v}"
           # Release notes are this version's section of CHANGELOG.md.
           awk -v v="$version" '/^## /{p = ($0 ~ "\\[" v "\\]")} p' CHANGELOG.md | tail -n +2 > "$RUNNER_TEMP/notes.md"
-          gh release create "$GITHUB_REF_NAME" "build/release/Arcadia-$version.dmg" \
+          gh release create "$GITHUB_REF_NAME" "build/release/Arcadia-$version.dmg" build/release/appcast.xml \
             --title "Arcadia $version" --notes-file "$RUNNER_TEMP/notes.md"

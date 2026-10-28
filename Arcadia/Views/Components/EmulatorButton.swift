@@ -38,9 +38,16 @@ struct EmulatorButton: View {
             }
 
         case .installed(let installation):
+            let update = emulators.hasUpdate(emulator.id) ? emulators.latest[emulator.id] : nil
             Menu {
-                Button("Update to Latest", systemImage: "arrow.triangle.2.circlepath") {
-                    emulators.install(emulator)
+                if let update {
+                    Button("Update to \(update.version)", systemImage: "arrow.down.circle") {
+                        emulators.install(emulator)
+                    }
+                } else {
+                    Button("Update to Latest", systemImage: "arrow.triangle.2.circlepath") {
+                        emulators.install(emulator)
+                    }
                 }
                 Button("Show in Finder", systemImage: "folder") {
                     if let url = emulators.payloadURL(emulator.id) {
@@ -52,11 +59,16 @@ struct EmulatorButton: View {
                     emulators.uninstall(emulator.id)
                 }
             } label: {
-                Label(installation.version, systemImage: "checkmark.circle.fill")
+                if update != nil {
+                    Label("Update Available", systemImage: "arrow.down.circle.fill")
+                } else {
+                    Label(installation.version, systemImage: "checkmark.circle.fill")
+                }
             }
             .menuStyle(.button)
             .fixedSize()
-            .tint(.green)
+            .tint(update != nil ? Theme.accent : .green)
+            .help(update.map { String(localized: "\(installation.version) is installed. \($0.version) is available.") } ?? "")
 
         case .failed(let message):
             HStack(spacing: 8) {

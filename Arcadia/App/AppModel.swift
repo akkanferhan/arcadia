@@ -53,6 +53,11 @@ final class AppModel {
                 : String(localized: "\(game.title) closed right after starting. Check that the game file is complete and not damaged."),
                 log: self?.launcher.lastLog)
         }
+        // Emulator updates wait until no game is running or starting.
+        emulators.mayUpdateInBackground = { [launcher] in launcher.running == nil && launcher.preparing == nil }
+        if ProcessInfo.processInfo.environment["XCTestConfigurationFilePath"] == nil {
+            emulators.startUpdateChecks()
+        }
         // `-page snes`, `-page emulators` etc. opens a page directly (handy for development).
         switch UserDefaults.standard.string(forKey: "page") {
         case nil: break
