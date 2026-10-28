@@ -1,0 +1,25 @@
+Arcadia/Services/GameFinder.swift
+  s_947a5ec9b0d04e::t_5f0d6f58846110 1-68,75-113,115-120,122-139,142-149,153-154,157-167
+  s_947a5ec9b0d04e::t_412831d3b4550c 121,140-141
+  s_947a5ec9b0d04e::t_d061757a1996d1 114
+  s_947a5ec9b0d04e::t_57a230be21b21c 69-74
+  s_947a5ec9b0d04e::t_166253a712577b 150-152,155-156
+Arcadia/Services/Library.swift
+  s_947a5ec9b0d04e::t_4fc8dd5cd65ba6 139,141
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "0cd088aa4487291c778a49c5caa642ef63bf68ee",
+  "prompts": {},
+  "sessions": {
+    "s_947a5ec9b0d04e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "ae2b73cb-5faa-44a9-b7a6-4d22739dbe7c",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Ferhan Akkan <ferhanakkan@gmail.com>"
+    }
+  }
+}
