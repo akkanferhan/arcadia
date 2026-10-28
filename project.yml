@@ -2,7 +2,7 @@ name: Arcadia
 options:
   bundleIdPrefix: dev.ferhanakkan
   deploymentTarget:
-    macOS: "14.0"
+    macOS: "26.0"
   developmentLanguage: en
   createIntermediateGroups: true
 settings:
