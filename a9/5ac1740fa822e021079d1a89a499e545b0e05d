@@ -1,0 +1,23 @@
+Arcadia.xcodeproj/project.pbxproj
+  s_947a5ec9b0d04e::t_baf97bdca8e611 523,662
+project.yml
+  s_947a5ec9b0d04e::t_baf97bdca8e611 20-21,38
+Arcadia/Info.plist
+  s_947a5ec9b0d04e::t_baf97bdca8e611 20
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "a95ac1740fa822e021079d1a89a499e545b0e05d",
+  "prompts": {},
+  "sessions": {
+    "s_947a5ec9b0d04e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "ae2b73cb-5faa-44a9-b7a6-4d22739dbe7c",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Ferhan Akkan <ferhanakkan@gmail.com>"
+    }
+  }
+}
