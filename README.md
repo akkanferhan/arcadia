@@ -9,9 +9,9 @@ scans your game folders, shows box art and starts games with a double-click.
 
 > Status: early development. PS4 and especially PS5 emulation are experimental upstream.
 >
-> Arcadia runs on **Macs with Apple silicon (M1 or later)** only. PCSX2, shadPS4, Cemu and SharpEmu
-> only ship Intel builds for macOS; they run through Rosetta 2, which macOS offers to install the
-> first time. RPCS3 needs macOS 15 or later.
+> Arcadia runs on **Macs with Apple silicon (M1 or later) and macOS 26 or later**. Every emulator
+> runs natively except shadPS4 (PS4), SharpEmu (PS5) and Cemu (Wii U), which only ship Intel
+> builds; for those Arcadia offers to install Rosetta 2 the first time.
 
 ## Features
 
@@ -39,10 +39,10 @@ scans your game folders, shows box art and starts games with a double-click.
 | Maker | Systems | Emulator |
 | --- | --- | --- |
 | PlayStation | PS1 | DuckStation |
-| | PS2 | PCSX2 |
+| | PS2 | RetroArch (PCSX2 core, native arm64) |
 | | PSP | PPSSPP |
 | | PS3 | RPCS3 |
-| | PS4 | shadPS4 (experimental) |
+| | PS4 | shadPS4 (experimental, Rosetta) |
 | | PS5 | SharpEmu (experimental, Rosetta) |
 | Nintendo | NES, SNES, N64, Game Boy, Game Boy Color, Game Boy Advance | RetroArch (Mesen, Snes9x, Mupen64Plus-Next, Gambatte, mGBA) |
 | | GameCube, Wii | Dolphin |
@@ -84,7 +84,7 @@ Multi-disc games: add an `.m3u` playlist and Arcadia hides the individual discs.
 
 ## Building
 
-Requirements: a Mac with Apple silicon, macOS 14 or later, Xcode 16 or later.
+Requirements: a Mac with Apple silicon, macOS 26 or later, Xcode 26 or later.
 
 ```sh
 open Arcadia.xcodeproj

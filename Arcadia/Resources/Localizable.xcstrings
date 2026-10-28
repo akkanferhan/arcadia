@@ -50,6 +50,52 @@
         }
       }
     },
+    "%@ is only made for Intel Macs, so it needs Rosetta, Apple's free translator. Install it now?": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "صُمّم %@ لأجهزة Mac بمعالج Intel فقط، لذا يحتاج إلى Rosetta، أداة الترجمة المجانية من Apple. هل تريد تثبيتها الآن؟"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ solo está hecho para Mac con Intel, así que necesita Rosetta, el traductor gratuito de Apple. ¿Instalarlo ahora?"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ n’est conçu que pour les Mac Intel ; il a donc besoin de Rosetta, le traducteur gratuit d’Apple. L’installer maintenant ?"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ केवल Intel Mac के लिए बना है, इसलिए इसे Apple का मुफ़्त अनुवादक Rosetta चाहिए। क्या अभी इंस्टॉल करें?"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O %@ só é feito para Macs com Intel, então precisa do Rosetta, o tradutor gratuito da Apple. Instalar agora?"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ yalnızca Intel Mac’ler için hazırlanmış; bu yüzden Apple’ın ücretsiz çevirmeni Rosetta gerekiyor. Şimdi yüklensin mi?"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ 仅为 Intel Mac 制作，因此需要 Apple 的免费转译工具 Rosetta。现在安装吗？"
+          }
+        }
+      }
+    },
     "%@ plays %@ games. Install it now? It's free and takes about a minute.": {
       "localizations": {
         "ar": {
@@ -3273,6 +3319,52 @@
         }
       }
     },
+    "Install Rosetta": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "تثبيت Rosetta"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Instalar Rosetta"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Installer Rosetta"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rosetta इंस्टॉल करें"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Instalar o Rosetta"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rosetta’yı Yükle"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "安装 Rosetta"
+          }
+        }
+      }
+    },
     "Install What My Games Need": {
       "localizations": {
         "ar": {
@@ -4879,6 +4971,52 @@
           "stringUnit": {
             "state": "translated",
             "value": "Rosetta"
+          }
+        }
+      }
+    },
+    "Rosetta needed": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "يلزم Rosetta"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Se necesita Rosetta"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rosetta requis"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rosetta ज़रूरी है"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rosetta necessário"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rosetta gerekli"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "需要 Rosetta"
           }
         }
       }

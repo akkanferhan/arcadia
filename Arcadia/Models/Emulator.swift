@@ -49,11 +49,6 @@ extension Emulator {
                  sources: [.github(repo: "stenzek/duckstation", asset: #"^duckstation-mac-release\.zip$"#)]) { r in
             ["-batch"] + (r.fullscreen ? ["-fullscreen"] : []) + ["--", r.game.path]
         },
-        Emulator(id: "pcsx2", name: "PCSX2", website: URL(string: "https://pcsx2.net")!, license: "GPL-3.0",
-                 sources: [.github(repo: "PCSX2/pcsx2", asset: #"macos-Qt\.tar\.xz$"#)],
-                 arguments: { r in
-            ["-batch"] + (r.fullscreen ? ["-fullscreen"] : []) + ["--", r.game.path]
-        }, needsRosetta: true),
         Emulator(id: "ppsspp", name: "PPSSPP", website: URL(string: "https://www.ppsspp.org")!, license: "GPL-2.0",
                  sources: [.github(repo: "hrydgard/ppsspp", asset: #"^PPSSPPSDL-macOS-.*\.zip$"#)]) { r in
             (r.fullscreen ? ["--fullscreen"] : []) + [r.game.path]

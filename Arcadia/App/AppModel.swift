@@ -27,6 +27,8 @@ final class AppModel {
         let id = UUID()
         let message: String
         var missing: Emulator?
+        var needsRosetta = false
+        var game: Game?
     }
 
     init() {
@@ -58,9 +60,23 @@ final class AppModel {
             } catch Launcher.Failure.emulatorMissing(let emulator) {
                 problem = Problem(message: String(localized: "\(emulator.name) plays \(game.system.name) games. Install it now? It's free and takes about a minute."),
                                   missing: emulator)
+            } catch let failure as Launcher.Failure {
+                if case .rosettaMissing = failure {
+                    problem = Problem(message: failure.localizedDescription, needsRosetta: true, game: game)
+                } else {
+                    problem = Problem(message: failure.localizedDescription)
+                }
             } catch {
                 problem = Problem(message: error.localizedDescription)
             }
+        }
+    }
+
+    /// Installs Rosetta, then starts the game that needed it.
+    func installRosetta(then game: Game?) {
+        Task {
+            guard await Rosetta.install() else { return }
+            if let game { play(game) }
         }
     }
 

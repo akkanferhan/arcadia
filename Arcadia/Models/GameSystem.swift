@@ -72,7 +72,7 @@ extension GameSystem {
                    symbol: "playstation.logo", colors: [Color(hex: 0x8E9AAF), Color(hex: 0x4A5568)]),
         GameSystem(id: "ps2", name: "PlayStation 2", shortName: "PS2", maker: .sony, year: 2000,
                    extensions: ["iso", "chd", "cso", "zso", "gz", "elf"],
-                   emulatorID: "pcsx2", thumbnails: "Sony - PlayStation 2",
+                   emulatorID: "retroarch", core: "pcsx2", thumbnails: "Sony - PlayStation 2",
                    symbol: "playstation.logo", colors: [Color(hex: 0x1E3A8A), Color(hex: 0x0B1026)]),
         GameSystem(id: "psp", name: "PlayStation Portable", shortName: "PSP", maker: .sony, year: 2004,
                    extensions: ["iso", "cso", "chd", "pbp", "elf"],

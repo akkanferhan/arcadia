@@ -77,6 +77,19 @@ extension Presets {
             // ParaLLEl-RDP renders N64 games accurately on Vulkan (MoltenVK) and upscales cleanly.
             options.set("mupen64plus-rdp-plugin", "\"parallel\"")
             options.set("mupen64plus-parallel-rdp-upscaling", "\"\(context.scale >= 4 ? 4 : context.scale >= 2 ? 2 : 1)x\"")
+            // The PCSX2 core runs natively on Apple silicon with its own arm64 recompiler.
+            options.set("pcsx2_renderer", "\"Vulkan\"")
+            options.set("pcsx2_upscale_multiplier", "\"\(pick(context.scale, ["1x (Native)", "2x", "2x", "4x"]))\"")
+            options.set("pcsx2_fastboot", "\"enabled\"")
+        }
+
+        // The PCSX2 core looks for BIOS files in <system>/pcsx2/bios; point that at bios/ps2.
+        if core == "pcsx2" {
+            let expected = context.bios.appendingPathComponent("pcsx2/bios")
+            if (try? expected.checkResourceIsReachable()) != true {
+                try? FileManager.default.createDirectory(at: expected.deletingLastPathComponent(), withIntermediateDirectories: true)
+                try? FileManager.default.createSymbolicLink(at: expected, withDestinationURL: context.bios.appendingPathComponent("ps2"))
+            }
         }
 
         return PresetLaunch(arguments: ["--config", config.path, "--appendconfig", coreConfig.path])
