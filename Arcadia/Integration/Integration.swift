@@ -79,10 +79,12 @@ extension AppModel {
     }
 
     /// Brings Arcadia forward with the game on screen.
-    func reveal(_ game: Game) {
+    /// Brings Arcadia forward on the game's console page, optionally with its details open.
+    func reveal(_ game: Game, showingDetails: Bool = false) {
         NSApp.activate()
+        search = ""
         selection = .system(game.systemID)
-        search = game.title
+        if showingDetails { details = game }
     }
 
     func open(_ link: ArcadiaLink) {
@@ -95,7 +97,7 @@ extension AppModel {
                 play(game)
             case .open(let id):
                 NSApp.activate()
-                if let id, let game = await game(withID: id) { reveal(game) }
+                if let id, let game = await game(withID: id) { reveal(game, showingDetails: true) }
             }
         }
     }
