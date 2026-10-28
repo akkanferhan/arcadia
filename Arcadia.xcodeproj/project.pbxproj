@@ -34,6 +34,7 @@
 		3D008FADD50B8081FEF7CD9D /* ArcadiaWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F6877E3C578A7CE691E7AA /* ArcadiaWidgetBundle.swift */; };
 		402AE0E09B120F0A0C4749A4 /* TestSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE1FAC42B6C0A1BE53F778A /* TestSupport.swift */; };
 		42C073A81A798FCE44C69245 /* Bios.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2815851E3A498347EFF6059 /* Bios.swift */; };
+		42E64D19ED3038AAF2549DDD /* VitaGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D6ADFE16969D9AC7C4663D /* VitaGame.swift */; };
 		4866A1B9E647BB3D39055F40 /* TVModeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21A7FCC3B1EA5E641B25CB5 /* TVModeController.swift */; };
 		48EB4F7A494975278BFC1823 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6057601F1F41C846AB29D7B8 /* Assets.xcassets */; };
 		4BE7955C7C27118B2F30BD32 /* RetroAchievements.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5924BF9E27D05248ACF91F4 /* RetroAchievements.swift */; };
@@ -63,11 +64,13 @@
 		7AACECE3971E3CF3E776E702 /* Intents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DCA6D0B09843D84D29306A /* Intents.swift */; };
 		7D0E45D4546B889BD0DD97F2 /* TVNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6D5AA2C7D3C02774810891 /* TVNavigation.swift */; };
 		7E02A2357654212EC851B48F /* TVInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1ADE13E0B70AF22499AC4E8 /* TVInput.swift */; };
+		7FADCA5836CF8177B254CDB7 /* VitaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB051B65C4F215FF1ABA116 /* VitaTests.swift */; };
 		80DB8AE959740A0D99714CD7 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812C784C99CEB2DFC813B35C /* SettingsView.swift */; };
 		81DFEEBB425213C5B1185CC0 /* GameIdentifierTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1978F3D28ED8BFB82CE15E74 /* GameIdentifierTests.swift */; };
 		848542425FC7660F826176CD /* Sparkle in Frameworks */ = {isa = PBXBuildFile; productRef = 0CB87FB87CA36376E8338F02 /* Sparkle */; };
 		866AC1044E7488D098DD6A17 /* Gamepads.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A18463512A2739BED27CBB /* Gamepads.swift */; };
 		890B353411ACABD921F1C917 /* PlayStationFolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA46445A2899DC1E961AB3C8 /* PlayStationFolder.swift */; };
+		8B5800052E3D4A19E0C29021 /* ZipReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1CA53C5952E55EF8CC7B20 /* ZipReader.swift */; };
 		8DBB70F06166B99F413D5A07 /* LibraryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABEB897CD0B84F515FFC489C /* LibraryTests.swift */; };
 		92BBCC3146E6E2A169810259 /* EmulatorUpdates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F95FCC4BC09CBAFEA7F4505 /* EmulatorUpdates.swift */; };
 		940F8976E708D2DBF9E8CAFD /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A465C9E977BB474751CA62E /* AppModel.swift */; };
@@ -78,6 +81,7 @@
 		A119178C519161EDEB08FD35 /* Artwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD10502CAF52885F1D59E067 /* Artwork.swift */; };
 		A5BAA656FE02440E70B0B931 /* BiosViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C0F5D6658EB4112AABCF7A /* BiosViews.swift */; };
 		AFF75B1617F473226DF6C3B9 /* LogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F20BBFB38B9120AA5E52C01 /* LogView.swift */; };
+		B0F1533AC05BECBD554BAF41 /* VitaPresets.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD50ED57C8D1553B061DC0FC /* VitaPresets.swift */; };
 		B707D53E67DB123B526FE0F8 /* Archive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 153D84E3CF93596DBF207241 /* Archive.swift */; };
 		B761846F6764DA2FA62FA1A1 /* GameSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2178624FDAD84591FF0DDD /* GameSystem.swift */; };
 		B995EEF85D865EF2B5D10DCF /* Downloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C93AF9553B3227700244CF6 /* Downloader.swift */; };
@@ -162,6 +166,8 @@
 		1844E443FA713D453BB9FFCA /* Wikipedia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wikipedia.swift; sourceTree = "<group>"; };
 		1978F3D28ED8BFB82CE15E74 /* GameIdentifierTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameIdentifierTests.swift; sourceTree = "<group>"; };
 		1A4B1630B611CEA329743489 /* SystemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemView.swift; sourceTree = "<group>"; };
+		1C1CA53C5952E55EF8CC7B20 /* ZipReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZipReader.swift; sourceTree = "<group>"; };
+		1CB051B65C4F215FF1ABA116 /* VitaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VitaTests.swift; sourceTree = "<group>"; };
 		1D7D34EF5DDDB72CAB16CAF1 /* ArcadiaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArcadiaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E0C1DF0C93AC42E7D0421E7 /* DiscImageCodec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscImageCodec.swift; sourceTree = "<group>"; };
 		1F95FCC4BC09CBAFEA7F4505 /* EmulatorUpdates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmulatorUpdates.swift; sourceTree = "<group>"; };
@@ -214,6 +220,7 @@
 		8CC8F8FF4BD60C833106FF5C /* CollectionsViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionsViews.swift; sourceTree = "<group>"; };
 		8D5675169E922AEE3316611F /* AppleSilicon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleSilicon.swift; sourceTree = "<group>"; };
 		908D90A4C4D8DFD947DE5718 /* ArcadiaWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ArcadiaWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		91D6ADFE16969D9AC7C4663D /* VitaGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VitaGame.swift; sourceTree = "<group>"; };
 		9461C5FC7ED27F1D2C40E329 /* IntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntegrationTests.swift; sourceTree = "<group>"; };
 		9479CD5B5BB8551EBA0778CE /* ConfigFileTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigFileTests.swift; sourceTree = "<group>"; };
 		96578CA7B0BFECE404684BD4 /* Integration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Integration.swift; sourceTree = "<group>"; };
@@ -237,6 +244,7 @@
 		B437352CDA4252AC7274B87D /* RetroArchPreset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetroArchPreset.swift; sourceTree = "<group>"; };
 		BD216CDDFBBFC931A449D302 /* ConfigFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigFile.swift; sourceTree = "<group>"; };
 		BD47DCC560FF89CEB5397D1B /* Arcadia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Arcadia.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD50ED57C8D1553B061DC0FC /* VitaPresets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VitaPresets.swift; sourceTree = "<group>"; };
 		C4A95C8F7D0A11A55B060040 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		C6447A999A9FEA27F88BCCA5 /* AppShortcuts.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = AppShortcuts.xcstrings; sourceTree = "<group>"; };
 		C85977AD8D42BE537A4AD4C2 /* WidgetPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetPublisher.swift; sourceTree = "<group>"; };
@@ -347,7 +355,9 @@
 				8A94B480FF851B32C4EBDA4C /* Paths.swift */,
 				EA46445A2899DC1E961AB3C8 /* PlayStationFolder.swift */,
 				123A212E997DA10971756816 /* Screenshots.swift */,
+				91D6ADFE16969D9AC7C4663D /* VitaGame.swift */,
 				1844E443FA713D453BB9FFCA /* Wikipedia.swift */,
+				1C1CA53C5952E55EF8CC7B20 /* ZipReader.swift */,
 				9948B7F7C735746AD8B045FE /* Achievements */,
 				39AA5DE3B6AF347B1BC84E56 /* Compression */,
 				BF13727D9B10A13F427F92D2 /* Presets */,
@@ -392,6 +402,7 @@
 				E826F97C1EA57BC33DF5D06C /* SaveSyncTests.swift */,
 				2DE1FAC42B6C0A1BE53F778A /* TestSupport.swift */,
 				839221A7140C672C0ECF6BCB /* TVNavigationTests.swift */,
+				1CB051B65C4F215FF1ABA116 /* VitaTests.swift */,
 			);
 			path = ArcadiaTests;
 			sourceTree = "<group>";
@@ -525,6 +536,7 @@
 				EF6C70EAF0C2F3EDDDE4AB13 /* PPSSPPPreset.swift */,
 				AC93158998E3FEF087A52306 /* Presets.swift */,
 				B437352CDA4252AC7274B87D /* RetroArchPreset.swift */,
+				BD50ED57C8D1553B061DC0FC /* VitaPresets.swift */,
 			);
 			path = Presets;
 			sourceTree = "<group>";
@@ -754,8 +766,11 @@
 				7D0E45D4546B889BD0DD97F2 /* TVNavigation.swift in Sources */,
 				000E25EFE22D424A7EE9ECA8 /* TVOverlays.swift in Sources */,
 				795EE8D5B990C831B31D1053 /* Theme.swift in Sources */,
+				42E64D19ED3038AAF2549DDD /* VitaGame.swift in Sources */,
+				B0F1533AC05BECBD554BAF41 /* VitaPresets.swift in Sources */,
 				79E5CE1BF309416A3776621E /* WidgetPublisher.swift in Sources */,
 				340B60FF6DD83CD69769C222 /* Wikipedia.swift in Sources */,
+				8B5800052E3D4A19E0C29021 /* ZipReader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -787,6 +802,7 @@
 				4CBCD0FFA651ACF7CE7AA162 /* SaveSyncTests.swift in Sources */,
 				C94668A28E28DEC613FBC5D3 /* TVNavigationTests.swift in Sources */,
 				402AE0E09B120F0A0C4749A4 /* TestSupport.swift in Sources */,
+				7FADCA5836CF8177B254CDB7 /* VitaTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
