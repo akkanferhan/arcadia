@@ -21,6 +21,7 @@ struct SettingsView: View {
                     Button("Show in Finder") { NSWorkspace.shared.open(model.library.folder) }
                     Button("Create System Folders") { model.library.createFolders() }
                     Button("Rescan") { Task { await model.library.scan() } }
+                    Button("Find Games on This Mac…") { model.showFinder = true }
                 }
             }
             Section {

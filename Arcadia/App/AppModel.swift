@@ -15,10 +15,12 @@ final class AppModel {
     let library = Library()
     let emulators = EmulatorManager()
     let launcher = Launcher()
+    let finder = GameFinder()
 
     var selection: SidebarItem? = .home
     var search = ""
     var showOnboarding: Bool
+    var showFinder = false
     var problem: Problem?
 
     struct Problem: Identifiable {
@@ -36,7 +38,17 @@ final class AppModel {
         case "emulators": selection = .emulators
         case let id?: selection = GameSystem.with(id: id).map { .system($0.id) } ?? .home
         }
-        Task { await library.scan() }
+        // `-findGamesIn <folder>` searches only that folder right away (handy for development).
+        if let folder = UserDefaults.standard.string(forKey: "findGamesIn") {
+            let url = URL(fileURLWithPath: folder)
+            showFinder = true
+            Task { [finder, library] in
+                await library.scan()
+                finder.start(in: [url], library: library)
+            }
+        } else {
+            Task { await library.scan() }
+        }
     }
 
     func play(_ game: Game) {
