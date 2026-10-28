@@ -13,6 +13,8 @@ final class Launcher {
     private(set) var preparingProgress: Double?
     /// Called when an emulator quits on its own within seconds of starting.
     var onUnexpectedExit: (Game) -> Void = { _ in }
+    /// The output of the most recent launch, in ~/Library/Logs/Arcadia.
+    private(set) var lastLog: URL?
     private var process: Process?
     private var payload: URL?
     private var startedAt = Date.now
@@ -82,18 +84,27 @@ final class Launcher {
         let preset = try await Presets.apply(context)
         let arguments = preset.arguments + emulator.arguments(request)
 
+        // Everything the emulator prints goes to a log, shown when a game fails to start.
+        let log = LaunchLogs.create(emulator: emulator.id, command: [payload.path] + arguments)
         let process = Process()
         if payload.pathExtension == "app" {
             // LaunchServices brings the app to the front and handles Rosetta; -W waits until it quits.
             process.executableURL = URL(fileURLWithPath: "/usr/bin/open")
             let environment = preset.environment.sorted { $0.key < $1.key }.flatMap { ["--env", "\($0.key)=\($0.value)"] }
-            process.arguments = ["-W", "-n"] + environment + ["-a", payload.path, "--args"] + arguments
+            process.arguments = ["-W", "-n"] + LaunchLogs.openArguments(log) + environment
+                + ["-a", payload.path, "--args"] + arguments
         } else {
             process.executableURL = payload
             process.arguments = arguments
             process.environment = ProcessInfo.processInfo.environment.merging(preset.environment) { $1 }
             process.currentDirectoryURL = preset.workingDirectory ?? payload.deletingLastPathComponent()
         }
+        // Bare executables write straight into the log; for apps this catches `open`'s own errors.
+        if let log, let handle = LaunchLogs.appendingHandle(log) {
+            process.standardOutput = handle
+            process.standardError = handle
+        }
+        lastLog = log
         process.terminationHandler = { [weak self] _ in
             Task { @MainActor in self?.finished(library: library) }
         }

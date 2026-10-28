@@ -59,6 +59,10 @@ extension Presets {
                 "input_quit_gamepad_combo": "\"4\"",
             ])
             cfg.set(retroArchAchievements(context.achievements))
+            // The mfi driver numbers controllers in connection order; player N takes controller N.
+            for player in 1...maxPlayers {
+                cfg.set("input_player\(player)_joypad_index", "\"\(player - 1)\"")
+            }
         }
 
         let core = context.core?.deletingPathExtension().lastPathComponent
