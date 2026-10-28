@@ -39,7 +39,8 @@ struct RootView: View {
             CollectionNameSheet(prompt: prompt)
         }
         .detailsLaunchArgument()
-        .alert(item: $model.problem) { problem in
+        .tvModeEntry()
+        .alert(item: model.isTVModeActive ? .constant(nil) : $model.problem) { problem in
             if let emulator = problem.missing {
                 Alert(title: Text("Almost ready"), message: Text(problem.message),
                       primaryButton: .default(Text("Install \(emulator.name)")) {

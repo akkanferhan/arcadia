@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		000E25EFE22D424A7EE9ECA8 /* TVOverlays.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5314FF81892F2B5A339D38 /* TVOverlays.swift */; };
 		020B48317A583B2F52EF47E5 /* EmulatorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88351EB6285E118CF42F4E5D /* EmulatorButton.swift */; };
 		028FA05881A40FDFF1CFD517 /* ConfigFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD216CDDFBBFC931A449D302 /* ConfigFile.swift */; };
 		02E95897C09D83E97FD3EA60 /* SDL3.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 825ABEF719D1D53B7F189C32 /* SDL3.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -27,6 +28,7 @@
 		389DC5E7CF859B9E1F6478EB /* CoverArt.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87C04A211AFE8FD54A89D15 /* CoverArt.swift */; };
 		402AE0E09B120F0A0C4749A4 /* TestSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE1FAC42B6C0A1BE53F778A /* TestSupport.swift */; };
 		42C073A81A798FCE44C69245 /* Bios.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2815851E3A498347EFF6059 /* Bios.swift */; };
+		4866A1B9E647BB3D39055F40 /* TVModeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21A7FCC3B1EA5E641B25CB5 /* TVModeController.swift */; };
 		48EB4F7A494975278BFC1823 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6057601F1F41C846AB29D7B8 /* Assets.xcassets */; };
 		4BE7955C7C27118B2F30BD32 /* RetroAchievements.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5924BF9E27D05248ACF91F4 /* RetroAchievements.swift */; };
 		4CBCD0FFA651ACF7CE7AA162 /* SaveSyncTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E826F97C1EA57BC33DF5D06C /* SaveSyncTests.swift */; };
@@ -37,6 +39,7 @@
 		5D9AC75FCE4D34EE1AEF3A9D /* MetadataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BED9878131566676D107B32 /* MetadataTests.swift */; };
 		6097722C6994C95D35AD11E8 /* AppleSilicon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5675169E922AEE3316611F /* AppleSilicon.swift */; };
 		61A541A69337FD43068FEB04 /* Presets.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC93158998E3FEF087A52306 /* Presets.swift */; };
+		647C5ED2937B16E8E21D54FE /* TVMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A2580D12D39AFDD9909324 /* TVMode.swift */; };
 		681849916D75E0B7E8D0B31E /* GameSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6CADA72596641D12641CF0 /* GameSort.swift */; };
 		687E662784B4F1AE120B23D8 /* SaveLocations.swift in Sources */ = {isa = PBXBuildFile; fileRef = A422E079DE5FF22CED914CA4 /* SaveLocations.swift */; };
 		69966BE878BC767DA489403D /* CompressionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542C667E23812682C5954381 /* CompressionTests.swift */; };
@@ -47,6 +50,8 @@
 		775F30204137D02909AA4A05 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0E850E7AC8F33F6CA3CFC3 /* Game.swift */; };
 		795EE8D5B990C831B31D1053 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AD88113A5F48B899BBD350 /* Theme.swift */; };
 		79C3F6151D648BF9836600C7 /* SaveSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591A42D93ACE329B2F438E73 /* SaveSync.swift */; };
+		7D0E45D4546B889BD0DD97F2 /* TVNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6D5AA2C7D3C02774810891 /* TVNavigation.swift */; };
+		7E02A2357654212EC851B48F /* TVInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1ADE13E0B70AF22499AC4E8 /* TVInput.swift */; };
 		80DB8AE959740A0D99714CD7 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812C784C99CEB2DFC813B35C /* SettingsView.swift */; };
 		81DFEEBB425213C5B1185CC0 /* GameIdentifierTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1978F3D28ED8BFB82CE15E74 /* GameIdentifierTests.swift */; };
 		866AC1044E7488D098DD6A17 /* Gamepads.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A18463512A2739BED27CBB /* Gamepads.swift */; };
@@ -64,6 +69,7 @@
 		B995EEF85D865EF2B5D10DCF /* Downloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C93AF9553B3227700244CF6 /* Downloader.swift */; };
 		BA2B7A0FCFCFBB05AFC5F817 /* AchievementsSettingsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB68C5F3B99E0EC2CBC17A20 /* AchievementsSettingsSection.swift */; };
 		BFA921BC582FF3C404B28BCA /* Launcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3268E4894BA62280577232B /* Launcher.swift */; };
+		C94668A28E28DEC613FBC5D3 /* TVNavigationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839221A7140C672C0ECF6BCB /* TVNavigationTests.swift */; };
 		CB3592EC7D1B7AC9E30CF277 /* NowPlayingBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31439409C5AC60CBCC71B508 /* NowPlayingBar.swift */; };
 		CDE7BBBDF308D0BA2C99D4BA /* Emulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A200B868177CA6D564CCCC7B /* Emulator.swift */; };
 		CEA17191C0844D50711D88EC /* FindGamesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2932FFE4E8B50288E6E3637 /* FindGamesView.swift */; };
@@ -79,6 +85,7 @@
 		F975F3F013DD56850A468884 /* SidebarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671CCDB488F80DC171E258B5 /* SidebarView.swift */; };
 		FA7C5E14DFF04AC9D413FF77 /* DiscCompressor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ABFA1D2C54C622375B1E917 /* DiscCompressor.swift */; };
 		FB5733A42C1A1C06DEBDAF53 /* AchievementsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2F970EF493F4B74B476028 /* AchievementsTests.swift */; };
+		FBDC5C372797F542622057C5 /* TVModeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15F11F4DC740119D2E785691 /* TVModeView.swift */; };
 		FDA336ACDE80BA2D5FB7192D /* SDL3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 825ABEF719D1D53B7F189C32 /* SDL3.framework */; };
 /* End PBXBuildFile section */
 
@@ -109,6 +116,7 @@
 /* Begin PBXFileReference section */
 		123A212E997DA10971756816 /* Screenshots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screenshots.swift; sourceTree = "<group>"; };
 		153D84E3CF93596DBF207241 /* Archive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Archive.swift; sourceTree = "<group>"; };
+		15F11F4DC740119D2E785691 /* TVModeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVModeView.swift; sourceTree = "<group>"; };
 		1844E443FA713D453BB9FFCA /* Wikipedia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wikipedia.swift; sourceTree = "<group>"; };
 		1978F3D28ED8BFB82CE15E74 /* GameIdentifierTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameIdentifierTests.swift; sourceTree = "<group>"; };
 		1A4B1630B611CEA329743489 /* SystemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemView.swift; sourceTree = "<group>"; };
@@ -123,11 +131,13 @@
 		3F24944E338626A252FB76BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		42DC825DFE20076E4D8FFC93 /* SaveSyncSettingsSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveSyncSettingsSection.swift; sourceTree = "<group>"; };
 		42F30181C8A97E8AA2829DD9 /* GameDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailsView.swift; sourceTree = "<group>"; };
+		4B5314FF81892F2B5A339D38 /* TVOverlays.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVOverlays.swift; sourceTree = "<group>"; };
 		4CC49813A90473D10A937E98 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		4D2F970EF493F4B74B476028 /* AchievementsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsTests.swift; sourceTree = "<group>"; };
 		542C667E23812682C5954381 /* CompressionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompressionTests.swift; sourceTree = "<group>"; };
 		552E3F0567F989B07102ADBB /* ModernPlayStationPresets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModernPlayStationPresets.swift; sourceTree = "<group>"; };
 		57C0F5D6658EB4112AABCF7A /* BiosViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiosViews.swift; sourceTree = "<group>"; };
+		58A2580D12D39AFDD9909324 /* TVMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVMode.swift; sourceTree = "<group>"; };
 		591A42D93ACE329B2F438E73 /* SaveSync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveSync.swift; sourceTree = "<group>"; };
 		5A72F9EAC35B4A5377692DB5 /* GameInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameInfo.swift; sourceTree = "<group>"; };
 		6057601F1F41C846AB29D7B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -143,6 +153,7 @@
 		7A09281597713AED32BE213D /* GameFinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameFinder.swift; sourceTree = "<group>"; };
 		812C784C99CEB2DFC813B35C /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		825ABEF719D1D53B7F189C32 /* SDL3.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL3.framework; path = Vendor/SDL3.framework; sourceTree = "<group>"; };
+		839221A7140C672C0ECF6BCB /* TVNavigationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVNavigationTests.swift; sourceTree = "<group>"; };
 		84F075E3969F2CC2D43B2F62 /* ArcadiaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcadiaApp.swift; sourceTree = "<group>"; };
 		88351EB6285E118CF42F4E5D /* EmulatorButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmulatorButton.swift; sourceTree = "<group>"; };
 		88936842B90B72E354D788DE /* NintendoPresets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NintendoPresets.swift; sourceTree = "<group>"; };
@@ -153,6 +164,7 @@
 		9479CD5B5BB8551EBA0778CE /* ConfigFileTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigFileTests.swift; sourceTree = "<group>"; };
 		97EA6343BB2B32418BEF0361 /* Library.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Library.swift; sourceTree = "<group>"; };
 		9D6CADA72596641D12641CF0 /* GameSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSort.swift; sourceTree = "<group>"; };
+		9D6D5AA2C7D3C02774810891 /* TVNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVNavigation.swift; sourceTree = "<group>"; };
 		A1A9C61B8666DF72C8848F68 /* AchievementsPresets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsPresets.swift; sourceTree = "<group>"; };
 		A200B868177CA6D564CCCC7B /* Emulator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emulator.swift; sourceTree = "<group>"; };
 		A422E079DE5FF22CED914CA4 /* SaveLocations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveLocations.swift; sourceTree = "<group>"; };
@@ -163,6 +175,7 @@
 		AC93158998E3FEF087A52306 /* Presets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presets.swift; sourceTree = "<group>"; };
 		ACDEE1826E9DF4341D469D64 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		AD10502CAF52885F1D59E067 /* Artwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artwork.swift; sourceTree = "<group>"; };
+		B21A7FCC3B1EA5E641B25CB5 /* TVModeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVModeController.swift; sourceTree = "<group>"; };
 		B2815851E3A498347EFF6059 /* Bios.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bios.swift; sourceTree = "<group>"; };
 		B2932FFE4E8B50288E6E3637 /* FindGamesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindGamesView.swift; sourceTree = "<group>"; };
 		B437352CDA4252AC7274B87D /* RetroArchPreset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetroArchPreset.swift; sourceTree = "<group>"; };
@@ -177,6 +190,7 @@
 		D8D39165C5D8061A46552EC0 /* Metadata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Metadata.swift; sourceTree = "<group>"; };
 		DB0E850E7AC8F33F6CA3CFC3 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		DBBF009962D0FF1BAE76EAF3 /* GameCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCard.swift; sourceTree = "<group>"; };
+		E1ADE13E0B70AF22499AC4E8 /* TVInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVInput.swift; sourceTree = "<group>"; };
 		E3268E4894BA62280577232B /* Launcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Launcher.swift; sourceTree = "<group>"; };
 		E57F165FCE5A87F720E7B440 /* Collections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collections.swift; sourceTree = "<group>"; };
 		E826F97C1EA57BC33DF5D06C /* SaveSyncTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveSyncTests.swift; sourceTree = "<group>"; };
@@ -214,6 +228,19 @@
 				1D7D34EF5DDDB72CAB16CAF1 /* ArcadiaTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		293024224A5EBAB8F638DCA4 /* TV */ = {
+			isa = PBXGroup;
+			children = (
+				E1ADE13E0B70AF22499AC4E8 /* TVInput.swift */,
+				58A2580D12D39AFDD9909324 /* TVMode.swift */,
+				B21A7FCC3B1EA5E641B25CB5 /* TVModeController.swift */,
+				15F11F4DC740119D2E785691 /* TVModeView.swift */,
+				9D6D5AA2C7D3C02774810891 /* TVNavigation.swift */,
+				4B5314FF81892F2B5A339D38 /* TVOverlays.swift */,
+			);
+			path = TV;
 			sourceTree = "<group>";
 		};
 		39AA5DE3B6AF347B1BC84E56 /* Compression */ = {
@@ -282,6 +309,7 @@
 				6BED9878131566676D107B32 /* MetadataTests.swift */,
 				E826F97C1EA57BC33DF5D06C /* SaveSyncTests.swift */,
 				2DE1FAC42B6C0A1BE53F778A /* TestSupport.swift */,
+				839221A7140C672C0ECF6BCB /* TVNavigationTests.swift */,
 			);
 			path = ArcadiaTests;
 			sourceTree = "<group>";
@@ -357,6 +385,7 @@
 				1A4B1630B611CEA329743489 /* SystemView.swift */,
 				F0AD88113A5F48B899BBD350 /* Theme.swift */,
 				9E582A43280BB7FA1751923C /* Components */,
+				293024224A5EBAB8F638DCA4 /* TV */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -560,6 +589,12 @@
 				80DB8AE959740A0D99714CD7 /* SettingsView.swift in Sources */,
 				F975F3F013DD56850A468884 /* SidebarView.swift in Sources */,
 				17B356BBA0004D4C262FB7FD /* SystemView.swift in Sources */,
+				7E02A2357654212EC851B48F /* TVInput.swift in Sources */,
+				647C5ED2937B16E8E21D54FE /* TVMode.swift in Sources */,
+				4866A1B9E647BB3D39055F40 /* TVModeController.swift in Sources */,
+				FBDC5C372797F542622057C5 /* TVModeView.swift in Sources */,
+				7D0E45D4546B889BD0DD97F2 /* TVNavigation.swift in Sources */,
+				000E25EFE22D424A7EE9ECA8 /* TVOverlays.swift in Sources */,
 				795EE8D5B990C831B31D1053 /* Theme.swift in Sources */,
 				340B60FF6DD83CD69769C222 /* Wikipedia.swift in Sources */,
 			);
@@ -576,6 +611,7 @@
 				8DBB70F06166B99F413D5A07 /* LibraryTests.swift in Sources */,
 				5D9AC75FCE4D34EE1AEF3A9D /* MetadataTests.swift in Sources */,
 				4CBCD0FFA651ACF7CE7AA162 /* SaveSyncTests.swift in Sources */,
+				C94668A28E28DEC613FBC5D3 /* TVNavigationTests.swift in Sources */,
 				402AE0E09B120F0A0C4749A4 /* TestSupport.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
