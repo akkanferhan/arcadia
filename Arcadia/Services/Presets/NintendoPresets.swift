@@ -29,7 +29,7 @@ extension Presets {
             ], section: "Settings")
             ini.set("VSync", "True", section: "Hardware")
         }
-        try dolphinControllers(context, config: config)
+        try dolphinControllers(context.gamepads, install: context.install, config: config)
         return PresetLaunch(arguments: ["-u", context.data.path])
     }
 
@@ -51,7 +51,7 @@ extension Presets {
             ("Graphic/UpscaleFilter", "1"),
             ("Graphic/FullscreenScaling", "0"),
         ])
-        try cemuControllers(context)
+        try cemuControllers(context.gamepads)
         return PresetLaunch(arguments: ["-m", mlc.path])
     }
 
@@ -193,6 +193,7 @@ extension Presets {
                 "Dreamcast.AutoLoadState": "yes",
             ], section: "config")
             ini.set("fullscreen", context.fullscreen ? "yes" : "no", section: "window")
+            ini.set(flycastPorts(players: players(context.gamepads).count), section: "input")
         }
         return PresetLaunch()
     }

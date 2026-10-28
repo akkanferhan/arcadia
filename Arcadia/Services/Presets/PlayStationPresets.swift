@@ -20,21 +20,44 @@ extension Presets {
         "LLeft": "Keyboard/A", "RUp": "Keyboard/T", "RRight": "Keyboard/H", "RDown": "Keyboard/G", "RLeft": "Keyboard/F",
     ]
 
-    private static func sdlPad(face: (south: String, east: String, west: String, north: String)) -> [String: String] {
-        [
-            "Up": "SDL-0/DPadUp", "Right": "SDL-0/DPadRight", "Down": "SDL-0/DPadDown", "Left": "SDL-0/DPadLeft",
-            "Cross": "SDL-0/\(face.south)", "Circle": "SDL-0/\(face.east)", "Square": "SDL-0/\(face.west)",
-            "Triangle": "SDL-0/\(face.north)", "Select": "SDL-0/Back", "Start": "SDL-0/Start", "Analog": "SDL-0/Guide",
-            "L1": "SDL-0/LeftShoulder", "R1": "SDL-0/RightShoulder", "L2": "SDL-0/+LeftTrigger", "R2": "SDL-0/+RightTrigger",
-            "L3": "SDL-0/LeftStick", "R3": "SDL-0/RightStick",
-            "LUp": "SDL-0/-LeftY", "LRight": "SDL-0/+LeftX", "LDown": "SDL-0/+LeftY", "LLeft": "SDL-0/-LeftX",
-            "RUp": "SDL-0/-RightY", "RRight": "SDL-0/+RightX", "RDown": "SDL-0/+RightY", "RLeft": "SDL-0/-RightX",
-            "LargeMotor": "SDL-0/LargeMotor", "SmallMotor": "SDL-0/SmallMotor",
+    /// Bindings for DuckStation's SDL device `device`, which is SDL's player index: controllers
+    /// are numbered in connection order.
+    private static func sdlPad(face: (south: String, east: String, west: String, north: String),
+                               device: Int) -> [String: String] {
+        let pad = [
+            "Up": "DPadUp", "Right": "DPadRight", "Down": "DPadDown", "Left": "DPadLeft",
+            "Cross": face.south, "Circle": face.east, "Square": face.west,
+            "Triangle": face.north, "Select": "Back", "Start": "Start", "Analog": "Guide",
+            "L1": "LeftShoulder", "R1": "RightShoulder", "L2": "+LeftTrigger", "R2": "+RightTrigger",
+            "L3": "LeftStick", "R3": "RightStick",
+            "LUp": "-LeftY", "LRight": "+LeftX", "LDown": "+LeftY", "LLeft": "-LeftX",
+            "RUp": "-RightY", "RRight": "+RightX", "RDown": "+RightY", "RLeft": "-RightX",
+            "LargeMotor": "LargeMotor", "SmallMotor": "SmallMotor",
         ]
+        return pad.mapValues { "SDL-\(device)/\($0)" }
     }
 
     /// Select + Start on a gamepad quits back to Arcadia.
     private static let quitCombo = "SDL-0/Back & SDL-0/Start"
+
+    /// DuckStation's `[PadN]` sections: Pad1 and Pad2 are ports 1 and 2, and with a multitap in
+    /// port 1 its slots 1B–1D are Pad3–Pad5. More than two players therefore share a multitap
+    /// in port 1 (slots 1A–1D), the way four-player PS1 games expect it.
+    static func duckStationPads(_ gamepads: [Gamepad], keyboard: [String: String] = [:])
+        -> (multitap: String, pads: [(section: String, entries: [(String, String)])]) {
+        let players = players(gamepads).count
+        let slots = players > 2 ? [1, 3, 4, 5] : [1, 2]
+        let pads = (1...8).map { number -> (section: String, entries: [(String, String)]) in
+            // Player 1 always has a controller: the keyboard plus the first gamepad once one is connected.
+            guard let player = slots.firstIndex(of: number), player == 0 || player < players else {
+                return ("Pad\(number)", [("Type", "None")])
+            }
+            let bindings = dualShockBindings(keyboard: player == 0 ? keyboard : [:],
+                                             pad: sdlPad(face: ("A", "B", "X", "Y"), device: player))
+            return ("Pad\(number)", [("Type", "AnalogController")] + bindings)
+        }
+        return (players > 2 ? "Port1Only" : "Disabled", pads)
+    }
 
     // MARK: DuckStation
 
@@ -81,8 +104,9 @@ extension Presets {
             var keyboard = keyboardPad
             keyboard.merge(["Up": "Keyboard/UpArrow", "Right": "Keyboard/RightArrow", "Down": "Keyboard/DownArrow",
                             "Left": "Keyboard/LeftArrow", "Start": "Keyboard/Enter"]) { $1 }
-            ini.replaceSection("Pad1", with: [("Type", "AnalogController")]
-                + dualShockBindings(keyboard: keyboard, pad: sdlPad(face: ("A", "B", "X", "Y"))))
+            let ports = duckStationPads(context.gamepads, keyboard: keyboard)
+            ini.set("MultitapMode", ports.multitap, section: "ControllerPorts")
+            for pad in ports.pads { ini.replaceSection(pad.section, with: pad.entries) }
             ini.replaceSection("Hotkeys", with: [
                 ("FastForward", "Keyboard/Tab"), ("TogglePause", "Keyboard/Space"), ("Screenshot", "Keyboard/F10"),
                 ("ToggleFullscreen", "Keyboard/F11"), ("OpenPauseMenu", "Keyboard/Escape"),
