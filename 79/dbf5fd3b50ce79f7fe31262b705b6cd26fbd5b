@@ -1,0 +1,24 @@
+Arcadia/Services/Metadata.swift
+  s_947a5ec9b0d04e::t_439ac131d10387 1-98
+Arcadia/Models/GameInfo.swift
+  s_947a5ec9b0d04e::t_5559e9c625dd2b 87,90
+  s_947a5ec9b0d04e::t_e0f3d0f2ccb69b 43,45-46,48-72,81,88,97,103,105
+  s_947a5ec9b0d04e::t_e54a9d3b82728f 1-42,44,47,73-80,82-86,89,91-96,98-99,104,106-216
+  s_947a5ec9b0d04e::t_8ca4282e1a20c6 100-102
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "79dbf5fd3b50ce79f7fe31262b705b6cd26fbd5b",
+  "prompts": {},
+  "sessions": {
+    "s_947a5ec9b0d04e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "ae2b73cb-5faa-44a9-b7a6-4d22739dbe7c",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Ferhan Akkan <ferhanakkan@gmail.com>"
+    }
+  }
+}
