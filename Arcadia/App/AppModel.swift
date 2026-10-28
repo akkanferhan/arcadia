@@ -33,6 +33,12 @@ final class AppModel {
 
     init() {
         showOnboarding = !library.hasFolder
+        launcher.onUnexpectedExit = { [weak self] game in
+            let bios = BiosRule.rule(for: game.systemID) != nil
+            self?.problem = Problem(message: bios
+                ? String(localized: "\(game.title) closed right after starting. Check that the game file is complete and that the console's BIOS is in place.")
+                : String(localized: "\(game.title) closed right after starting. Check that the game file is complete and not damaged."))
+        }
         // `-page snes`, `-page emulators` etc. opens a page directly (handy for development).
         switch UserDefaults.standard.string(forKey: "page") {
         case nil: break
