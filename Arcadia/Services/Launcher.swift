@@ -23,11 +23,14 @@ final class Launcher {
 
     enum Failure: LocalizedError {
         case emulatorMissing(Emulator)
+        case rosettaMissing(Emulator)
         case alreadyRunning
 
         var errorDescription: String? {
             switch self {
             case .emulatorMissing(let emulator): String(localized: "\(emulator.name) is not installed yet.")
+            case .rosettaMissing(let emulator):
+                String(localized: "\(emulator.name) is only made for Intel Macs, so it needs Rosetta, Apple's free translator. Install it now?")
             case .alreadyRunning: String(localized: "Another game is already running.")
             }
         }
@@ -39,6 +42,7 @@ final class Launcher {
         let player = Bios.player(for: game.system, bios: library.biosFolder)
         let emulator = player.emulator
         guard let payload = emulators.payloadURL(emulator.id) else { throw Failure.emulatorMissing(emulator) }
+        if emulator.needsRosetta, !Rosetta.isInstalled { throw Failure.rosettaMissing(emulator) }
 
         preparing = game
         defer { preparing = nil; preparingStatus = nil }
@@ -93,5 +97,25 @@ final class Launcher {
         if let game = running { library.recordSession(game, started: startedAt) }
         running = nil
         process = nil
+    }
+}
+
+/// Apple's translator for Intel apps. Only emulators without an Apple silicon build need it.
+enum Rosetta {
+    static var isInstalled: Bool {
+        FileManager.default.fileExists(atPath: "/Library/Apple/usr/share/rosetta/rosetta")
+    }
+
+    /// Installs Rosetta; macOS asks for an administrator password.
+    static func install() async -> Bool {
+        await Task.detached {
+            let script = "do shell script \"/usr/sbin/softwareupdate --install-rosetta --agree-to-license\" with administrator privileges"
+            let process = Process()
+            process.executableURL = URL(fileURLWithPath: "/usr/bin/osascript")
+            process.arguments = ["-e", script]
+            guard (try? process.run()) != nil else { return false }
+            process.waitUntilExit()
+            return process.terminationStatus == 0
+        }.value
     }
 }

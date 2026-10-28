@@ -35,6 +35,12 @@ struct RootView: View {
                           model.emulators.install(emulator)
                       },
                       secondaryButton: .cancel())
+            } else if problem.needsRosetta {
+                Alert(title: Text("Rosetta needed"), message: Text(problem.message),
+                      primaryButton: .default(Text("Install Rosetta")) {
+                          model.installRosetta(then: problem.game)
+                      },
+                      secondaryButton: .cancel())
             } else {
                 Alert(title: Text("Couldn't start the game"), message: Text(problem.message))
             }
