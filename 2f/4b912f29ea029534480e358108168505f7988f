@@ -1,0 +1,21 @@
+Tests/ArcadiaTests/IntegrationTests.swift
+  s_947a5ec9b0d04e::t_3524c351438f2c 1-2,4-63,66-124
+  s_947a5ec9b0d04e::t_7dc08ea2c5e7dd 3
+  s_947a5ec9b0d04e::t_30ab5e82bf9221 64-65
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "2f4b912f29ea029534480e358108168505f7988f",
+  "prompts": {},
+  "sessions": {
+    "s_947a5ec9b0d04e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "ae2b73cb-5faa-44a9-b7a6-4d22739dbe7c",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Ferhan Akkan <ferhanakkan@gmail.com>"
+    }
+  }
+}
