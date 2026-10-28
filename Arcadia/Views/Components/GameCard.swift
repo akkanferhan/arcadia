@@ -1,8 +1,9 @@
 import SwiftUI
 
-/// A cover with the title underneath. Double-click or press the play button to start the game.
+/// A cover with the title underneath. Click for details; double-click or press the play button to start the game.
 struct GameCard: View {
     @Environment(AppModel.self) private var model
+    @Environment(\.currentCollection) private var currentCollection
     let game: Game
     var showsSystem = false
     @State private var hovering = false
@@ -58,12 +59,25 @@ struct GameCard: View {
         }
         .contentShape(Rectangle())
         .onTapGesture(count: 2) { model.play(game) }
+        .onTapGesture { model.details = game }
+        .draggable(game.id) {
+            CoverArt(game: game)
+                .frame(width: 90, height: 120)
+                .clipShape(RoundedRectangle(cornerRadius: 8, style: .continuous))
+        }
         .contextMenu {
             Button("Play", systemImage: "play.fill") { model.play(game) }
+            Button("Details", systemImage: "info.circle") { model.details = game }
             if record.favorite {
                 Button("Remove from Favorites", systemImage: "star.slash") { model.library.toggleFavorite(game) }
             } else {
                 Button("Add to Favorites", systemImage: "star") { model.library.toggleFavorite(game) }
+            }
+            Menu("Collections", systemImage: "square.stack") { CollectionMenuItems(game: game) }
+            if let currentCollection {
+                Button("Remove from This Collection", systemImage: "minus.circle") {
+                    model.collections.remove(game, from: currentCollection)
+                }
             }
             Divider()
             Button("Show in Finder", systemImage: "folder") {
@@ -129,7 +143,7 @@ struct GameGridPage: View {
                                            description: Text("Games will show up here."))
                         .padding(.top, 60)
                 } else {
-                    GameGrid(games: games, showsSystem: true)
+                    GameBrowser(games: games, scope: "\(title)", showsSystem: true)
                 }
             }
             .padding(32)

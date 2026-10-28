@@ -14,6 +14,8 @@ struct SidebarView: View {
                     .tag(SidebarItem.favorites)
             }
 
+            CollectionsSection()
+
             ForEach(Maker.allCases) { maker in
                 let systems = visibleSystems(for: maker)
                 if !systems.isEmpty {

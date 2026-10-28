@@ -5,6 +5,7 @@ enum SidebarItem: Hashable {
     case home
     case favorites
     case system(String)
+    case collection(UUID)
     case emulators
 }
 
@@ -16,11 +17,15 @@ final class AppModel {
     let emulators = EmulatorManager()
     let launcher = Launcher()
     let finder = GameFinder()
+    let metadata = Metadata()
+    let collections = Collections()
 
     var selection: SidebarItem? = .home
     var search = ""
     var showOnboarding: Bool
     var showFinder = false
+    /// The game whose details sheet is open.
+    var details: Game?
     var problem: Problem?
 
     struct Problem: Identifiable {

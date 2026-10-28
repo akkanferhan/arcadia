@@ -15,7 +15,7 @@ struct SystemView: View {
                 if games.isEmpty {
                     emptyState
                 } else {
-                    GameGrid(games: games)
+                    GameBrowser(games: games, scope: system.id)
                 }
             }
             .padding(32)
