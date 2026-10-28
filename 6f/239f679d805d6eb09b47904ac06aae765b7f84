@@ -1,0 +1,53 @@
+Arcadia/Arcadia.entitlements
+  s_947a5ec9b0d04e::t_eef2f94e0ce535 1-10
+Arcadia/Integration/Intents.swift
+  s_947a5ec9b0d04e::t_eef2f94e0ce535 1-151
+Arcadia/Services/Artwork.swift
+  s_947a5ec9b0d04e::t_eef2f94e0ce535 30,48-58
+  s_947a5ec9b0d04e::t_8771757022879a 59
+Arcadia.xcodeproj/project.pbxproj
+  s_947a5ec9b0d04e::t_eef2f94e0ce535 25,29,33,52,60-61,82-83,95,97,100,118-124,128-138,156,162,180,186,193,200,209-210,212,234-235,244,250,284,314,349-356,376,388-398,416,423-434,492,495,539,545,572-589,600,604-608,635,642-649,654,679,702-703,731,740,745-754,764,778-782,828,862,879-903,908,929-930,957-970,975,978,981,1019,1087,1093
+  s_947a5ec9b0d04e::t_a0cd1ae804b1ae 19,971-974,976-977,979-980,1047-1048,1088-1092,1094-1095
+ArcadiaWidget/ArcadiaWidget.entitlements
+  s_947a5ec9b0d04e::t_eef2f94e0ce535 1-12
+Arcadia/Integration/Integration.swift
+  s_947a5ec9b0d04e::t_eef2f94e0ce535 1-118
+ArcadiaWidget/Info.plist
+  s_947a5ec9b0d04e::t_eef2f94e0ce535 1-29
+ArcadiaWidget/ArcadiaWidgetBundle.swift
+  s_947a5ec9b0d04e::t_eef2f94e0ce535 1-9
+Arcadia/Resources/AppShortcuts.xcstrings
+  s_947a5ec9b0d04e::t_eef2f94e0ce535 1-21
+ArcadiaWidget/ContinuePlayingWidget.swift
+  s_947a5ec9b0d04e::t_eef2f94e0ce535 1-220
+Arcadia/Integration/Spotlight.swift
+  s_947a5ec9b0d04e::t_eef2f94e0ce535 1-91
+project.yml
+  s_947a5ec9b0d04e::t_eef2f94e0ce535 16-18,30-38,49-52,75,81-114,129
+Arcadia/Integration/Shared/ContinuePlaying.swift
+  s_947a5ec9b0d04e::t_eef2f94e0ce535 1-96
+Arcadia/App/ArcadiaApp.swift
+  s_947a5ec9b0d04e::t_eef2f94e0ce535 5-11,19
+Tests/ArcadiaTests/IntegrationTests.swift
+  s_947a5ec9b0d04e::t_eef2f94e0ce535 1-124
+Arcadia/Info.plist
+  s_947a5ec9b0d04e::t_eef2f94e0ce535 19-29
+Arcadia/Integration/WidgetPublisher.swift
+  s_947a5ec9b0d04e::t_eef2f94e0ce535 1-75
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "6f239f679d805d6eb09b47904ac06aae765b7f84",
+  "prompts": {},
+  "sessions": {
+    "s_947a5ec9b0d04e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "ae2b73cb-5faa-44a9-b7a6-4d22739dbe7c",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Ferhan Akkan <ferhanakkan@gmail.com>"
+    }
+  }
+}
