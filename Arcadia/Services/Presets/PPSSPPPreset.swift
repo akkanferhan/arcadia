@@ -27,7 +27,9 @@ extension Presets {
                 "iShowStatusFlags": "0",
             ], section: "Graphics")
             ini.set("AudioBufferSize", "256", section: "Sound")
+            ini.set(ppssppAchievements(context.achievements), section: "Achievements")
         }
+        try writePPSSPPToken(context.achievements, system: system)
 
         // Once controls.ini has a mapping section, every action loses its defaults, so keyboard
         // (device 1) and gamepad (device 10) are written together. SDL also reports shoulder buttons

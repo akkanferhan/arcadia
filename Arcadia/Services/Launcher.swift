@@ -64,7 +64,7 @@ final class Launcher {
         }
         // Arcadia's tuned settings are written before every launch, so emulator menus never matter.
         let gamepads = await Gamepads.connected()
-        let context = PresetContext(emulator: emulator, system: game.system, game: target, core: request.core,
+        var context = PresetContext(emulator: emulator, system: game.system, game: target, core: request.core,
                                     install: emulators.payloadURL(emulator.id)!, bios: library.biosFolder,
                                     scale: quality.scale, fullscreen: fullscreen, gamepads: gamepads,
                                     report: { [weak self] status in
@@ -76,6 +76,9 @@ final class Launcher {
                                     progress: { [weak self] value in
                                         Task { @MainActor in self?.preparingProgress = value }
                                     })
+        context.achievements = RetroAchievements.shared.settings
+        // With iCloud sync on, saves must be linked and downloaded before the emulator reads them.
+        try await SaveSync.shared.prepare(emulatorID: emulator.id, report: context.report, progress: context.progress)
         let preset = try await Presets.apply(context)
         let arguments = preset.arguments + emulator.arguments(request)
 

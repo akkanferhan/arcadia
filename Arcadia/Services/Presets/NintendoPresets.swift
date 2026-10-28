@@ -29,6 +29,9 @@ extension Presets {
             ], section: "Settings")
             ini.set("VSync", "True", section: "Hardware")
         }
+        try INIFile.update(config.appendingPathComponent("RetroAchievements.ini")) { ini in
+            ini.set(dolphinAchievements(context.achievements), section: "Achievements")
+        }
         try dolphinControllers(context, config: config)
         return PresetLaunch(arguments: ["-u", context.data.path])
     }
@@ -193,6 +196,7 @@ extension Presets {
                 "Dreamcast.AutoLoadState": "yes",
             ], section: "config")
             ini.set("fullscreen", context.fullscreen ? "yes" : "no", section: "window")
+            ini.set(flycastAchievements(context.achievements), section: "achievements")
         }
         return PresetLaunch()
     }

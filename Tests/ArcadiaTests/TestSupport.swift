@@ -88,3 +88,16 @@ enum DiscFixture {
         }
     }
 }
+
+/// UserDefaults that keep values in memory only, so tests never write preference files.
+final class MemoryDefaults: UserDefaults, @unchecked Sendable {
+    private var values: [String: Any] = [:]
+
+    init() { super.init(suiteName: nil)! }
+
+    override func object(forKey key: String) -> Any? { values[key] }
+    override func set(_ value: Any?, forKey key: String) { values[key] = value }
+    override func set(_ value: Bool, forKey key: String) { values[key] = value }
+    override func bool(forKey key: String) -> Bool { values[key] as? Bool ?? false }
+    override func removeObject(forKey key: String) { values[key] = nil }
+}

@@ -70,7 +70,7 @@ extension Presets {
                 "SearchDirectory": context.bios.appendingPathComponent("ps1").path,
                 "PatchFastBoot": "true",
             ], section: "BIOS")
-            ini.set("Enabled", "false", section: "Cheevos")
+            ini.set(duckStationAchievements(context.achievements), section: "Cheevos")
             ini.set([
                 "Directory": memoryCards.path,
                 "Card1Type": "PerGameTitle",
