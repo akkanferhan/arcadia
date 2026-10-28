@@ -2,6 +2,7 @@ import SwiftUI
 
 struct SettingsView: View {
     @Environment(AppModel.self) private var model
+    @AppStorage(TVMode.openOnControllerKey) private var openTVModeOnController = false
 
     var body: some View {
         @Bindable var launcher = model.launcher
@@ -31,6 +32,7 @@ struct SettingsView: View {
                     }
                 }
                 Toggle("Start games in full screen", isOn: $launcher.fullscreen)
+                Toggle("Open TV Mode when a controller connects", isOn: $openTVModeOnController)
             } header: {
                 Text("Playing")
             } footer: {

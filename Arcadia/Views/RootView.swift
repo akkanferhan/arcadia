@@ -28,7 +28,8 @@ struct RootView: View {
         .sheet(isPresented: $model.showFinder) {
             FindGamesView()
         }
-        .alert(item: $model.problem) { problem in
+        .tvModeEntry()
+        .alert(item: model.isTVModeActive ? .constant(nil) : $model.problem) { problem in
             if let emulator = problem.missing {
                 Alert(title: Text("Almost ready"), message: Text(problem.message),
                       primaryButton: .default(Text("Install \(emulator.name)")) {

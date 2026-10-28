@@ -22,6 +22,8 @@ final class AppModel {
     var showOnboarding: Bool
     var showFinder = false
     var problem: Problem?
+    /// True while the TV Mode window is open; it shows problems itself then.
+    var isTVModeActive = false
 
     struct Problem: Identifiable {
         let id = UUID()

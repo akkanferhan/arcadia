@@ -21,7 +21,10 @@ struct ArcadiaApp: App {
                 Button("Show Library in Finder") { NSWorkspace.shared.open(model.library.folder) }
                     .keyboardShortcut("o", modifiers: [.command, .shift])
             }
+            TVModeCommands(model: model)
         }
+
+        TVModeScene(model: model)
 
         Settings {
             SettingsView()
