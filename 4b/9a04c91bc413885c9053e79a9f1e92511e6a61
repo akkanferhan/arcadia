@@ -1,0 +1,19 @@
+Arcadia/Resources/Localizable.xcstrings
+  s_947a5ec9b0d04e::t_1cc96a2bc4dadc 4843-4934,5073-5118,6913-6958,9121-9166,12249-12294,12801-12846,13169-13214,13261-13352,14227-14272
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "4b9a04c91bc413885c9053e79a9f1e92511e6a61",
+  "prompts": {},
+  "sessions": {
+    "s_947a5ec9b0d04e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "ae2b73cb-5faa-44a9-b7a6-4d22739dbe7c",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Ferhan Akkan <ferhanakkan@gmail.com>"
+    }
+  }
+}
