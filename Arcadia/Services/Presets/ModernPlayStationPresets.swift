@@ -46,7 +46,7 @@ extension Presets {
         if !FileManager.default.fileExists(atPath: installed.path) {
             if !FileManager.default.fileExists(atPath: firmware.path) {
                 context.report("Downloading PS3 system software from Sony…")
-                try await PS3Firmware.download(to: firmware)
+                try await PS3Firmware.download(to: firmware, progress: context.progress)
             }
             context.report("Installing PS3 system software…")
             let executable = context.executableFolder.appendingPathComponent("rpcs3")
@@ -119,7 +119,7 @@ enum PS3Firmware {
 
     /// Sony serves the update list and file over plain HTTP; RPCS3 verifies the file's
     /// internal hashes when it installs it.
-    static func download(to destination: URL) async throws {
+    static func download(to destination: URL, progress: @escaping @Sendable (Double) -> Void) async throws {
         let list = URL(string: "http://fus01.ps3.update.playstation.net/update/ps3/list/us/ps3-updatelist.txt")!
         let (data, _) = try await URLSession.shared.data(from: list)
         let text = String(decoding: data, as: UTF8.self)
@@ -128,7 +128,7 @@ enum PS3Firmware {
 
         let temporary = Paths.downloads.appendingPathComponent("PS3UPDAT.PUP")
         defer { try? FileManager.default.removeItem(at: temporary) }
-        _ = try await Downloader.download(url, to: temporary) { _ in }
+        _ = try await Downloader.download(url, to: temporary, progress: progress)
         try FileManager.default.createDirectory(at: destination.deletingLastPathComponent(), withIntermediateDirectories: true)
         try? FileManager.default.removeItem(at: destination)
         try FileManager.default.moveItem(at: temporary, to: destination)

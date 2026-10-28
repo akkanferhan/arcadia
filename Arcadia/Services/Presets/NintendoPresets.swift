@@ -209,7 +209,7 @@ extension Presets {
             let zip = Paths.downloads.appendingPathComponent("xbox_hdd.qcow2.zip")
             defer { try? FileManager.default.removeItem(at: zip) }
             let url = URL(string: "https://github.com/xemu-project/xemu-hdd-image/releases/download/1.0/xbox_hdd.qcow2.zip")!
-            _ = try await Downloader.download(url, to: zip) { _ in }
+            _ = try await Downloader.download(url, to: zip, progress: context.progress)
             try await Shell.run("/usr/bin/ditto", ["-x", "-k", zip.path, data.path])
         }
 
