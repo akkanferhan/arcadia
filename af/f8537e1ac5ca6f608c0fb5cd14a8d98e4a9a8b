@@ -1,0 +1,54 @@
+Arcadia/Views/LogView.swift
+  s_947a5ec9b0d04e::t_7beaa72fc8fc5d 1-113
+Arcadia/Services/LaunchLogs.swift
+  s_947a5ec9b0d04e::t_7beaa72fc8fc5d 1-87
+Arcadia/Views/SettingsView.swift
+  s_947a5ec9b0d04e::t_7beaa72fc8fc5d 54
+Arcadia/App/AppModel.swift
+  s_947a5ec9b0d04e::t_7beaa72fc8fc5d 34-35,43-44,53-54,65-70
+Arcadia/Services/Presets/PlayStationPresets.swift
+  s_947a5ec9b0d04e::t_7beaa72fc8fc5d 23-35,37,43-61,107-109
+Arcadia/Services/Presets/ModernPlayStationPresets.swift
+  s_947a5ec9b0d04e::t_7beaa72fc8fc5d 40
+Tests/ArcadiaTests/LaunchLogsTests.swift
+  s_947a5ec9b0d04e::t_7beaa72fc8fc5d 1-78
+Arcadia/Services/Presets/GamepadPresets.swift
+  s_947a5ec9b0d04e::t_7beaa72fc8fc5d 4-6,8-19,50-61,64-69,80-93,99,105-113,119-159,164-180,182,190-203
+  s_947a5ec9b0d04e::t_c4a5382f26945c 204
+Tests/ArcadiaTests/FolderWatcherTests.swift
+  s_947a5ec9b0d04e::t_7beaa72fc8fc5d 1-60
+Arcadia/Services/Presets/NintendoPresets.swift
+  s_947a5ec9b0d04e::t_7beaa72fc8fc5d 35,57,200
+Arcadia/Services/Presets/RetroArchPreset.swift
+  s_947a5ec9b0d04e::t_7beaa72fc8fc5d 62-65
+Arcadia/Services/Library.swift
+  s_947a5ec9b0d04e::t_7beaa72fc8fc5d 11-12,17,31-33
+Arcadia.xcodeproj/project.pbxproj
+  s_947a5ec9b0d04e::t_7beaa72fc8fc5d 25,46,69,80,89,94,131,141,162,177,206,211,284,289,321,323,326,396,572,586,589,631,633
+  s_947a5ec9b0d04e::t_cfd236735ddd45 636
+Arcadia/Views/RootView.swift
+  s_947a5ec9b0d04e::t_7beaa72fc8fc5d 56-59,64-65
+  s_947a5ec9b0d04e::t_4b32e033d3b8d5 66
+Tests/ArcadiaTests/MultiplayerTests.swift
+  s_947a5ec9b0d04e::t_7beaa72fc8fc5d 1-148
+Arcadia/Services/FolderWatcher.swift
+  s_947a5ec9b0d04e::t_7beaa72fc8fc5d 1-95
+Arcadia/Services/Launcher.swift
+  s_947a5ec9b0d04e::t_7beaa72fc8fc5d 16-17,87-88,94-95,102-107
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "aff8537e1ac5ca6f608c0fb5cd14a8d98e4a9a8b",
+  "prompts": {},
+  "sessions": {
+    "s_947a5ec9b0d04e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "ae2b73cb-5faa-44a9-b7a6-4d22739dbe7c",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Ferhan Akkan <ferhanakkan@gmail.com>"
+    }
+  }
+}
