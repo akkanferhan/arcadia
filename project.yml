@@ -17,7 +17,8 @@ settings:
     # Apple silicon only.
     ARCHS: arm64
     ONLY_ACTIVE_ARCH: NO
-    CURRENT_PROJECT_VERSION: "1"
+    # Sparkle compares build versions, so the build version follows the release version.
+    CURRENT_PROJECT_VERSION: $(MARKETING_VERSION)
 targets:
   Arcadia:
     type: application
@@ -34,8 +35,7 @@ targets:
       path: Arcadia/Info.plist
       properties:
         CFBundleShortVersionString: $(MARKETING_VERSION)
-        # Sparkle compares build versions, so the build version follows the release version.
-        CFBundleVersion: $(MARKETING_VERSION)
+        CFBundleVersion: $(CURRENT_PROJECT_VERSION)
         # Sparkle: the appcast scripts/release.sh uploads next to each release's disk image.
         SUFeedURL: https://github.com/akkanferhan/arcadia/releases/latest/download/appcast.xml
         SUPublicEDKey: PU9qpsmcl451+bvIPkaChgIZLYANhkbAvvnnbPQ73Y4=
