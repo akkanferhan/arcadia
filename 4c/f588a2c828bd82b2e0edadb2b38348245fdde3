@@ -1,0 +1,21 @@
+CHANGELOG.md
+  s_947a5ec9b0d04e::t_f7d0b2f81172e6 26-42
+README.md
+  s_947a5ec9b0d04e::t_2c4c3fcac3ab84 24-26,28-34,37-48,52-53
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "4cf588a2c828bd82b2e0edadb2b38348245fdde3",
+  "prompts": {},
+  "sessions": {
+    "s_947a5ec9b0d04e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "ae2b73cb-5faa-44a9-b7a6-4d22739dbe7c",
+        "model": "unknown"
+      },
+      "human_author": "Ferhan Akkan <ferhanakkan@gmail.com>"
+    }
+  }
+}
