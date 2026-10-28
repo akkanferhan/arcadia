@@ -46,6 +46,7 @@ struct SettingsView: View {
                     NSWorkspace.shared.open(model.library.biosFolder)
                 }
             }
+            LogsSettingsSection()
         }
         .formStyle(.grouped)
         .frame(width: 560)

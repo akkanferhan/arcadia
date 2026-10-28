@@ -41,9 +41,16 @@ struct RootView: View {
                           model.installRosetta(then: problem.game)
                       },
                       secondaryButton: .cancel())
+            } else if let log = problem.log {
+                Alert(title: Text("Couldn't start the game"), message: Text(problem.message),
+                      primaryButton: .default(Text("Show Log")) { model.shownLog = LaunchLog(url: log) },
+                      secondaryButton: .cancel(Text("OK")))
             } else {
                 Alert(title: Text("Couldn't start the game"), message: Text(problem.message))
             }
+        }
+        .sheet(item: $model.shownLog) { log in
+            LogView(log: log.url)
         }
     }
 

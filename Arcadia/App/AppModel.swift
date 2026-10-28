@@ -22,6 +22,8 @@ final class AppModel {
     var showOnboarding: Bool
     var showFinder = false
     var problem: Problem?
+    /// The launch log shown in a sheet.
+    var shownLog: LaunchLog?
 
     struct Problem: Identifiable {
         let id = UUID()
@@ -29,6 +31,8 @@ final class AppModel {
         var missing: Emulator?
         var needsRosetta = false
         var game: Game?
+        /// The emulator's output, for a game that closed right after starting.
+        var log: URL?
     }
 
     init() {
@@ -37,7 +41,8 @@ final class AppModel {
             let bios = BiosRule.rule(for: game.systemID) != nil
             self?.problem = Problem(message: bios
                 ? String(localized: "\(game.title) closed right after starting. Check that the game file is complete and that the console's BIOS is in place.")
-                : String(localized: "\(game.title) closed right after starting. Check that the game file is complete and not damaged."))
+                : String(localized: "\(game.title) closed right after starting. Check that the game file is complete and not damaged."),
+                log: self?.launcher.lastLog)
         }
         // `-page snes`, `-page emulators` etc. opens a page directly (handy for development).
         switch UserDefaults.standard.string(forKey: "page") {
@@ -45,6 +50,12 @@ final class AppModel {
         case "favorites": selection = .favorites
         case "emulators": selection = .emulators
         case let id?: selection = GameSystem.with(id: id).map { .system($0.id) } ?? .home
+        }
+        // `-failedLaunchLog <file>` shows the failed-start alert for a log (handy for development).
+        if let path = UserDefaults.standard.string(forKey: "failedLaunchLog") {
+            let log = URL(fileURLWithPath: path)
+            problem = Problem(message: String(localized: "\(log.lastPathComponent) closed right after starting. Check that the game file is complete and not damaged."),
+                              log: log)
         }
         // `-findGamesIn <folder>` searches only that folder right away (handy for development).
         if let folder = UserDefaults.standard.string(forKey: "findGamesIn") {
