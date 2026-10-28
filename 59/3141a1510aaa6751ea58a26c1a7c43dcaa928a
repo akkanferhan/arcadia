@@ -1,0 +1,29 @@
+Arcadia/Services/GameFinder.swift
+  s_947a5ec9b0d04e::t_d248f58997ec81 158-159
+Arcadia/Services/VitaGame.swift
+  s_947a5ec9b0d04e::t_513b4380878259 1-88
+Arcadia/Services/Artwork.swift
+  s_947a5ec9b0d04e::t_d248f58997ec81 4,28,36-41,43
+Arcadia/Services/Library.swift
+  s_947a5ec9b0d04e::t_d248f58997ec81 82,123-126
+Arcadia/Services/GameIdentifier.swift
+  s_947a5ec9b0d04e::t_d248f58997ec81 32-33,40,48-51,98-100
+Arcadia/Services/PlayStationFolder.swift
+  s_947a5ec9b0d04e::t_8c86bc8452752a 3-4,8-9,18,23-24,47-53,63-84
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "593141a1510aaa6751ea58a26c1a7c43dcaa928a",
+  "prompts": {},
+  "sessions": {
+    "s_947a5ec9b0d04e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "ae2b73cb-5faa-44a9-b7a6-4d22739dbe7c",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Ferhan Akkan <ferhanakkan@gmail.com>"
+    }
+  }
+}
