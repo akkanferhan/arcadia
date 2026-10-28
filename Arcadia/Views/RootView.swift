@@ -25,6 +25,9 @@ struct RootView: View {
             OnboardingView()
                 .interactiveDismissDisabled()
         }
+        .sheet(isPresented: $model.showFinder) {
+            FindGamesView()
+        }
         .alert(item: $model.problem) { problem in
             if let emulator = problem.missing {
                 Alert(title: Text("Almost ready"), message: Text(problem.message),

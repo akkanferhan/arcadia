@@ -131,13 +131,19 @@ private struct WelcomeHero: View {
                     .frame(maxWidth: 520, alignment: .leading)
                 HStack {
                     Button {
-                        NSWorkspace.shared.open(model.library.folder)
+                        model.showFinder = true
                     } label: {
-                        Label("Open Games Folder", systemImage: "folder.fill")
+                        Label("Find Games on This Mac", systemImage: "sparkle.magnifyingglass")
                     }
                     .buttonStyle(.borderedProminent)
                     .tint(.white)
                     .foregroundStyle(.black)
+                    Button {
+                        NSWorkspace.shared.open(model.library.folder)
+                    } label: {
+                        Label("Open Games Folder", systemImage: "folder.fill")
+                    }
+                    .buttonStyle(.bordered)
                     Button {
                         model.selection = .emulators
                     } label: {

@@ -29,6 +29,11 @@ targets:
       properties:
         CFBundleShortVersionString: $(MARKETING_VERSION)
         CFBundleVersion: $(CURRENT_PROJECT_VERSION)
+        NSDesktopFolderUsageDescription: Arcadia looks for your games here when you search this Mac.
+        NSDocumentsFolderUsageDescription: Arcadia looks for your games here when you search this Mac.
+        NSDownloadsFolderUsageDescription: Arcadia looks for your games here when you search this Mac.
+        NSRemovableVolumesUsageDescription: Arcadia looks for your games on this drive when you search.
+        NSNetworkVolumesUsageDescription: Arcadia looks for your games on this drive when you search.
         # Sony serves PS3 system software over HTTP only; RPCS3 verifies the file's hashes.
         NSAppTransportSecurity:
           NSExceptionDomains:

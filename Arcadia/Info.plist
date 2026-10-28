@@ -31,5 +31,15 @@
 			</dict>
 		</dict>
 	</dict>
+	<key>NSDesktopFolderUsageDescription</key>
+	<string>Arcadia looks for your games here when you search this Mac.</string>
+	<key>NSDocumentsFolderUsageDescription</key>
+	<string>Arcadia looks for your games here when you search this Mac.</string>
+	<key>NSDownloadsFolderUsageDescription</key>
+	<string>Arcadia looks for your games here when you search this Mac.</string>
+	<key>NSNetworkVolumesUsageDescription</key>
+	<string>Arcadia looks for your games on this drive when you search.</string>
+	<key>NSRemovableVolumesUsageDescription</key>
+	<string>Arcadia looks for your games on this drive when you search.</string>
 </dict>
 </plist>

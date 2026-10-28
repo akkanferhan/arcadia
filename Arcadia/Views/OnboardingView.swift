@@ -4,6 +4,7 @@ import SwiftUI
 struct OnboardingView: View {
     @Environment(AppModel.self) private var model
     @State private var folder = Paths.defaultLibrary
+    @State private var searchNow = true
 
     var body: some View {
         VStack(spacing: 0) {
@@ -44,10 +45,18 @@ struct OnboardingView: View {
                 .padding(12)
                 .background(Theme.card, in: RoundedRectangle(cornerRadius: 10, style: .continuous))
 
+                Toggle("Search this Mac for my games now", isOn: $searchNow)
+                    .toggleStyle(.checkbox)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+
                 Button {
                     model.library.folder = folder
                     model.library.createFolders()
                     model.showOnboarding = false
+                    if searchNow {
+                        // Open after the onboarding sheet has gone away.
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) { model.showFinder = true }
+                    }
                 } label: {
                     Text("Get Started").frame(maxWidth: .infinity)
                 }

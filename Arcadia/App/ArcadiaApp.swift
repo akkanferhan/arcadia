@@ -14,6 +14,8 @@ struct ArcadiaApp: App {
         .windowToolbarStyle(.unified(showsTitle: false))
         .commands {
             CommandGroup(after: .newItem) {
+                Button("Find Games on This Mac…") { model.showFinder = true }
+                    .keyboardShortcut("f", modifiers: [.command, .shift])
                 Button("Rescan Library") { Task { await model.library.scan() } }
                     .keyboardShortcut("r")
                 Button("Show Library in Finder") { NSWorkspace.shared.open(model.library.folder) }

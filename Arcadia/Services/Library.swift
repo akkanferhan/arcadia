@@ -136,7 +136,8 @@ final class Library {
         return files.map { Game(url: $0, systemID: system.id) }
     }
 
+    /// Follows links, so game folders added in place by "Find Games" count as folders.
     nonisolated private static func isDirectory(_ url: URL) -> Bool {
-        (try? url.resourceValues(forKeys: [.isDirectoryKey]).isDirectory) == true
+        (try? url.resolvingSymlinksInPath().resourceValues(forKeys: [.isDirectoryKey]).isDirectory) == true
     }
 }
