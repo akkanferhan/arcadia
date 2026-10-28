@@ -55,7 +55,9 @@ final class EmulatorManager {
     /// Whether a background update may start now; AppModel says no while a game is running.
     var mayUpdateInBackground: () -> Bool = { true }
 
-    var updatesAutomatically = UserDefaults.standard.object(forKey: "updateEmulatorsAutomatically") as? Bool ?? true {
+    // `bool(forKey:)` also reads `-updateEmulatorsAutomatically NO` launch arguments.
+    var updatesAutomatically = UserDefaults.standard.object(forKey: "updateEmulatorsAutomatically") == nil
+        || UserDefaults.standard.bool(forKey: "updateEmulatorsAutomatically") {
         didSet {
             UserDefaults.standard.set(updatesAutomatically, forKey: "updateEmulatorsAutomatically")
             installUpdatesInBackground()
