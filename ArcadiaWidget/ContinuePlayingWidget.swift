@@ -191,7 +191,16 @@ struct WidgetCover: View {
     var body: some View {
         ZStack {
             if let image {
+                // The whole cover over a blurred copy of itself, like the covers in Arcadia.
                 Color.black
+                    .overlay {
+                        Image(nsImage: image)
+                            .resizable()
+                            .widgetAccentedRenderingMode(.fullColor)
+                            .aspectRatio(contentMode: .fill)
+                            .blur(radius: 10)
+                            .opacity(0.7)
+                    }
                 Image(nsImage: image)
                     .resizable()
                     .widgetAccentedRenderingMode(.fullColor)
