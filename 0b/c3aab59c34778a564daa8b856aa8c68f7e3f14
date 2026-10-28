@@ -1,0 +1,39 @@
+Arcadia/Services/EmulatorUpdates.swift
+  s_947a5ec9b0d04e::t_be05ba9e8869d0 47-51
+  s_947a5ec9b0d04e::t_8a5afee78cf57b 28-30
+  s_947a5ec9b0d04e::t_9029b8768550ca 1-27,31-46,52
+Arcadia/App/AppModel.swift
+  s_947a5ec9b0d04e::t_ed085d85c8c742 42-46
+Arcadia/Services/EmulatorManager.swift
+  s_947a5ec9b0d04e::t_f3ef77c0ba4c45 10-11,50-64,69-73,94,117,158-159,187,205,230,238,250-291,294-298,300-307
+  s_947a5ec9b0d04e::t_fd3a9819805175 86-87,98-99,292-293,299
+  s_947a5ec9b0d04e::t_3f1a8eb2168919 308
+Arcadia/Views/SidebarView.swift
+  s_947a5ec9b0d04e::t_ecce7c2ec95962 35
+Arcadia/Views/SettingsView.swift
+  s_947a5ec9b0d04e::t_ed085d85c8c742 8,42-47
+  s_947a5ec9b0d04e::t_39fc3526e53864 48-49
+Arcadia/Views/EmulatorsView.swift
+  s_947a5ec9b0d04e::t_ed085d85c8c742 27,44-70
+  s_947a5ec9b0d04e::t_17e36285de1946 71-74
+Arcadia/Views/Components/EmulatorButton.swift
+  s_947a5ec9b0d04e::t_ecce7c2ec95962 41,43-50,62-66,70-71
+Arcadia.xcodeproj/project.pbxproj
+  s_947a5ec9b0d04e::t_c7f599ac7734de 40,93,192,431
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "0bc3aab59c34778a564daa8b856aa8c68f7e3f14",
+  "prompts": {},
+  "sessions": {
+    "s_947a5ec9b0d04e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "ae2b73cb-5faa-44a9-b7a6-4d22739dbe7c",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Ferhan Akkan <ferhanakkan@gmail.com>"
+    }
+  }
+}
