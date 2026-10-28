@@ -8,7 +8,7 @@ The first release: one native home for games from the Atari 2600 to the PlayStat
 with Apple silicon running macOS 26 or later.
 
 ### Added
-- Library of 26 systems with box art, favorites, recently played, play time and search, in
+- Library of 27 systems with box art, favorites, recently played, play time and search, in
   English, Türkçe, 简体中文, Español, हिन्दी, العربية, Français and Português (Brasil).
 - Find Games on This Mac: searches folders and drives, recognises each game's console from the
   disc or ROM itself and adds it in place as a link.
@@ -40,5 +40,8 @@ with Apple silicon running macOS 26 or later.
 - Spotlight search, Shortcuts and Siri actions ("Play Game", "Continue Playing"), a Continue
   Playing widget and `arcadia://` links.
 - Launch logs in `~/Library/Logs/Arcadia`, opened from the failed-start alert or Settings.
+- PlayStation Vita with Vita3K: `.vpk` and game-folder libraries with real titles and icons,
+  system software and fonts downloaded from Sony, a one-time install per game, tuned graphics
+  and iCloud save sync.
 - Automatic updates for Arcadia through Sparkle, and daily emulator update checks with an
   Update Available badge, Update All and background updates while no game is running.
