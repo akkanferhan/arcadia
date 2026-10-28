@@ -1,0 +1,20 @@
+Arcadia/Services/Collections.swift
+  s_947a5ec9b0d04e::t_b471bcb8101fa7 1-70,72-112
+  s_947a5ec9b0d04e::t_a11897b0ba3e50 71
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "6d312fceee5103fec3f2558bc721e22b7a5f0012",
+  "prompts": {},
+  "sessions": {
+    "s_947a5ec9b0d04e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "ae2b73cb-5faa-44a9-b7a6-4d22739dbe7c",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Ferhan Akkan <ferhanakkan@gmail.com>"
+    }
+  }
+}
