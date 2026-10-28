@@ -20,6 +20,8 @@ struct PresetContext {
     var report: @Sendable (LocalizedStringResource) -> Void = { _ in }
     /// Download progress for the step last reported, from 0 to 1.
     var progress: @Sendable (Double) -> Void = { _ in }
+    /// RetroAchievements account and switches, written into every emulator that supports them.
+    var achievements: AchievementsSettings = .off
 
     /// Settings, saves and memory cards for this emulator, owned by Arcadia.
     var data: URL { Paths.data(emulator.id) }

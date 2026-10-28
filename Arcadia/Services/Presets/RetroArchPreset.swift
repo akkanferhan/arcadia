@@ -58,6 +58,7 @@ extension Presets {
                 // Select + Start quits back to Arcadia.
                 "input_quit_gamepad_combo": "\"4\"",
             ])
+            cfg.set(retroArchAchievements(context.achievements))
         }
 
         let core = context.core?.deletingPathExtension().lastPathComponent
