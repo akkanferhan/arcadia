@@ -1,0 +1,20 @@
+Tests/ArcadiaTests/FolderWatcherTests.swift
+  s_947a5ec9b0d04e::t_de1dbb9e9170f5 21,23,28-33
+  s_947a5ec9b0d04e::t_ecddcbf0ad5295 40
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "13a1bbda325c39c018106ce67857e9b16a1279b7",
+  "prompts": {},
+  "sessions": {
+    "s_947a5ec9b0d04e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "ae2b73cb-5faa-44a9-b7a6-4d22739dbe7c",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Ferhan Akkan <ferhanakkan@gmail.com>"
+    }
+  }
+}
