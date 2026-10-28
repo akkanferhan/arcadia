@@ -1,0 +1,23 @@
+Arcadia/Services/Wikipedia.swift
+  s_947a5ec9b0d04e::t_7926e0718e16d4 176-182,186-190
+  s_947a5ec9b0d04e::t_5d86a583846c05 113-116,166-167,174
+  s_947a5ec9b0d04e::t_493cf6ddbcc28b 1-112,117-165,168-173,175,183-185,191-218
+Arcadia/Services/Screenshots.swift
+  s_947a5ec9b0d04e::t_e2f5159446acf7 1-68
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "9e45d2419667f5d15535e1a5252d5a1b9afcd889",
+  "prompts": {},
+  "sessions": {
+    "s_947a5ec9b0d04e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "ae2b73cb-5faa-44a9-b7a6-4d22739dbe7c",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Ferhan Akkan <ferhanakkan@gmail.com>"
+    }
+  }
+}
