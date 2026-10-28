@@ -38,6 +38,8 @@ struct SettingsView: View {
                 Text("\(chip.name) with a \(chip.gpuCores)-core GPU. Arcadia tunes every emulator for this Mac; games render at \(launcher.quality.scale)× their original resolution.")
                     .foregroundStyle(.secondary)
             }
+            SaveSyncSettingsSection()
+            AchievementsSettingsSection()
             Section("BIOS") {
                 Text("Some systems need BIOS or firmware files dumped from your own console. Put them in the bios folder inside your games folder.")
                     .foregroundStyle(.secondary)
